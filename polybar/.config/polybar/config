@@ -25,15 +25,13 @@ primary = #222
 secondary = #eeeeee
 alert = #ec95ec
 
-
-
 [bar/mybar2]
 #monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 25
 ;offset-x = 10%
 ;offset-y = 10%
-#radius = 6.0
+radius = 6.0
 fixed-center = true
 
 enable-ipc = true
@@ -44,14 +42,14 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 1
+border-size = 5
 border-color = #00000000
 
-padding-left = 0
-padding-right = 2
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1
-module-margin-right = 1
+module-margin-right = 0
 
 font-0 = "UbuntuMono Nerd Font:size=11;2"
 font-1 = "UbuntuMono Nerd Font:size=16;3"
@@ -66,20 +64,15 @@ modules-left = dwm
 modules-center =
 modules-right = pulseaudio memory cpu date
 
-tray-position = right
-tray-padding = 1
+tray-position = center
+tray-detached = true
+tray-padding = 0
+tray-offset-x = 370
+tray-offset-y = 0
+tray-scale = 1.0
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
-
 override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -224,7 +217,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = #ed8fed
 format-underline = #ec95ec
 label =%percentage%%
@@ -232,7 +225,7 @@ label =%percentage%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = #ec95ec
 format-underline = #ec95ec
 #label = %percentage_used%%
@@ -252,10 +245,11 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <label-volume> 
-format-volume-prefix = "  "
+format-volume-prefix = " "
 format-volume-prefix-foreground = #ec95ec
+format-volume-prefix-background = #222
 format-volume-underline = #ec95ec
-label-volume = %percentage%%
+label-volume =%percentage%%
 label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
@@ -302,33 +296,10 @@ animation-discharging-framerate = 750
 
 [module/powermenu]
 type = custom/menu
-
-expand-right = false
-expand-down = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+menu-0-0 = Poweroff
+menu-0-0-exec = poweroff
+menu-0-1 = Suspend
+menu-0-1-exec = systemctl suspend
 
 [settings]
 screenchange-reload = true
