@@ -17,73 +17,13 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #1aaba0
 foreground-alt = 555
 primary = #222
 secondary = #eeeeee
-alert = ec95ec
-
-[bar/mybar]
-#monitor = ${env:MONITOR:DVI-D-0}
-width = 100%
-height = 25
-;offset-x = 1%
-;offset-y = 1%
-radius = 6.0
-fixed-center = false
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = "UbuntuMono Nerd Font:size=10;2"
-font-1 = "UbuntuMono Nerd Font:size=16;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
-font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
-font-5 = Noto Sans CJK JP
-font-6 = Nerd Pro
-;font-7 = fixed:pixelsize=10;1
-;font-8 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-7 = "Wuncon Siji:pixelsize=10;1"
-;font-10 = siji:pixelsize=10;1
-
-modules-left = dwm
-modules-center = 
-modules-right = 
-
-tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
+alert = #ec95ec
 
 
 
@@ -91,10 +31,10 @@ cursor-scroll = ns-resize
 #monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 25
-;offset-x = 1%
-;offset-y = 1%
-radius = 6.0
-fixed-center = false
+;offset-x = 10%
+;offset-y = 10%
+#radius = 6.0
+fixed-center = true
 
 enable-ipc = true
 
@@ -104,30 +44,30 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
+border-size = 1
 border-color = #00000000
 
 padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = "UbuntuMono Nerd Font:size=11;2"
 font-1 = "UbuntuMono Nerd Font:size=16;3"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
-font-5 = Noto Sans CJK JP
-font-6 = Nerd Pro
-font-7 = "Wuncon Siji:pixelsize=10;1""
+font-5 = "Noto Sans CJK JP"
+#font-6 = Nerd Pro
+#font-7 = "Wuncon Siji:pixelsize=10;1""
 
 modules-left = dwm
-modules-center = 
-modules-right = memory cpu pulseaudio date
+modules-center =
+modules-right = pulseaudio memory cpu date
 
 tray-position = right
-tray-padding = 2
+tray-padding = 1
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -148,22 +88,6 @@ cursor-scroll = ns-resize
 type = internal/xwindow
 label = %title%
 ;label = %title:0:30:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -205,7 +129,7 @@ layout-scroll-reverse = false
 secondary-layout-symbol = [M]
 
 ; Separator in between shown tags
-; label-separator = |
+; label-separator = | 
 
 ; Title of currently focused window
 ; Available tokens:
@@ -299,142 +223,45 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "CPU: "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = #ed8fed
 format-underline = #ec95ec
 label = %percentage:2%%
-
-click-right = bpytop
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "RAM: "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = #ec95ec
 format-underline = #ec95ec
-#format-underline = #1aaba0
 #label = %percentage_used%%
 label = %gb_used%
-
-click-right = bpytop
-
-
-[module/wlan]
-type = internal/network
-interface = wlan0
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/eth]
-type = internal/network
-interface = eth0
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
 interval = 5
+date = %d %b,
+time = %H:%M 
 
-date = %a %b %d
-#date-alt = " %Y-%m-%d"
-
-time = %H:%M
-#time-alt = %H:%M:%S
-
-#format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = #1aaba0
+format-underline = #ec95ec
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
 format-volume = <label-volume> 
-format-underline = #1db954
-#<bar-volume>
-format-volume-prefix = "VOL: "
-format-volume-prefix-foreground = ${colors.foreground-alt}
+format-volume-prefix = " "
+format-volume-prefix-foreground = #ec95ec
+format-volume-underline = #ec95ec
 label-volume =  %percentage%%
-label-volume-foreground = ${root.foreground}
-#label-volume-foreground = ${colors.foreground-alt}
+label-volume-foreground = ${colors.foreground}
 
-label-muted =  muted
-label-muted-foreground = #666
-
-bar-volume-width = 7
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+label-muted = " muted"
+label-muted-foreground = #ec95ec
 
 # right click
 click-right = pavucontrol
-
-[module/alsa]
-type = internal/alsa
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL:
-label-volume-foreground = ${colors.foreground-alt}
-
-format-muted-prefix = "VOL: "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted =  
-
-bar-volume-width = 4
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -469,33 +296,15 @@ animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
-
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
+expand-down = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
@@ -527,9 +336,7 @@ screenchange-reload = true
 
 [global/wm]
 margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
+margin-bottom = 1
 
 [module/spotify]
 type = custom/script
@@ -541,7 +348,7 @@ exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
 
 [module/spotify-prev]
 type = custom/script
-exec = echo "玲"
+exec = echo ""
 format = <label>
 format-foreground = ${colors.foreground-alt}
 click-left = playerctl --player=playerctld previous
@@ -557,7 +364,7 @@ click-left = playerctl --player=playerctld play-pause
 
 [module/spotify-next]
 type = custom/script
-exec = echo " "
+exec = echo " "
 format = <label>
 format-foreground = ${colors.foreground-alt}
 click-left = playerctl --player=playerctld next
