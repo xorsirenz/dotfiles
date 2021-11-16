@@ -68,7 +68,7 @@ sleep 2s && polybar -r mybar2 &
 numlockx &
 
 # terminal
-sleep 1s && /usr/bin/alacritty &
+sleep 1s && /usr/bin/kitty &
 
 # loop
 while true; do
