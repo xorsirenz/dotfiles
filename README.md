@@ -11,3 +11,5 @@ My rice isnt as good as jasmine's, but its still tasty!
 💠 **Browser** ➙ [Firefox](https://www.mozilla.org/en-US/)  
 💠 **File manager** ➙ [Thunar](https://gitlab.xfce.org/xfce/thunar)  
 💠 **Notification daemon** ➙ [Dunst](https://github.com/dunst-project/dunst)  
+
+![](https://github.com/madison-craig/dotfiles/blob/main/img/screenshot-1.png?raw=true)  
