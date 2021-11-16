@@ -12,4 +12,4 @@ My rice isnt as good as jasmine's, but its still tasty!
 💠 **File manager** ➙ [Thunar](https://gitlab.xfce.org/xfce/thunar)  
 💠 **Notification daemon** ➙ [Dunst](https://github.com/dunst-project/dunst)  
 
-![](https://github.com/madison-craig/dotfiles/blob/main/img/screenshot-1.png?raw=true)  
+![](https://github.com/madison-craig/dotfiles/blob/main/screenshot-01.png?raw=true)  
