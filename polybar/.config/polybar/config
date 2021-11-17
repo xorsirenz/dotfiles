@@ -51,14 +51,10 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 0
 
-font-0 = "UbuntuMono Nerd Font:size=11;2"
-font-1 = "UbuntuMono Nerd Font:size=16;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
+font-0 = "Comic:size=11:2"
+font-1 = "Noto Sans CJK JP"
+font-2 = "UbuntuMono Nerd Font:size=11;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
-font-5 = "Noto Sans CJK JP"
-#font-6 = Nerd Pro
-#font-7 = "Wuncon Siji:pixelsize=10;1""
 
 modules-left = dwm
 modules-center =
@@ -67,7 +63,7 @@ modules-right = pulseaudio memory cpu date
 tray-position = center
 tray-detached = true
 tray-padding = 0
-tray-offset-x = 370
+tray-offset-x = 330
 tray-offset-y = 0
 tray-scale = 1.0
 ;tray-background = #0063ff
