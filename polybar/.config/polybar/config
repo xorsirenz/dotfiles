@@ -51,7 +51,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 0
 
-font-0 = "Comic Sans MS:size=12:2"
+font-0 = "Comic Sans MS:size=11:2"
 font-1 = "Noto Sans CJK JP"
 font-2 = "UbuntuMono Nerd Font:size=11;2"
 font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
@@ -63,7 +63,7 @@ modules-right = pulseaudio memory cpu date
 tray-position = center
 tray-detached = true
 tray-padding = 0
-tray-offset-x = 360
+tray-offset-x = 365
 tray-offset-y = 0
 tray-scale = 1.0
 ;tray-background = #0063ff
