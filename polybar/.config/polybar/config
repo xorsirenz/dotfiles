@@ -51,19 +51,20 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 0
 
-font-0 = "Comic Sans MS:size=11:2"
-font-1 = "Noto Sans CJK JP"
-font-2 = "UbuntuMono Nerd Font:size=11;2"
-font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
+
+font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
+font-1 = "Comic Sans MS:size=11:2"
+font-2 = "Noto Sans CJK JP"
+font-3 = "UbuntuMono Nerd Font:size=11;2"
 
 modules-left = dwm
 modules-center =
-modules-right = pulseaudio memory cpu date
+modules-right = pulseaudio memory cpu battery date
 
 tray-position = center
 tray-detached = true
 tray-padding = 0
-tray-offset-x = 365
+tray-offset-x = 340
 tray-offset-y = 0
 tray-scale = 1.0
 ;tray-background = #0063ff
@@ -264,29 +265,30 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = #ec95ec
+#format-charging-prefix = " "
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+#format-full-underline = #ec95ec
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = #ec95ec
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = #ffb52a
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
