@@ -261,24 +261,24 @@ click-right = pavucontrol
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = ADP1
-full-at = 98
+adapter = ADP0
+full-at = 99
+poll-interval = 1
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ec95ec
-#format-charging-prefix = " "
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix-foreground = #ec95ec
 format-full-underline = #ec95ec
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = #ec95ec
+#ramp-capacity-0 = 
+#ramp-capacity-1 = 
+#ramp-capacity-2 = 
+#ramp-capacity-foreground = #ec95ec
 
 animation-charging-0 = 
 animation-charging-1 = 
