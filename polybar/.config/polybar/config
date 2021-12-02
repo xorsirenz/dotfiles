@@ -58,7 +58,7 @@ font-2 = "Noto Sans CJK JP"
 font-3 = "UbuntuMono Nerd Font:size=11;2"
 
 modules-left = dwm
-modules-center =
+modules-center = spotify-prev spotify-play-pause spotify-next
 modules-right = pulseaudio memory cpu battery date
 
 tray-position = center
