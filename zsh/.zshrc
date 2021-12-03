@@ -15,14 +15,7 @@ export LANG=en_US.UTF-8
 # don't throw errors when file gobs don't match anything
 setopt NULL_GLOB
 setopt NO_NULL_GLOB
-setopt NOMATCH
-setopt NO_NOMATCH
-setopt NO_CASE_GLOB
 setopt GLOB_COMPLETE
-
-# extended globbing
-setopt EXTENDED_GLOB
-setopt NO_EXTENDED_GLOB
 
 # turn off beep
 unsetopt beep
