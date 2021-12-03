@@ -23,7 +23,8 @@ foreground = #1aaba0
 foreground-alt = 555
 primary = #222
 secondary = #eeeeee
-alert = #ec95ec
+alert = #f6768e
+pink = #f6768e
 
 [bar/mybar2]
 #monitor = ${env:MONITOR:HDMI-0}
@@ -127,7 +128,7 @@ secondary-layout-symbol = []
 ;   %title%
 label-title = %title%
 label-title-padding = 1
-label-title-foreground = #ec95ec
+label-title-foreground = ${colors.pink}
 label-title-maxlen = 30
 
 ; Symbol of current layout
@@ -150,7 +151,7 @@ label-focused = %name%
 label-focused-background = ${colors.background}
 label-focused-underline = ${colors.background}
 #label-focused-underline= ${colors.primary}
-label-focused-foreground = #ec95ec
+label-focused-foreground = ${colors.pink}
 label-focused-padding = 2
 
 ; unfocused = Unselected tag on unselected monitor
@@ -215,16 +216,16 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #ed8fed
-format-underline = #ec95ec
+format-prefix-foreground = ${colors.pink}
+format-underline = ${colors.pink}
 label =%percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #ec95ec
-format-underline = #ec95ec
+format-prefix-foreground = ${colors.pink}
+format-underline = ${colors.pink}
 #label = %percentage_used%%
 label = %gb_used%
 
@@ -235,7 +236,7 @@ date = %d %b,
 time = %H:%M 
 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ec95ec
+format-underline = ${colors.pink}
 
 label = %date% %time%
 
@@ -243,17 +244,17 @@ label = %date% %time%
 type = internal/pulseaudio
 format-volume = <label-volume> 
 format-volume-prefix = " "
-format-volume-prefix-foreground = #ec95ec
+format-volume-prefix-foreground = ${colors.pink}
 format-volume-prefix-background = #222
-format-volume-underline = #ec95ec
+format-volume-underline = ${colors.pink}
 label-volume =%percentage%%
 label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
-format-muted-prefix-foreground = #ec95ec
+format-muted-prefix-foreground = ${colors.pink}
 label-muted = "muted"
 label-muted-foreground = ${colors.foreground}
-format-muted-underline = #ec95ec
+format-muted-underline = ${colors.pink}
 
 # right click
 click-right = pavucontrol
@@ -266,19 +267,19 @@ full-at = 99
 poll-interval = 1
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ec95ec
+format-charging-underline = ${colors.pink}
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
-format-full-prefix-foreground = #ec95ec
-format-full-underline = #ec95ec
+format-full-prefix-foreground = ${colors.pink}
+format-full-underline = ${colors.pink}
 
 #ramp-capacity-0 = 
 #ramp-capacity-1 = 
 #ramp-capacity-2 = 
-#ramp-capacity-foreground = #ec95ec
+#ramp-capacity-foreground = ${colors.pink}
 
 animation-charging-0 = 
 animation-charging-1 = 
