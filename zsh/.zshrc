@@ -18,6 +18,7 @@ setopt NO_NULL_GLOB
 setopt NOMATCH
 setopt NO_NOMATCH
 setopt NO_CASE_GLOB
+setopt GLOB_COMPLETE
 
 # extended globbing
 setopt EXTENDED_GLOB
@@ -60,10 +61,9 @@ zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 # case insensitive path-completion 
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
-
+zstyle ':completion:*' matcher-list  'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 # remove errors when auto-tab when only dotfiles or no files are available
-zstyle ':completion:*' matcher-list '' 'l:|=* r:|=*'
+#zstyle ':completion:*' matcher-list '' 'l:|=* r:|=*'
 
 # loading plugins - keep at end of file.
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
