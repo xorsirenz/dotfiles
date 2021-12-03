@@ -15,7 +15,7 @@ My rice isnt as good as jasmine's, but its still tasty!
 🌸 **Mouse Cursor** ➙ [Breeze](https://github.com/ful1e5/BreezeX_Cursor)  
 
 Default Screenshot:
-![](https://github.com/madison-craig/dotfiles/blob/main/screenshot-001.png?raw=true)  
+![](https://github.com/madison-craig/dotfiles/blob/main/001.png?raw=true)  
 
 Dmenu, Kitty+Zsh, & Thunar:
-![](https://github.com/madison-craig/dotfiles/blob/main/screenshot-002.png?raw=true)  
+![](https://github.com/madison-craig/dotfiles/blob/main/002.png?raw=true)  
