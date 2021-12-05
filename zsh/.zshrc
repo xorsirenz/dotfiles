@@ -6,8 +6,8 @@ PS1="[%n:%F{cyan}%~%f]$ "
 
 # History
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 # language
 export LANG=en_US.UTF-8
