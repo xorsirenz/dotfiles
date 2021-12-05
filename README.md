@@ -1,4 +1,4 @@
-My rice isnt as good as jasmine's, but its still tasty!
+### Aren't dotfiles meant to be hidden? Welp it looks like I screwed up again.. 
 
 ### My Setup:
 🌸 **Window Manager** ➙ [DWM](https://dwm.suckless.org)  
