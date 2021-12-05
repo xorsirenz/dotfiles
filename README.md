@@ -1,4 +1,4 @@
-### Aren't dotfiles meant to be hidden? Welp it looks like I screwed up again.. 
+## Aren't dotfiles meant to be hidden? Welp it looks like I screwed up again.. 
 
 ### My Setup:
 🌸 **Window Manager** ➙ [DWM](https://dwm.suckless.org)  
