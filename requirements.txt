@@ -1,2 +1,9 @@
 playerctl
+xorg
+xorg-server
+xorg-xinit
+nitrogen
+picom
+firefox
+git
 xmag
