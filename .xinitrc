@@ -61,7 +61,7 @@ pulseaudio &
 picom &
 
 # polybar
-sleep 3s && polybar -r mybar2 &
+sleep 3s && polybar -r mybar &
 
 
 # numlock 
