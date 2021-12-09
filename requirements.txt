@@ -6,4 +6,5 @@ nitrogen
 picom
 firefox
 git
+xnumlock
 xmag
