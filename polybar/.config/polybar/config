@@ -20,13 +20,14 @@
 background = #222
 background-alt = #444
 foreground = #1aaba0
+#foreground = #51b8b8
 foreground-alt = 555
 primary = #222
 secondary = #eeeeee
 alert = #f6768e
 pink = #f6768e
 
-[bar/mybar2]
+[bar/mybar]
 #monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 25
@@ -63,12 +64,12 @@ modules-center = spotify-prev spotify-play-pause spotify-next
 modules-right = pulseaudio memory cpu battery date
 
 tray-position = center
-tray-detached = true
+#tray-detached = true
 tray-padding = 0
 tray-offset-x = 330
 tray-offset-y = 0
 tray-scale = 1.0
-;tray-background = #0063ff
+#tray-background = #0063ff
 
 override-redirect = false
 
