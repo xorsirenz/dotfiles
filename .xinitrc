@@ -61,8 +61,7 @@ pulseaudio &
 picom &
 
 # polybar
-sleep 3s && polybar -r mybar &
-
+sleep 3s && ./.config/polybar/launch.sh &
 
 # numlock 
 numlockx &
