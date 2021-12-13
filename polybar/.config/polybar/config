@@ -21,7 +21,7 @@ background = #222
 background-alt = #444
 foreground = #1aaba0
 #foreground = #51b8b8
-foreground-alt = 555
+foreground-alt = #555
 primary = #222
 secondary = #eeeeee
 alert = #f6768e
@@ -41,7 +41,7 @@ enable-ipc = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 line-color = #f00
 
 border-size = 5
@@ -54,8 +54,8 @@ module-margin-left = 1
 module-margin-right = 0
 
 
-font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
-font-1 = "Comic Sans MS:size=11:2"
+font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
+font-1 = "Jet Brains Mono:style=Solid:pixelsize=11;2"
 font-2 = "Noto Sans CJK JP"
 font-3 = "UbuntuMono Nerd Font:size=11;2"
 
@@ -63,13 +63,11 @@ modules-left = dwm
 modules-center = spotify-prev spotify-play-pause spotify-next
 modules-right = pulseaudio memory cpu battery date
 
-tray-position = center
-#tray-detached = true
-tray-padding = 0
-tray-offset-x = 330
-tray-offset-y = 0
+tray-position = right
+tray-detached = true
+tray-padding = 1
+tray-offset-x = -375
 tray-scale = 1.0
-#tray-background = #0063ff
 
 override-redirect = false
 
@@ -128,7 +126,7 @@ secondary-layout-symbol = []
 ; Available tokens:
 ;   %title%
 label-title = %title%
-label-title-padding = 1
+label-title-padding = 0
 label-title-foreground = ${colors.pink}
 label-title-maxlen = 30
 
@@ -153,13 +151,13 @@ label-focused-background = ${colors.background}
 label-focused-underline = ${colors.background}
 #label-focused-underline= ${colors.primary}
 label-focused-foreground = ${colors.pink}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
 label-unfocused-background = ${colors.background}
 label-unfocused-underline = ${colors.background} 
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
@@ -170,13 +168,13 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Unselected tag with window that has urgency hint set
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
 label-empty = %name%
 label-empty-background = ${colors.primary}
-label-empty-padding = 2
+label-empty-padding = 1
 
 [module/mpd]
 type = internal/mpd
