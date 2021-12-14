@@ -8,3 +8,6 @@ firefox
 git
 xnumlock
 xmag
+ranger
+feh
+thunar
