@@ -64,7 +64,7 @@ modules-right = pulseaudio memory cpu battery date powermenu
 tray-position = right
 tray-detached = true
 tray-padding = 1
-tray-offset-x = -340
+tray-offset-x = -350
 tray-scale = 1.0
 
 override-redirect = false
