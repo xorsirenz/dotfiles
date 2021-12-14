@@ -49,8 +49,8 @@ border-color = #00000000
 padding-left = 1
 padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 0
+module-margin-left = 0
+module-margin-right = 1
 
 
 font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
@@ -59,7 +59,7 @@ font-2 = "Noto Sans CJK JP"
 
 modules-left = dwm
 modules-center = spotify-prev spotify-play-pause spotify-next
-modules-right = pulseaudio memory cpu battery date
+modules-right = pulseaudio memory cpu battery date powermenu
 
 tray-position = right
 tray-detached = true
@@ -292,10 +292,27 @@ animation-discharging-framerate = 750
 
 [module/powermenu]
 type = custom/menu
-menu-0-0 = Poweroff
-menu-0-0-exec = poweroff
-menu-0-1 = Suspend
-menu-0-1-exec = systemctl suspend
+expand-right = true
+format-spacing = 0
+
+; main label
+label-open = 
+label-open-foreground = ${colors.pink}
+format-underline = ${colors.pink}
+
+; main close
+label-close = 
+label-close-foreground = ${colors.pink}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+; reboot
+menu-0-0 = 
+menu-0-0-exec = reboot
+
+; poweroff
+menu-0-1 = 
+menu-0-1-exec = poweroff
 
 [settings]
 screenchange-reload = true
