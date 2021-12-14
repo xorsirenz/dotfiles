@@ -17,5 +17,5 @@
 Default Screenshot:
 ![](https://github.com/madison-craig/dotfiles/blob/main/01.png?raw=true)  
 
-Dmenu, Kitty+Zsh, & Thunar:
+Dmenu, kitty+zsh, nvim & thunar:
 ![](https://github.com/madison-craig/dotfiles/blob/main/02.png?raw=true)  
