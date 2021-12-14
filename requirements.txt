@@ -9,5 +9,6 @@ git
 xnumlock
 xmag
 ranger
+w3m
 feh
 thunar
