@@ -28,7 +28,6 @@ alert = #f6768e
 pink = #f6768e
 
 [bar/mybar]
-#monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 25
 ;offset-x = 10%
@@ -55,9 +54,8 @@ module-margin-right = 0
 
 
 font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
-font-1 = "Jet Brains Mono:style=Solid:pixelsize=11;2"
+font-1 = "URW Gothic:style=Solid:pixelsize=11;2"
 font-2 = "Noto Sans CJK JP"
-font-3 = "UbuntuMono Nerd Font:size=11;2"
 
 modules-left = dwm
 modules-center = spotify-prev spotify-play-pause spotify-next
@@ -66,7 +64,7 @@ modules-right = pulseaudio memory cpu battery date
 tray-position = right
 tray-detached = true
 tray-padding = 1
-tray-offset-x = -375
+tray-offset-x = -325
 tray-scale = 1.0
 
 override-redirect = false
@@ -126,9 +124,9 @@ secondary-layout-symbol = []
 ; Available tokens:
 ;   %title%
 label-title = %title%
-label-title-padding = 0
+label-title-padding = 1
 label-title-foreground = ${colors.pink}
-label-title-maxlen = 30
+label-title-maxlen = 50
 
 ; Symbol of current layout
 ; Available tokens:
