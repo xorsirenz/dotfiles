@@ -15,7 +15,7 @@
 🌸 **Mouse Cursor** ➙ [Breeze](https://github.com/ful1e5/BreezeX_Cursor)  
 
 Default Screenshot:
-![](https://github.com/madison-craig/dotfiles/blob/main/01.png?raw=true)  
+![](https://github.com/madison-craig/dotfiles/blob/main/001.png?raw=true)  
 
 Dmenu, kitty+zsh, nvim & thunar:
 ![](https://github.com/madison-craig/dotfiles/blob/main/02.png?raw=true)  
