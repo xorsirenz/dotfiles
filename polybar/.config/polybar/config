@@ -247,7 +247,7 @@ format-charging-underline = ${colors.pink}
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.pink}
 format-full-underline = ${colors.pink}
 
