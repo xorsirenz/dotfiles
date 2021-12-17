@@ -59,7 +59,7 @@ font-2 = "Noto Sans CJK JP"
 
 modules-left = dwm
 modules-center = spotify-prev spotify-play-pause spotify-next
-modules-right = pulseaudio memory cpu battery date powermenu
+modules-right = pulseaudio cpu memory battery date powermenu
 
 tray-position = right
 tray-detached = true
@@ -298,7 +298,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
+pseudo-transparency = true
 
 [global/wm]
 margin-top = 5
