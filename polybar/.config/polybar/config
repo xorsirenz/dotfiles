@@ -57,7 +57,7 @@ font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 font-1 = "URW Gothic:style=Solid:pixelsize=12;2"
 font-2 = "Noto Sans CJK JP"
 
-modules-left = dwm
+modules-left = dwm title
 modules-center = spotify-prev spotify-play-pause spotify-next
 modules-right = pulseaudio cpu memory battery date powermenu
 
@@ -80,17 +80,14 @@ label = %title%
 [module/filesystem]
 type = internal/fs
 interval = 25
-
 mount-0 = /
-
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-
 [module/dwm]
 type = internal/dwm
-format = <label-tags> <label-title>
+format = <label-tags>
 #<label-layout> <label-floating> <label-title>
 ; Path to dwm socket (default: /tmp/dwm.sock)
 ; socket-path = /tmp/dwm.sock
@@ -120,13 +117,6 @@ secondary-layout-symbol = []
 ; Separator in between shown tags
 ; label-separator = | 
 
-; Title of currently focused window
-; Available tokens:
-;   %title%
-label-title = %title%
-label-title-padding = 1
-label-title-foreground = ${colors.pink}
-label-title-maxlen = 50
 
 ; Symbol of current layout
 ; Available tokens:
@@ -173,6 +163,18 @@ label-urgent-padding = 1
 label-empty = %name%
 label-empty-background = ${colors.primary}
 label-empty-padding = 1
+
+[module/title]
+type = internal/dwm
+format = <label-title>
+
+; Title of currently focused window
+; Available tokens:
+;   %title%
+label-title = %title%
+label-title-padding = 1
+label-title-foreground = ${colors.pink}
+label-title-maxlen = 50
 
 [module/mpd]
 type = internal/mpd
