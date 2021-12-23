@@ -1,0 +1,10 @@
+set statusbar-h-padding 1
+set statusbar-v-padding 1
+set page-padding 2
+set selection-clipboard clipboard
+map u scroll full-up
+map d scroll full-down
+map <C-t> scroll top
+map b scroll bottom
+map r reload
+map i recolor
