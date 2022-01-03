@@ -35,6 +35,8 @@ height = 25
 radius = 6.0
 fixed-center = true
 
+locale = pt_BR.UTF-8
+
 enable-ipc = true
 
 background = ${colors.background}
@@ -209,7 +211,7 @@ label = %gb_used%
 [module/date]
 type = internal/date
 interval = 5
-date = %d %b,
+date = %b %d (%a)
 time = %H:%M 
 
 format-prefix-foreground = ${colors.foreground-alt}
