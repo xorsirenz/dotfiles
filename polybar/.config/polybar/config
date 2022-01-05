@@ -338,3 +338,5 @@ exec = echo " "
 format = <label>
 format-foreground = ${colors.foreground-alt}
 click-left = playerctl --player=playerctld next
+
+; vim:ft=dosini
