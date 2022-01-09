@@ -25,7 +25,6 @@ source $HOME/.aliases
 
 # vi mode
 bindkey -v
-bindkey -e
 bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -55,6 +54,9 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 # case insensitive path-completion 
 zstyle ':completion:*' matcher-list  'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+
+#mcfly
+eval "$(mcfly init zsh)"
 
 # loading plugins - keep at end of file.
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
