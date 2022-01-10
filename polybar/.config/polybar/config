@@ -58,8 +58,8 @@ module-margin-right = 1
 font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
 font-1 = "URW Gothic:style=Solid:pixelsize=12;2"
 font-2 = "Noto Sans CJK JP"
-font-3 = "Symbols Nerd Fonts"
-modules-left = dwm title
+
+modules-left = round-left dwm round-right title
 modules-center = spotify-prev spotify-play-pause spotify-next
 modules-right = pulseaudio cpu memory battery date powermenu
 
@@ -202,7 +202,7 @@ label =%percentage%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
+format-prefix = " "
 format-prefix-foreground = ${colors.pink}
 format-underline = ${colors.pink}
 #label = %percentage_used%%
