@@ -10,14 +10,26 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
+
+    " File Tree
+    Plug 'kyazdani42/nvim-tree.lua'
+
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
+    
     " CoC
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'othree/html5.vim'
+    Plug 'antoinemadec/coc-fzf'
+    
+    " LuaLine Status Bar
+    Plug 'nvim-lualine/lualine.nvim'
+    
+    " Git
+    Plug 'tpope/vim-fugitive'
+    
     " Themes
-    Plug 'joshdick/onedark.vim'
+    Plug 'kyazdani42/nvim-web-devicons'
     Plug 'liuchengxu/space-vim-dark'
 
 

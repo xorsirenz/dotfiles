@@ -37,6 +37,8 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 "set autochdir                           " Your working directory will always be the same as your working directory
 set number relativenumber               " Sets cursor postion relative to line
 
+set termguicolors
+
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " hmm
