@@ -4,4 +4,4 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/themes/space-vim-dark.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/lualine.lua
-
+source $HOME/.config/nvim/nvim-tree.lua
