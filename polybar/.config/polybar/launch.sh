@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-BAR_NAME=main
+BAR_NAME=mybar
 
 IFS=$'\n'
 
