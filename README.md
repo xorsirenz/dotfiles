@@ -9,7 +9,7 @@
 🌸 **Shell** ➙ [ZSH](https://zsh.sourceforge.io/)  
 🌸 **Text Editor** ➙ [Neovim](https://neovim.io/)  
 🌸 **Browser** ➙ [Firefox](https://www.mozilla.org/en-US/)  
-🌸 **File manager** ➙ [Thunar](https://gitlab.xfce.org/xfce/thunar)  
+🌸 **File manager** ➙ [Ranger](https://github.com/ranger/ranger)  
 🌸 **Widget** ➙ [Kimi-dark-v40](https://github.com/EliverLara/Kimi)  
 🌸 **Icon Theme** ➙ [Tela-Circle](https://github.com/vinceliuice/Tela-circle-icon-theme)  
 🌸 **Mouse Cursor** ➙ [Breeze](https://github.com/ful1e5/BreezeX_Cursor)  
