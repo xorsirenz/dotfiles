@@ -322,15 +322,15 @@ exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
 
 [module/spotify-prev]
 type = custom/script
-exec = echo ""
+exec = echo " "
 format = <label>
 format-foreground = ${colors.foreground-alt}
 click-left = playerctl --player=playerctld previous
 
 [module/spotify-play-pause]
 type = custom/ipc
-hook-0 = echo ""
-hook-1 = echo ""
+hook-0 = echo " "
+hook-1 = echo " "
 format-foreground = ${colors.foreground-alt}
 format-padding = 1
 initial = 1
@@ -338,7 +338,7 @@ click-left = playerctl --player=playerctld play-pause
 
 [module/spotify-next]
 type = custom/script
-exec = echo " "
+exec = echo ""
 format = <label>
 format-foreground = ${colors.foreground-alt}
 click-left = playerctl --player=playerctld next
