@@ -20,7 +20,6 @@
 background = #222
 background-alt = #444
 foreground = #1aaba0
-#foreground = #51b8b8
 foreground-alt = #555
 primary = #222
 secondary = #eeeeee
@@ -55,19 +54,18 @@ module-margin-left = 0
 module-margin-right = 1
 
 
-font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=9;2"
+font-0 = "Hack Nerd Font:style=Solid:pixelsize=12;3"
 font-1 = "URW Gothic:style=Solid:pixelsize=12;2"
 font-2 = "Noto Sans CJK JP"
-font-3 = "Symbols Nerd Fonts"
 
 modules-left = dwm title
 modules-center = spotify-prev spotify-play-pause spotify-next
-modules-right = pulseaudio cpu memory battery date powermenu
+modules-right = date pulseaudio battery powermenu
 
 tray-position = right
 tray-detached = true
 tray-padding = 1
-tray-offset-x = -415
+tray-offset-x = -300
 tray-scale = 1.0
 
 override-redirect = false
@@ -177,7 +175,7 @@ format = <label-title>
 label-title = %title%
 label-title-padding = 1
 label-title-foreground = ${colors.pink}
-label-title-maxlen = 50
+label-title-maxlen = 40
 
 [module/mpd]
 type = internal/mpd
@@ -216,62 +214,67 @@ date = %b %d (%A)
 time = %H:%M 
 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.pink}
+#format-underline = ${colors.pink}
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume = <label-volume> 
-format-volume-prefix = " "
-format-volume-prefix-foreground = ${colors.pink}
-format-volume-prefix-background = #222
-format-volume-underline = ${colors.pink}
-label-volume =%percentage%%
-label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = " "
-format-muted-prefix-foreground = ${colors.pink}
-label-muted = "muted"
-label-muted-foreground = ${colors.foreground}
-format-muted-underline = ${colors.pink}
+format-volume = <ramp-volume> 
+format-volume-foreground = ${colors.pink}
+format-volume-prefix-background = #222
+#format-volume-underline = ${colors.pink}
+label-volume =%percentage%%
+label-ramp-volume-foreground = ${colors.pink}
+
+ramp-volume-0 = " "
+ramp-volume-1 = "墳 "
+ramp-volume-2 = " "
+
+label-muted = " "
+label-muted-foreground = ${colors.pink}
+#format-muted-underline = ${colors.pink}
 
 # right click
 click-right = pavucontrol
 
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = AC
-full-at = 99
-poll-interval = 5
+full-at = 98
+#poll-interval = 1
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.pink}
+#format-charging = 
+format-charging = <animation-charging>
+format-charging-foreground = ${colors.pink}
+#format-charging-underline = ${colors.pink}
 
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging = <ramp-capacity>
+#format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = ""
-format-full-prefix-foreground = ${colors.pink}
-format-full-underline = ${colors.pink}
+label-full = " "
+label-full-foreground = ${colors.pink}
 
-#ramp-capacity-0 = 
-#ramp-capacity-1 = 
-#ramp-capacity-2 = 
-#ramp-capacity-foreground = ${colors.pink}
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+ramp-capacity-5 = " "
+ramp-capacity-6 = " "
+ramp-capacity-7 = " "
+ramp-capacity-8 = " "
+ramp-capacity-9 = " "
+ramp-capacity-foreground = ${colors.pink}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = #ffb52a
-animation-charging-framerate = 750
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
+click-right = <lable-
 
 [module/powermenu]
 type = custom/menu
@@ -279,9 +282,9 @@ expand-right = false
 format-spacing = 1
 
 ; main label
-label-open = 
+label-open = ""
 label-open-foreground = ${colors.pink}
-format-underline = ${colors.pink}
+#format-underline = ${colors.pink}
 
 ; main close
 label-close = 
@@ -306,7 +309,7 @@ screenchange-reload = true
 pseudo-transparency = true
 
 [global/wm]
-margin-top = 5
+margin-top = 1
 margin-bottom = 1
 
 [module/spotify]
