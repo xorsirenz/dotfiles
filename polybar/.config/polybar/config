@@ -54,9 +54,9 @@ module-margin-left = 0
 module-margin-right = 1
 
 
-font-0 = "Hack Nerd Font:style=Solid:pixelsize=12;3"
-font-1 = "URW Gothic:style=Solid:pixelsize=12;2"
-font-2 = "Noto Sans CJK JP"
+font-0 = "URW Gothic:style=Solid:pixelsize=12;2"
+font-1 = "Noto Sans CJK JP"
+font-2 = "Hack Nerd Font:style=Solid:pixelsize=12;3"
 
 modules-left = dwm title
 modules-center = spotify-prev spotify-play-pause spotify-next
@@ -65,7 +65,7 @@ modules-right = date pulseaudio battery powermenu
 tray-position = right
 tray-detached = true
 tray-padding = 1
-tray-offset-x = -300
+tray-offset-x = -250
 tray-scale = 1.0
 
 override-redirect = false
@@ -211,7 +211,7 @@ label = %gb_used%
 type = internal/date
 interval = 5
 date = %b %d (%A)
-time = %H:%M 
+time = "%H:%M "  
 
 format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = ${colors.pink}
@@ -228,11 +228,11 @@ format-volume-prefix-background = #222
 label-volume =%percentage%%
 label-ramp-volume-foreground = ${colors.pink}
 
-ramp-volume-0 = " "
-ramp-volume-1 = "墳 "
-ramp-volume-2 = " "
+ramp-volume-0 = "  "
+ramp-volume-1 = "墳  "
+ramp-volume-2 = "  "
 
-label-muted = " "
+label-muted = "  "
 label-muted-foreground = ${colors.pink}
 #format-muted-underline = ${colors.pink}
 
@@ -282,12 +282,12 @@ expand-right = false
 format-spacing = 1
 
 ; main label
-label-open = ""
+label-open = " "
 label-open-foreground = ${colors.pink}
 #format-underline = ${colors.pink}
 
 ; main close
-label-close = 
+label-close = " "
 label-close-foreground = ${colors.pink}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
