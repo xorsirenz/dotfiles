@@ -60,12 +60,12 @@ font-2 = "Hack Nerd Font:style=Solid:pixelsize=12;3"
 
 modules-left = dwm title
 modules-center = spotify-prev spotify-play-pause spotify-next
-modules-right = date pulseaudio battery powermenu
+modules-right = battery-combined-udev pulseaudio calendar date powermenu
 
 tray-position = right
 tray-detached = true
 tray-padding = 1
-tray-offset-x = -250
+tray-offset-x = -275
 tray-scale = 1.0
 
 override-redirect = false
@@ -213,10 +213,19 @@ interval = 5
 date = %b %d (%A)
 time = "%H:%M "  
 
-format-prefix-foreground = ${colors.foreground-alt}
+#format-foreground = ${colors.pink}
 #format-underline = ${colors.pink}
 
 label = %date% %time%
+
+[module/calendar]
+type = custom/script
+label-foreground = ${colors.pink}
+label = "ﭷ "
+exec = echo ﭷ
+click-left = ~/.config/polybar/scripts/calendar curr
+scroll-up =  ~/.config/polybar/scripts/calendar next
+scroll-down = ~/.config/polybar/scripts/calendar prev
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -274,7 +283,11 @@ animation-charging-1 = " "
 animation-charging-2 = " "
 animation-charging-3 = " "
 
-click-right = <lable-
+[module/battery-combined-udev]
+type = custom/script
+format-foreground = ${colors.pink}
+exec = ~/.config/polybar/scripts/battery-combined-udev.sh
+tail = true
 
 [module/powermenu]
 type = custom/menu
