@@ -1,4 +1,8 @@
-alias ls='ls --color=tty'
+#!/bin/sh
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
 alias df='df -h'
 alias ll='ls -lh'
 alias z='zathura'
