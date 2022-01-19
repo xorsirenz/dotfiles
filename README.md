@@ -5,6 +5,7 @@
 🌸 **Menu** ➙ [Dmenu](https://tools.suckless.org/dmenu/)  
 🌸 **Bar** ➙ [Polybar](https://github.com/polybar/polybar)  
 🌸 **Compositor** ➙ [Picom (ibhagwan fork)](https://github.com/ibhagwan/picom)  
+🌸 **Notifications** ➙ [Dunst](https://dunst-project.org/)  
 🌸 **Terminal** ➙ [Kitty](https://github.com/kovidgoyal/kitty)  
 🌸 **Shell** ➙ [ZSH](https://zsh.sourceforge.io/)  
 🌸 **Text Editor** ➙ [Neovim](https://neovim.io/)  
