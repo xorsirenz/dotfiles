@@ -20,3 +20,7 @@ Default Screenshot:
 
 Dmenu, kitty+zsh, nvim & ranger:
 ![](https://github.com/madison-craig/dotfiles/blob/main/002.png?raw=true)  
+
+Thunar, btop & Dunst (calendar notification from polybar action)
+![](https://github.com/madison-craig/dotfiles/blob/main/003.png?raw=true)  
+
