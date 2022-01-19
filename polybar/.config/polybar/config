@@ -15,76 +15,127 @@
 ;   The README contains a lot of information
 ;
 ;==========================================================
+; Include Modules
+[section/base]
+include-file = ~/.config/polybar/colors
 
-[colors]
-background = #222
-background-alt = #444
-foreground = #1aaba0
-foreground-alt = #555
-primary = #222
-secondary = #eeeeee
-alert = #f6768e
-pink = #f6768e
-
-[bar/mybar]
-width = 100%
+[bar/workspace]
+width = 20%
 height = 25
-;offset-x = 10%
-;offset-y = 10%
-radius = 6.0
+offset-x = 0%
+offset-y = 0.5%
+radius = 0.0
 fixed-center = true
+
+enable-ipc = true
+
+background = ${colors.transparent}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+
+border-size = 0
+border-color = ${colors.transparent}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = "Noto Sans CJK JP:pixelsize=14;2"
+
+modules-left = dwm
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/time]
+width = 20%
+height = 25
+offset-x = 40%
+offset-y = 0.5%
+radius = 0.0
+fixed-center = true
+
+enable-ipc = true
+
+locale = pt_BR.UTF-8
+
+background = ${colors.transparent}
+foreground = ${colors.white}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-color = ${colors.transparent}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = "URW Gothic:style=Bold:pixelsize=14;2"
+font-1 = "Hack Nerd Font:style=Solid:pixelsize=14;3"
+
+modules-center = calendar date
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/settings]
+width = 25%
+height = 25
+offset-x = 75%
+offset-y = 0%
+radius = 6.0
+fixed-center = false
 
 locale = pt_BR.UTF-8
 
 enable-ipc = true
 
-background = ${colors.background}
+background = ${colors.transparent}
 foreground = ${colors.foreground}
 
 line-size = 2
 line-color = #f00
 
 border-size = 5
-border-color = #00000000
+border-color = ${colors.transparent}
 
 padding-left = 1
 padding-right = 1
 
-module-margin-left = 0
+module-margin-left = 1
 module-margin-right = 1
 
-
-font-0 = "URW Gothic:style=Solid:pixelsize=12;2"
+font-0 = "URW Gothic:style=Solid:pixelsize=14;2"
 font-1 = "Noto Sans CJK JP"
-font-2 = "Hack Nerd Font:style=Solid:pixelsize=12;3"
+font-2 = "Hack Nerd Font:style=Solid:pixelsize=14;3"
 
-modules-left = dwm title
-modules-center = spotify-prev spotify-play-pause spotify-next
-modules-right = battery-combined-udev pulseaudio calendar date powermenu
+modules-right = pulseaudio battery powermenu
 
 tray-position = right
 tray-detached = true
 tray-padding = 1
-tray-offset-x = -275
+tray-offset-x = -200
 tray-scale = 1.0
 
 override-redirect = false
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-[module/xwindow]
-type = internal/xwindow
-label = %title%
-;label = %title:0:30:...%
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-mount-0 = /
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/dwm]
 type = internal/dwm
@@ -125,7 +176,7 @@ secondary-layout-symbol = []
 label-layout = %symbol%
 label-layout-padding = 0
 label-layout-foreground = #000
-label-layout-background = ${colors.primary}
+label-layout-background = ${colors.transparent}
 
 ; Text to show when currently focused window is floating
 #label-floating = F
@@ -136,16 +187,16 @@ label-layout-background = ${colors.primary}
 
 ; focused = Selected tag on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.background}
-label-focused-underline = ${colors.background}
+label-focused-background = ${colors.transparent}
+label-focused-underline = ${colors.transparent}
 #label-focused-underline= ${colors.primary}
 label-focused-foreground = ${colors.pink}
 label-focused-padding = 1
 
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
-label-unfocused-background = ${colors.background}
-label-unfocused-underline = ${colors.background} 
+label-unfocused-background = ${colors.transparent}
+label-unfocused-underline = ${colors.transparent} 
 label-unfocused-padding = 1
 
 ; visible = Unselected tag, but occupied tag on any monitor
@@ -162,7 +213,7 @@ label-urgent-padding = 1
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
 label-empty = %name%
-label-empty-background = ${colors.primary}
+label-empty-background = ${colors.transparent}
 label-empty-padding = 1
 
 [module/title]
@@ -174,38 +225,8 @@ format = <label-title>
 ;   %title%
 label-title = %title%
 label-title-padding = 1
-label-title-foreground = ${colors.pink}
+label-title-foreground = ${colors.white}
 label-title-maxlen = 40
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.pink}
-format-underline = ${colors.pink}
-label =%percentage%%
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.pink}
-format-underline = ${colors.pink}
-#label = %percentage_used%%
-label = %gb_used%
 
 [module/date]
 type = internal/date
@@ -220,32 +241,58 @@ label = %date% %time%
 
 [module/calendar]
 type = custom/script
-label-foreground = ${colors.pink}
-label = "ﭷ "
+label-foreground = ${colors.white}
+label = "ﭷ"
 exec = echo ﭷ
 click-left = ~/.config/polybar/scripts/calendar curr
 scroll-up =  ~/.config/polybar/scripts/calendar next
 scroll-down = ~/.config/polybar/scripts/calendar prev
 
+[module/volume]
+type = internal/pulseaudio
+format-volume = <bar-volume>
+format-volume-background = ${colors.background}
+format-volume-padding = 1
+
+format-muted = <label-muted>
+format-muted-prefix = 婢
+format-muted-background = ${colors.background}
+format-muted-padding = 1
+
+label-volume = %percentage%%
+
+label-muted = " Muted"
+label-muted-foreground = ${colors.foreground}
+
+bar-volume-width = 10
+bar-volume-gradient = false
+
+bar-volume-indicator = ${bar.indicator}
+bar-volume-indicator-foreground = ${colors.foreground-alt}
+
+bar-volume-fill = ${bar.fill}
+bar-volume-foreground-0 = ${colors.foreground}
+bar-volume-foreground-1 = ${colors.foreground}
+bar-volume-foreground-2 = ${colors.foreground}
+
+bar-volume-empty = ${bar.empty}
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <ramp-volume> 
-format-volume-foreground = ${colors.pink}
-format-volume-prefix-background = #222
-#format-volume-underline = ${colors.pink}
+format-volume = <ramp-volume> <label-volume> 
+format-volume-foreground = ${colors.white}
 label-volume =%percentage%%
 label-ramp-volume-foreground = ${colors.pink}
 
-ramp-volume-0 = "  "
-ramp-volume-1 = "墳  "
-ramp-volume-2 = "  "
+ramp-volume-0 = " "
+ramp-volume-1 = "墳 "
+ramp-volume-2 = " "
 
-label-muted = "  "
-label-muted-foreground = ${colors.pink}
-#format-muted-underline = ${colors.pink}
+label-muted = "   00%"
+label-muted-foreground = ${colors.white}
 
-# right click
 click-right = pavucontrol
 
 [module/battery]
@@ -255,16 +302,19 @@ adapter = AC
 full-at = 98
 #poll-interval = 1
 
-#format-charging = 
-format-charging = <animation-charging>
-format-charging-foreground = ${colors.pink}
+format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${colors.white}
 #format-charging-underline = ${colors.pink}
 
-format-discharging = <ramp-capacity>
+format-discharging = <ramp-capacity> <label-discharging>
 #format-discharging-underline = ${self.format-charging-underline}
 
-label-full = " "
-label-full-foreground = ${colors.pink}
+label-full = 
+label-full-foreground = ${colors.white}
+label-charging = %percentage%%
+label-charging-foreground = ${colors.white}
+label-discharging = %percentage%%
+label-discharging-foreground = ${colors.white}
 
 ramp-capacity-0 = " "
 ramp-capacity-1 = " "
@@ -285,7 +335,7 @@ animation-charging-3 = " "
 
 [module/battery-combined-udev]
 type = custom/script
-format-foreground = ${colors.pink}
+format-foreground = ${colors.white}
 exec = ~/.config/polybar/scripts/battery-combined-udev.sh
 tail = true
 
@@ -296,12 +346,12 @@ format-spacing = 1
 
 ; main label
 label-open = " "
-label-open-foreground = ${colors.pink}
+label-open-foreground = ${colors.alert}
 #format-underline = ${colors.pink}
 
 ; main close
 label-close = " "
-label-close-foreground = ${colors.pink}
+label-close-foreground = ${colors.alert}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
@@ -315,15 +365,7 @@ menu-0-1-exec = poweroff
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
 pseudo-transparency = true
-
-[global/wm]
-margin-top = 1
-margin-bottom = 1
 
 [module/spotify]
 type = custom/script
@@ -351,7 +393,7 @@ click-left = playerctl --player=playerctld play-pause
 
 [module/spotify-next]
 type = custom/script
-exec = echo ""
+exec = echo " "
 format = <label>
 format-foreground = ${colors.foreground-alt}
 click-left = playerctl --player=playerctld next
