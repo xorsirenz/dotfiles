@@ -14,22 +14,22 @@
 /* ----- Avoids white flash ----- */
 #tabbrowser-tabpanels {background-color: var(--uc-light-bkgnd-color, var(--color1)) !important;}
 
-/* ----- bookmarks items centering ----- */
+/* ----- bookmarks items left align ----- */
 #PlacesToolbarItems {
   display: flex !important;
   justify-content: left !important;
 }
 
 /* order of bars */
-#navigator-toolbox #nav-bar {
+#titlebar {
   -moz-box-ordinal-group: 0 !important;
-  background-color: transparent !important;
 }
 #navigator-toolbox #toolbar-menubar {
   -moz-box-ordinal-group: 1 !important;
 }
-#titlebar {
+#navigator-toolbox #nav-bar {
   -moz-box-ordinal-group: 2 !important;
+  background-color: transparent !important;
 }
 #PersonalToolbar {
   -moz-box-ordinal-group: 3 !important;
@@ -75,7 +75,7 @@
 
 /* non active tabs have darker text */
 .tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover) {
-  color: #717171 !important;
+  color: #a7a7a7 !important;
 }
 
 /* icons */
