@@ -35,7 +35,6 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-
 border-size = 0
 border-color = ${colors.transparent}
 
@@ -234,9 +233,6 @@ interval = 5
 date = %b %d (%A)
 time = "%H:%M "  
 
-#format-foreground = ${colors.pink}
-#format-underline = ${colors.pink}
-
 label = %date% %time%
 
 [module/calendar]
@@ -247,36 +243,6 @@ exec = echo ﭷ
 click-left = ~/.config/polybar/scripts/calendar curr
 scroll-up =  ~/.config/polybar/scripts/calendar next
 scroll-down = ~/.config/polybar/scripts/calendar prev
-
-[module/volume]
-type = internal/pulseaudio
-format-volume = <bar-volume>
-format-volume-background = ${colors.background}
-format-volume-padding = 1
-
-format-muted = <label-muted>
-format-muted-prefix = 婢
-format-muted-background = ${colors.background}
-format-muted-padding = 1
-
-label-volume = %percentage%%
-
-label-muted = " Muted"
-label-muted-foreground = ${colors.foreground}
-
-bar-volume-width = 10
-bar-volume-gradient = false
-
-bar-volume-indicator = ${bar.indicator}
-bar-volume-indicator-foreground = ${colors.foreground-alt}
-
-bar-volume-fill = ${bar.fill}
-bar-volume-foreground-0 = ${colors.foreground}
-bar-volume-foreground-1 = ${colors.foreground}
-bar-volume-foreground-2 = ${colors.foreground}
-
-bar-volume-empty = ${bar.empty}
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -297,17 +263,16 @@ click-right = pavucontrol
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = AC
 full-at = 98
 #poll-interval = 1
 
 format-charging = <animation-charging> <label-charging>
 format-charging-foreground = ${colors.white}
-#format-charging-underline = ${colors.pink}
 
 format-discharging = <ramp-capacity> <label-discharging>
-#format-discharging-underline = ${self.format-charging-underline}
+format-discharging-foreground = ${colors.white}
 
 label-full = 
 label-full-foreground = ${colors.white}
