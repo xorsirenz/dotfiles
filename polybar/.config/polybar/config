@@ -206,7 +206,8 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Unselected tag with window that has urgency hint set
 label-urgent = %name%
-label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.white}
+label-urgent-background = ${colors.transparent}
 label-urgent-padding = 1
 
 ; empty = Unselected and unoccupied tag
