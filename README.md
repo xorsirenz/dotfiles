@@ -24,3 +24,5 @@ Thunar, btop & Dunst (calendar notification from polybar action):
 Dmenu, kitty+zsh, nvim & ranger:
 ![](https://github.com/madison-craig/dotfiles/blob/main/003.png?raw=true)  
 
+Firefox:
+![](https://github.com/madison-craig/dotfiles/blob/main/004.png?raw=true)  
