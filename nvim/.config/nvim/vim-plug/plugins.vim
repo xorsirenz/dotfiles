@@ -30,7 +30,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     " Themes
     Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'psliwka/termcolors.nvim'
+    Plug 'liuchengxu/space-vim-dark'
+    "Plug 'psliwka/termcolors.nvim'
 
 
 call plug#end()
