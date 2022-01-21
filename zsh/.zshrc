@@ -1,5 +1,9 @@
 export SHELL=/bin/zsh
 export EDITOR=vim
+
+# import colorscheme from wal
+(wal -r &)
+
 #enable colors and change prompt
 autoload -U colors && colors
 PS1="[%n:%F{cyan}%~%f]$ "
@@ -24,7 +28,7 @@ unsetopt beep
 source $HOME/.aliases
 
 # vi mode
-bindkey -v
+#bindkey -v
 bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
