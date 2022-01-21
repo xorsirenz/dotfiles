@@ -11,6 +11,8 @@ battery_print() {
     battery_max_0=0
     battery_max_1=0
 
+    charging=
+
     if [ -f "$PATH_AC/online" ]; then
         ac=$(cat "$PATH_AC/online")
     fi
@@ -38,12 +40,15 @@ battery_print() {
     battery_percent=$(("$battery_percent / $battery_max"))
 
     if [ "$ac" -eq 1 ]; then
-        icon=" "
+        icon=""
 
         if [ "$battery_percent" -gt 97 ]; then
             echo "$icon"
         else
-            echo "$icon $battery_percent %"
+            for (( i=0; i<${#charging}; i++ )); do
+                echo "${charging:$i:1} $battery_percent%"
+                sleep 1
+            done
         fi
     else
         if [ "$battery_percent" -gt 85 ]; then
@@ -55,7 +60,7 @@ battery_print() {
         elif [ "$battery_percent" -gt 10 ]; then
             icon=""
         else
-            icon=""
+            icon=""
         fi
 
         echo "$icon $battery_percent %"
@@ -81,7 +86,7 @@ case "$1" in
         while true; do
             battery_print
 
-            sleep 30 &
+            sleep 1 &
             wait
         done
         ;;
