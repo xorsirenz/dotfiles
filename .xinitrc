@@ -61,18 +61,24 @@ nitrogen --restore &
 pulseaudio &
 
 # compositor
-# picom &
+picom &
 
 # numlock 
 numlockx &
+
+# start dunst notification daemon
+dunst &
+
+# sets colorscheme based on background
+wal -i "$(< "${HOME}/.cache/wal/wal")"
 
 # terminal
 (sleep 1s && "/usr/bin/kitty") &
 
 # loop
-while true; do
-    dwm >/dev/null 2>&1
-done
+#while true; do
+#    dwm >/dev/null 2>&1
+#done
 
 # execute dwm
 exec dwm
