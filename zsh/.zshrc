@@ -1,9 +1,6 @@
 export SHELL=/bin/zsh
 export EDITOR=vim
 
-# import colorscheme from wal
-(wal -r &)
-
 #enable colors and change prompt
 autoload -U colors && colors
 PS1="[%n:%F{cyan}%~%f]$ "
