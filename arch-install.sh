@@ -16,11 +16,14 @@ function CYAN(){
   echo -e "\n${CYAN}${1}${NC}"
 }
 
-# Script turned off until testing is finished
-CYAN "This script is turned off until testing is completed."
-exit 1
 
 CYAN "Madison's Arch (with dwm+polybar) install script, Hope you enjoy!"
+
+# Script turned off until testing is finished
+CYAN "This script is turned off until testing is completed."
+CYAN "If you wish to run this script anyways, open up this file in a text editor and remove line 25: exit 1, and it should run."
+exit 1
+
 
 sleep 1
 
@@ -181,4 +184,5 @@ chsh -s $(which zsh)
 sleep 1
 
 CYAN "Please reboot your system now for all changes to take effect."
+CYAN "After rebooting, open up nvim and in command mode type :PlugInstall  - Wait for the Plugins to install and then exit nvim"
 
