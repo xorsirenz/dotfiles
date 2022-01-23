@@ -122,7 +122,7 @@ mkdir -p ~/.config/
     cp ./wallpapers/024.png ~/Pictures/wallpapers/;
   else
     CYAN "Installing wallpaper to ~/Pictures/wallpapers/ directory.."
-    cp ./wallpapers/024.png ~/Pictures/wallpapers/;
+    mkdir ~/Pictures/wallpapers/ && cp ./wallpapers/024.png ~/Pictures/wallpapers/;
   fi
   if [ -f ~/.xinitrc ]; then
     CYAN "Backing up & installing new .xinitrc config.."
