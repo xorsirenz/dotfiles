@@ -92,20 +92,20 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 
-[bar/settings]
-width = 25%
+[bar/main]
+width = 100%
 height = 25
-offset-x = 75%
+offset-x = 0%
 offset-y = 0%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 locale = pt_BR.UTF-8
 
 enable-ipc = true
 
 background = ${colors.transparent}
-foreground = ${colors.foreground}
+foreground = ${colors.cyan}
 
 line-size = 2
 line-color = #f00
@@ -123,6 +123,8 @@ font-0 = "URW Gothic:style=Solid:pixelsize=14;2"
 font-1 = "Noto Sans CJK JP"
 font-2 = "Hack Nerd Font:style=Solid:pixelsize=14;3"
 
+modules-left = dwm
+modules-center = calendar date
 modules-right = pulseaudio battery-combined-ramp-udev powermenu
 
 tray-position = right
@@ -194,6 +196,7 @@ label-focused-padding = 1
 
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
+label-unfocused-foreground = ${colors.cyan}
 label-unfocused-background = ${colors.transparent}
 label-unfocused-underline = ${colors.transparent} 
 label-unfocused-padding = 1
@@ -213,6 +216,7 @@ label-urgent-padding = 1
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
 label-empty = %name%
+label-empty-foreground = ${colors.cyan}
 label-empty-background = ${colors.transparent}
 label-empty-padding = 1
 
