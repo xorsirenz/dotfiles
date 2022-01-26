@@ -1,8 +1,6 @@
 #!/usr/bin/sh
 
 BAR_NAME=main
-BAR_NAME1=time
-BAR_NAME2=settings
 
 IFS=$'\n'
 
