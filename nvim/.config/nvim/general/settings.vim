@@ -1,5 +1,6 @@
 " set leader key
 let g:mapleader = "\<Space>"
+let g:indent_blankline_enabled = 0
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -44,3 +45,13 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 
 " hmm
 cmap w!! w !sudo tee %
+
+
+" Indentation
+lua << EOF
+vim.opt.list = true
+
+require("indent_blankline").setup {
+    show_end_of_line = true,
+}
+EOF

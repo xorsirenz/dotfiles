@@ -21,7 +21,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'othree/html5.vim'
     Plug 'antoinemadec/coc-fzf'
-    
+   
+    " Indentation
+    Plug 'lukas-reineke/indent-blankline.nvim'
+
     " LuaLine Status Bar
     Plug 'nvim-lualine/lualine.nvim'
     
@@ -30,8 +33,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     " Themes
     Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'liuchengxu/space-vim-dark'
-    "Plug 'psliwka/termcolors.nvim'
 
 
 call plug#end()
