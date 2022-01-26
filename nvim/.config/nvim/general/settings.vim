@@ -55,3 +55,15 @@ require("indent_blankline").setup {
     show_end_of_line = true,
 }
 EOF
+
+" Bufferline
+lua << EOF
+require("bufferline").setup{
+offsets = {
+    filetype = "NvimTree",
+    text = "File Explorer",
+    highlight = "Directory",
+    text_align = "left"
+  }
+}
+EOF
