@@ -51,3 +51,4 @@ Firefox:
 | `Mod + Shift + =`          | Remove gaps                              |
 | `Mod + w`                  | Spawn broswer (firefox)                  |
 | `Mod + Shift + d`          | Spawn discord                            |
+| `Mod + Shift + m`          | Spawn Matrix (element)                   |
