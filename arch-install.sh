@@ -31,7 +31,7 @@ CYAN "Updating the system.."
 sudo pacman --noconfirm -Syu
 
 CYAN "Installing base system & needed packages for base install.."
-sudo pacman --noconfirm -S base-devel git kitty wget xdg-utils xorg xorg-server xorg-xinit yajl zsh
+sudo pacman --noconfirm -S base-devel git kitty pacman-contrib wget xdg-utils xorg xorg-server xorg-xinit yajl zsh
 
 CYAN "Installing Yay.."
 git clone https://aur.archlinux.org/yay.git /opt/
