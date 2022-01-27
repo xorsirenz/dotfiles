@@ -52,7 +52,7 @@ font-2 = "Hack Nerd Font:style=Solid:pixelsize=14;3"
 
 modules-left = dwm
 modules-center = calendar date
-modules-right = pulseaudio battery-combined-ramp-udev powermenu
+modules-right = updates pulseaudio battery-combined-ramp-udev powermenu
 
 tray-position = right
 tray-detached = true
@@ -198,6 +198,12 @@ type = custom/script
 format-foreground = ${colors.white}
 exec = ~/.config/polybar/scripts/battery-combined-ramp-udev.sh
 tail = true
+
+[module/updates]
+type = custom/script
+format-foreground = ${colors.white}
+exec = ~/.config/polybar/scripts/updates.sh
+interval = 600
 
 [module/powermenu]
 type = custom/menu
