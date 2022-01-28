@@ -1,4 +1,4 @@
-### Aren't dotfiles meant to be hidden? Welp it looks like I screwed up again.. 
+## Aren't dotfiles meant to be hidden? Welp it looks like I screwed up again.. 
 
 ### My Setup:
 🌸 **Window Manager** ➙ [DWM](https://dwm.suckless.org)  
@@ -52,3 +52,5 @@ Firefox:
 | `Mod + w`                  | Spawn broswer (firefox)                  |
 | `Mod + Shift + d`          | Spawn discord                            |
 | `Mod + Shift + m`          | Spawn Matrix (element)                   |
+
+Hint: `Mod` key is set to the `Win` / `Super` key.
