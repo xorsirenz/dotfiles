@@ -46,6 +46,7 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 " hmm
 cmap w!! w !sudo tee %
 
+set ft=nasm
 
 " Indentation
 lua << EOF
@@ -59,11 +60,8 @@ EOF
 " Bufferline
 lua << EOF
 require("bufferline").setup{
-offsets = {
-    filetype = "NvimTree",
-    text = "File Explorer",
-    highlight = "Directory",
-    text_align = "left"
+options = {
+  separator_style = "thin"
   }
 }
 EOF
