@@ -203,7 +203,7 @@ tail = true
 type = custom/script
 format-foreground = ${colors.white}
 exec = ~/.config/polybar/scripts/pkgupdates.sh
-interval = 5
+interval = 300
 
 [module/powermenu]
 type = custom/menu
