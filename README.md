@@ -1,7 +1,7 @@
 ### Aren't dotfiles meant to be hidden? Welp it looks like I screwed up again.. 
 
 ### My Setup:
-🌸 **Moddow Manager** ➙ [DWM](https://dwm.suckless.org)  
+🌸 **Window Manager** ➙ [DWM](https://dwm.suckless.org)  
 🌸 **Menu** ➙ [Dmenu](https://tools.suckless.org/dmenu/)  
 🌸 **Bar** ➙ [Polybar](https://github.com/polybar/polybar)  
 🌸 **Compositor** ➙ [Picom (ibhagwan fork)](https://github.com/ibhagwan/picom)  
