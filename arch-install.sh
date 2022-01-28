@@ -33,15 +33,15 @@ sudo pacman --noconfirm -Syu
 CYAN "Installing base system & needed packages for base install.."
 sudo pacman --noconfirm -S base-devel git kitty pacman-contrib wget xdg-utils xorg xorg-server xorg-xinit yajl zsh
 
-CYAN "Installing Yay.."
-git clone https://aur.archlinux.org/yay.git /opt/
-cd /opt/yay-git && makepkg -si && cd ~/dotfiles/
+CYAN "Installing Paru.."
+git clone https://aur.archlinux.org/paru.git /opt/
+cd /opt/paru && makepkg -si && cd ~/dotfiles/
 
 CYAN "Installing polybar for dwm.."
-yay --noconfirm -S polybar-dwm-module
+paru --noconfirm -S polybar-dwm-module
 
 CYAN "Installing ibhagwan picom fork.."
-yay --noconfirm -S picom-ibhagwan-git
+paru --noconfirm -S picom-ibhagwan-git
 
 # installing fonts
 sudo pacman --noconfirm -S noto-fonts noto-fonts-extra noto-fonts-cjk gsfonts nerd-fonts-complete 
