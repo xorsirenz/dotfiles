@@ -54,3 +54,5 @@ Firefox:
 | `Mod + Shift + m`          | Spawn Matrix (element)                   |
 
 Hint: `Mod` key is set to the `Win` / `Super` key.
+
+### Some Vim keybinds:
