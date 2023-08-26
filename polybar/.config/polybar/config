@@ -162,8 +162,8 @@ label-title-maxlen = 40
 [module/date]
 type = internal/date
 interval = 5
-date = "%a %m/%d"
 time = "%H:%M "  
+date = "%b %e"
 label = %time% %date%
 format-foreground = ${colors.white}
 
