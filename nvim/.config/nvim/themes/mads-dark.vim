@@ -1,7 +1,7 @@
 " Vim color file
 "
 " Author: Madison Craig
-" URL: https://github.com/madison-craig/dotfiles/blob/main/nvim/.config/nvim/themes/mads-dark.vim
+" URL: https://github.com/madison-isa/dotfiles/blob/main/nvim/.config/nvim/themes/mads-dark.vim
 "
 " Note: Inspired by space-dark-vim theme
 
