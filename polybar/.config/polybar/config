@@ -32,12 +32,12 @@ locale = pt_BR.UTF-8
 enable-ipc = true
 
 background = ${colors.transparent}
-foreground = ${colors.cyan}
+foreground = ${colors.peach}
 
-line-size = 2
+line-size = 1
 line-color = #f00
 
-border-size = 5
+border-size = 1
 border-color = ${colors.transparent}
 
 padding-left = 1
@@ -51,13 +51,13 @@ font-1 = "Noto Sans CJK JP"
 font-2 = "Hack Nerd Font:style=Solid:pixelsize=14;3"
 
 modules-left = dwm
-modules-center = calendar date
+modules-center = date calendar
 modules-right = pkgupdates pulseaudio battery-combined-ramp-udev powermenu
 
-tray-position = right
+tray-position = left
 tray-detached = true
 tray-padding = 1
-tray-offset-x = -200
+tray-offset-x = 240
 tray-scale = 1.0
 
 override-redirect = false
@@ -118,12 +118,12 @@ label-focused = %name%
 label-focused-background = ${colors.transparent}
 label-focused-underline = ${colors.transparent}
 #label-focused-underline= ${colors.primary}
-label-focused-foreground = ${colors.pink}
+label-focused-foreground = ${colors.white}
 label-focused-padding = 1
 
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
-label-unfocused-foreground = ${colors.cyan}
+label-unfocused-foreground = ${colors.peach}
 label-unfocused-background = ${colors.transparent}
 label-unfocused-underline = ${colors.transparent} 
 label-unfocused-padding = 1
@@ -143,7 +143,7 @@ label-urgent-padding = 1
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
 label-empty = %name%
-label-empty-foreground = ${colors.cyan}
+label-empty-foreground = ${colors.peach}
 label-empty-background = ${colors.transparent}
 label-empty-padding = 1
 
@@ -162,16 +162,16 @@ label-title-maxlen = 40
 [module/date]
 type = internal/date
 interval = 5
-date = %b %d (%A)
+date = "%a %m/%d"
 time = "%H:%M "  
-label = %date% %time%
+label = %time% %date%
 format-foreground = ${colors.white}
 
 [module/calendar]
 type = custom/script
 label-foreground = ${colors.white}
-label = "ﭷ"
-exec = echo ﭷ
+label = " "
+exec = echo 
 click-left = ~/.config/polybar/scripts/calendar curr
 scroll-up =  ~/.config/polybar/scripts/calendar next
 scroll-down = ~/.config/polybar/scripts/calendar prev
@@ -179,16 +179,16 @@ scroll-down = ~/.config/polybar/scripts/calendar prev
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <ramp-volume> <label-volume> 
+format-volume = <ramp-volume>
 format-volume-foreground = ${colors.white}
 label-volume =%percentage%%
-label-ramp-volume-foreground = ${colors.pink}
+label-ramp-volume-foreground = ${colors.gray}
 
-ramp-volume-0 = " "
-ramp-volume-1 = "墳 "
-ramp-volume-2 = " "
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
 
-label-muted = "   00%"
+label-muted = ""
 label-muted-foreground = ${colors.white}
 
 click-right = pavucontrol
@@ -213,7 +213,7 @@ format-spacing = 1
 ; main label
 label-open = " "
 label-open-foreground = ${colors.alert}
-#format-underline = ${colors.pink}
+#format-underline = ${colors.gray}
 
 ; main close
 label-close = " "
