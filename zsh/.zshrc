@@ -1,5 +1,6 @@
 export SHELL=/bin/zsh
 export EDITOR=vim
+export PATH="$HOME/bin:$PATH"
 
 #enable colors and change prompt
 autoload -U colors && colors
@@ -12,16 +13,11 @@ SAVEHIST=10000
 
 # language
 export LANG=en_US.UTF-8
-
-# don't throw errors when file gobs don't match anything
+# globstoppers
 setopt NULL_GLOB
 setopt NO_NULL_GLOB
 setopt GLOB_COMPLETE
-
-# turn off beep
-unsetopt beep
-
-# custom aliases
+unsetopt beep #turn off beep
 source $HOME/.aliases
 
 # vi mode
@@ -29,10 +25,8 @@ source $HOME/.aliases
 bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/madison/.zshrc'
-
-# auto complete
-autoload -Uz compinit && compinit
+zstyle :compinstall filename '/home/kyli0x/.zshrc'
+autoload -Uz compinit && compinit #auto complete
 
 # the gits
 autoload -Uz add-zsh-hook vcs_info
@@ -53,12 +47,12 @@ zstyle ':vcs_info:*' stagedstr ' +'
 zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
-# case insensitive path-completion 
+#case insensitive path-completion 
 zstyle ':completion:*' matcher-list  'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
 #mcfly
 eval "$(mcfly init zsh)"
 
-# loading plugins - keep at end of file.
+#loading plugins - keep at end of file.
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
