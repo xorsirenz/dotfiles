@@ -30,7 +30,7 @@ Firefox:
 | -------------------------- | ---------------------------------------- |
 | `Mod + Enter`              | Spawn Terminal (Kitty)                   |
 | `Mod + Shift + q`          | Quit window                              |
-| `Mod + Shift + q`          | Kill dwm                                 |
+| `Mod + Ctrl + q`           | Kill dwm                                 |
 | `Mod + d`                  | Launch dmenu                             |
 | `Mod + Shift + Enter`      | Swap master window                       |
 | `Mod + j`                  | Focus next stacked window                |
