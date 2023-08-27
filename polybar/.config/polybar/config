@@ -57,7 +57,7 @@ modules-right = pkgupdates pulseaudio battery-combined-ramp-udev powermenu
 tray-position = left
 tray-detached = true
 tray-padding = 1
-tray-offset-x = 200
+tray-offset-x = 194
 tray-scale = 1.0
 
 override-redirect = false
