@@ -38,9 +38,7 @@ fi
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
-
-# start some programs
-
+# invoke global x session script
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
@@ -48,35 +46,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-#xrandr --output DVI-D-0 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --right-of DVI-D-0
-#xrandr --output HDMI-0 --mode 1920x1080 --output DVI-D-0 --mode 1920x1080 --right-of HDMI-0
-
-# polybar
-(sleep 1s && "$HOME/.config/polybar/launch.sh") &
-
-# wallpaper
-nitrogen --restore &
-
-# audio
-pulseaudio &
-
-# compositor
-picom &
-
-# numlock 
-numlockx &
-
-# start dunst notification daemon
-dunst &
-
-# terminal
-(sleep 1s && "/usr/bin/kitty") &
-
-# loop
+xinput set-prop 14 "Device Enabled" 0 #disable trackpad
+(sleep 1s && "$HOME/.config/polybar/launch.sh") & #polybar
+nitrogen --restore & #wallpaper
+pulseaudio & #audio
+picom & #compositor
+numlockx & #numlock
+dunst & #notifications
+(sleep 1s && "/usr/bin/kitty") & #launch terminal
+(sleep 2s && exec wmname dwm) &
 while true; do
     dwm >/dev/null 2>&1
 done
-
-# execute dwm
-exec dwm
+exec dwm #execute dwm
 
