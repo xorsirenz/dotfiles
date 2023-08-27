@@ -31,7 +31,7 @@ locale = pt_BR.UTF-8
 
 enable-ipc = true
 
-background = ${colors.transparent}
+background = ${colors.background}
 foreground = ${colors.peach}
 
 line-size = 1
@@ -57,7 +57,7 @@ modules-right = pkgupdates pulseaudio battery-combined-ramp-udev powermenu
 tray-position = left
 tray-detached = true
 tray-padding = 1
-tray-offset-x = 240
+tray-offset-x = 200
 tray-scale = 1.0
 
 override-redirect = false
@@ -115,7 +115,6 @@ label-layout-background = ${colors.transparent}
 
 ; focused = Selected tag on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.transparent}
 label-focused-underline = ${colors.transparent}
 #label-focused-underline= ${colors.primary}
 label-focused-foreground = ${colors.white}
@@ -124,27 +123,23 @@ label-focused-padding = 1
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.peach}
-label-unfocused-background = ${colors.transparent}
 label-unfocused-underline = ${colors.transparent} 
 label-unfocused-padding = 1
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Unselected tag with window that has urgency hint set
 label-urgent = %name%
 label-urgent-foreground = ${colors.white}
-label-urgent-background = ${colors.transparent}
 label-urgent-padding = 1
 
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
 label-empty = %name%
 label-empty-foreground = ${colors.peach}
-label-empty-background = ${colors.transparent}
 label-empty-padding = 1
 
 [module/title]
@@ -180,28 +175,28 @@ scroll-down = ~/.config/polybar/scripts/calendar prev
 type = internal/pulseaudio
 
 format-volume = <ramp-volume>
-format-volume-foreground = ${colors.white}
+format-volume-foreground = ${colors.light-blue}
 label-volume =%percentage%%
 label-ramp-volume-foreground = ${colors.gray}
 
-ramp-volume-0 = ""
-ramp-volume-1 = ""
-ramp-volume-2 = ""
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
 
-label-muted = ""
+label-muted = " "
 label-muted-foreground = ${colors.white}
 
 click-right = pavucontrol
 
 [module/battery-combined-ramp-udev]
 type = custom/script
-format-foreground = ${colors.white}
+format-foreground = ${colors.green}
 exec = ~/.config/polybar/scripts/battery-combined-ramp-udev.sh
 tail = true
 
 [module/pkgupdates]
 type = custom/script
-format-foreground = ${colors.white}
+format-foreground = ${colors.light-blue}
 exec = ~/.config/polybar/scripts/pkgupdates.sh
 interval = 300
 
@@ -211,13 +206,13 @@ expand-right = false
 format-spacing = 1
 
 ; main label
-label-open = " "
-label-open-foreground = ${colors.alert}
+label-open = "  "
+label-open-foreground = ${colors.red}
 #format-underline = ${colors.gray}
 
 ; main close
 label-close = " "
-label-close-foreground = ${colors.alert}
+label-close-foreground = ${colors.green}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
@@ -232,36 +227,5 @@ menu-0-1-exec = poweroff
 [settings]
 screenchange-reload = true
 pseudo-transparency = true
-
-[module/spotify]
-type = custom/script
-tail = true
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format = <label>
-exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
-
-[module/spotify-prev]
-type = custom/script
-exec = echo " "
-format = <label>
-format-foreground = ${colors.foreground-alt}
-click-left = playerctl --player=playerctld previous
-
-[module/spotify-play-pause]
-type = custom/ipc
-hook-0 = echo " "
-hook-1 = echo " "
-format-foreground = ${colors.foreground-alt}
-format-padding = 1
-initial = 1
-click-left = playerctl --player=playerctld play-pause
-
-[module/spotify-next]
-type = custom/script
-exec = echo " "
-format = <label>
-format-foreground = ${colors.foreground-alt}
-click-left = playerctl --player=playerctld next
 
 ; vim:ft=dosini
