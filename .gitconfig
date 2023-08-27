@@ -1,0 +1,7 @@
+[user]
+	name = madison
+	email = madisoncraig@protonmail.com
+[init]
+	defaultBranch = main
+[tag]
+	forceSignAnnotated = true
