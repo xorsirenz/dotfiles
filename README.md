@@ -16,13 +16,13 @@
 🌸 **Mouse Cursor** ➙ [Breeze](https://github.com/ful1e5/BreezeX_Cursor)  
 
 Default Screenshot:
-![](https://github.com/madison-craig/dotfiles/blob/main/001.png?raw=true)  
+![](https://github.com/madison-isa/dotfiles/blob/main/001.png?raw=true)  
 
 Dmenu, kitty+zsh, nvim & ranger:
-![](https://github.com/madison-craig/dotfiles/blob/main/002.png?raw=true)  
+![](https://github.com/madison-isa/dotfiles/blob/main/002.png?raw=true)  
 
 Firefox:
-![](https://github.com/madison-craig/dotfiles/blob/main/003.png?raw=true)  
+![](https://github.com/madison-isa/dotfiles/blob/main/003.png?raw=true)  
 
 
 ### Keybinds:
