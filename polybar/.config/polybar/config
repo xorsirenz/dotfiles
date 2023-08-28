@@ -206,7 +206,7 @@ expand-right = false
 format-spacing = 1
 
 ; main label
-label-open = "  "
+label-open = " "
 label-open-foreground = ${colors.red}
 #format-underline = ${colors.gray}
 
