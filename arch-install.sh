@@ -174,7 +174,7 @@ mkdir -p ~/.config/
   fi
 
 CYAN "Installing my dwm & dmenu setup"
-git clone https://github.com/madison-craig/suckless.git ~/.config/ && sudo make clean install -C ~/.config/suckless/dwm/
+git clone https://github.com/madison-isa/suckless.git ~/.config/ && sudo make clean install -C ~/.config/suckless/dwm/
 sleep 5
 sudo make clean install -C ~/.config/suckless/dmenu/
 
