@@ -27,8 +27,6 @@ offset-y = 0%
 radius = 6.0
 fixed-center = true
 
-locale = pt_BR.UTF-8
-
 enable-ipc = true
 
 background = ${colors.background}
