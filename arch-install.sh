@@ -44,7 +44,7 @@ CYAN "Installing ibhagwan picom fork.."
 paru --noconfirm -S picom-ibhagwan-git
 
 # installing fonts
-sudo pacman --noconfirm -S noto-fonts noto-fonts-extra noto-fonts-cjk gsfonts nerd-fonts-complete 
+sudo pacman --noconfirm -S noto-fonts noto-fonts-extra noto-fonts-cjk gsfonts nerd-fonts-complete ttf-google-fonts-git
 
 # possible other needed fonts
 # ttf-fira-code ttf-font-awesome ttf-jetbrains-mono
