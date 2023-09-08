@@ -47,12 +47,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 xinput set-prop 14 "Device Enabled" 0 #disable trackpad
-(sleep 1s && "$HOME/.config/polybar/launch.sh") & #polybar
+(sleep 2s && "$HOME/.config/polybar/launch.sh") & #polybar
 nitrogen --restore & #wallpaper
 pulseaudio & #audio
-picom & #compositor
 numlockx & #numlock
 dunst & #notifications
+picom & #compositor
 (sleep 1s && "/usr/bin/kitty") & #launch terminal
 (sleep 2s && exec wmname dwm) &
 while true; do
