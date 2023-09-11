@@ -293,6 +293,11 @@ xdg-settings set default-web-browser firefox.desktop
 Configure firefox:
 ```shell
 about:config #in browser url
+browser.eme.ui.enabled: false
+browser.tabs.closeWindowWithLastTab: false
+extensions.pocket.enabled: false
+media.eme.enabled: false
+pdfjs.disabled: true (ymmv)
 toolkit.legacyUserProfileCustomizations.stylesheets = true
 ```
 
