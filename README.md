@@ -1,4 +1,4 @@
-## Aren't dotfiles meant to be hidden? Welp it looks like I screwed up again.. 
+## Oops, aren't dotfiles meant to be hidden?
 ### My Setup:
 🌸 **Window Manager**<sup> ➙ [dwm](https://dwm.suckless.org)</sup>  
 🌸 **Menu**<sup> ➙ [dmenu](https://tools.suckless.org/dmenu/)</sup>  
