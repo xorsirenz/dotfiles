@@ -295,6 +295,7 @@ Configure firefox:
 about:config #in browser url
 browser.eme.ui.enabled: false
 browser.tabs.closeWindowWithLastTab: false
+browser.tabs.firefox-view: false
 extensions.pocket.enabled: false
 media.eme.enabled: false
 pdfjs.disabled: true (ymmv)
