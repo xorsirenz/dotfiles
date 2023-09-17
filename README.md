@@ -1,5 +1,5 @@
-## Oops, aren't dotfiles meant to be hidden?
-### My Setup:
+###### Oops, aren't dotfiles meant to be hidden?
+### // My Stack
 🌸 **Window Manager**<sup> ➙ [dwm](https://dwm.suckless.org)</sup>  
 🌸 **Menu**<sup> ➙ [dmenu](https://tools.suckless.org/dmenu/)</sup>  
 🌸 **Bar**<sup> ➙ [polybar](https://github.com/polybar/polybar)</sup>  
@@ -24,7 +24,7 @@ ___
 
 ---
 
-### Keybinds:
+### // keybinds
 |        Keybind             |                 Function                 |
 | -------------------------- | ---------------------------------------- |
 | `Mod + Enter`              | Spawn Terminal (Kitty)                   |
@@ -52,4 +52,4 @@ ___
 | `Mod + Shift + d`          | Spawn discord                            |
 | `Mod + Shift + m`          | Spawn Matrix (element)                   |
 
-Hint: `Mod` key is set to the `Win` / `Super` key.
+##### // Hint: `Mod` key is set to the `Win` / `Super` key.
