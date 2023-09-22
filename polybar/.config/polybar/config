@@ -194,7 +194,7 @@ tail = true
 
 [module/pkgupdates]
 type = custom/script
-format-foreground = ${colors.light-blue}
+format-foreground = ${colors.blue}
 exec = ~/.config/polybar/scripts/pkgupdates.sh
 interval = 300
 
