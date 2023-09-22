@@ -272,7 +272,7 @@ nmcli dev wifi connect <network-ssid> password "<network-password>"
 ```
 Installing Personal Base Programs:
 ```shell
-$ pacman -S acpi acpi_call binutils bluez bluez-utils blueman btop curl flameshot gucharmap lsof lynis mcfly networkmanager-openvpn net-tools nm-connection-manager nmap numlockx openvpn p7zip tldr tlp traceroute tree unzip whois wmname xorg xorg-server xorg-xinit xdg-utils xorg-xmag zip nitrogen picom firefox git python-yaml playerctl w3m feh okular ranger jsoncpp zathura zathura-pdf-poppler yajl zsh noto-fonts-cjk nodejs npm lxappearance pulseaudio pulseaudio-bluetooth neovim polybar-dwm-module gsfonts resolconf wireshark```
+$ pacman -S acpi acpi_call binutils bluez bluez-utils blueman btop curl flameshot gucharmap imagemagick lsof lynis mcfly networkmanager-openvpn net-tools nm-connection-manager nmap numlockx openvpn p7zip tldr tlp traceroute tree unzip whois wmname xorg xorg-server xorg-xinit xdg-utils xorg-xmag zip nitrogen picom firefox git python-yaml playerctl w3m feh okular ranger jsoncpp zathura zathura-pdf-poppler yajl zsh noto-fonts-cjk nodejs npm lxappearance pulseaudio pulseaudio-bluetooth neovim polybar-dwm-module gsfonts resolconf wireshark```
 
 Git clone zsh plugins into ~/.config/zsh/plugins/
 ```shell
