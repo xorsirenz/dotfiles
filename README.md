@@ -1,15 +1,15 @@
 ###### Oops, aren't dotfiles meant to be hidden?
-### // My Stack
+### // Setup
 🌸 **Window Manager**<sup> ➙ [dwm](https://dwm.suckless.org)</sup>  
-🌸 **Menu**<sup> ➙ [dmenu](https://tools.suckless.org/dmenu/)</sup>  
 🌸 **Bar**<sup> ➙ [polybar](https://github.com/polybar/polybar)</sup>  
-🌸 **Compositor**<sup> ➙ [picom (ibhagwan fork)](https://github.com/ibhagwan/picom)</sup>  
-🌸 **Notifications**<sup> ➙ [dunst](https://dunst-project.org/)</sup>  
-🌸 **Terminal**<sup> ➙ [kitty](https://github.com/kovidgoyal/kitty)</sup>  
+🌸 **Menu**<sup> ➙ [dmenu](https://tools.suckless.org/dmenu/)</sup>  
 🌸 **Shell**<sup> ➙ [zsh](https://zsh.sourceforge.io/)</sup>  
+🌸 **Terminal**<sup> ➙ [kitty](https://github.com/kovidgoyal/kitty)</sup>  
 🌸 **Text Editor**<sup> ➙ [nvim](https://neovim.io/)</sup>  
 🌸 **Browser**<sup> ➙ [firefox](https://www.mozilla.org/en-US/)</sup>  
 🌸 **File manager**<sup> ➙ [ranger](https://github.com/ranger/ranger)</sup>  
+🌸 **Compositor**<sup> ➙ [picom (ibhagwan fork)](https://github.com/ibhagwan/picom)</sup>  
+🌸 **Notifications**<sup> ➙ [dunst](https://dunst-project.org/)</sup>  
 🌸 **Widget**<sup> ➙ [layan-dark](https://github.com/vinceliuice/Layan-gtk-theme)</sup>  
 🌸 **Icon Theme**<sup> ➙ [reversal-pink-dark](https://github.com/yeyushengfan258/Reversal-icon-theme)</sup>  
 🌸 **Mouse Cursor**<sup> ➙ [zinia-cursors-light](https://codeberg.org/maya/zinia-cursors)</sup>  
@@ -52,4 +52,4 @@ ___
 | `Mod + Shift + d`          | Spawn discord                            |
 | `Mod + Shift + m`          | Spawn Matrix (element)                   |
 
-##### // Hint: `Mod` key is set to the `Win` / `Super` key.
+##### // hint: `Mod` key is set to the `Win` / `Super` key.
