@@ -272,7 +272,7 @@ nmcli dev wifi connect <network-ssid> password "<network-password>"
 ```
 Installing Personal Base Programs:
 ```shell
-$ pacman -S acpi acpi_call binutils bluez bluez-utils blueman btop curl flameshot gucharmap imagemagick lsof lynis mcfly networkmanager-openvpn network-manager-applet net-tools nm-connection-manager nmap numlockx openresolv openvpn p7zip tldr tlp traceroute tree unzip whois wmname xorg xorg-server xorg-xinit xdg-utils xorg-xmag zip nitrogen picom firefox git python-yaml playerctl w3m feh okular ranger jsoncpp zathura zathura-pdf-poppler yajl zsh noto-fonts-cjk nodejs npm lxappearance pulseaudio pulseaudio-bluetooth neovim polybar-dwm-module gsfonts resolconf wireshark```
+$ pacman -S acpi acpi_call binutils bluez bluez-utils blueman btop curl dnscrypt-proxy flameshot gucharmap imagemagick lsof lynis mcfly networkmanager-openvpn network-manager-applet net-tools nm-connection-manager nmap numlockx openresolv openvpn p7zip tldr tlp traceroute tree unzip whois wmname xorg xorg-server xorg-xinit xdg-utils xorg-xmag zip nitrogen picom firefox git python-yaml playerctl w3m feh okular ranger jsoncpp zathura zathura-pdf-poppler yajl zsh noto-fonts-cjk nodejs npm lxappearance pulseaudio pulseaudio-bluetooth neovim polybar-dwm-module gsfonts resolconf wireshark```
 
 Git clone zsh plugins into ~/.config/zsh/plugins/
 ```shell
@@ -348,12 +348,34 @@ sudo cp /usr/share/openvpn/examples/client.conf /etc/openvpn/client/
 nmcli connection import type openvpn file /etc/openvpn/client/<client-vpn>.ovpn
 ```
 
+setup dnscrypt proxy:
+```shell
+sudo nvim /etc/dnscrypt-proxy/dnscrypt-proxy.toml # uncomment server_names
+```
+```shell
+sudo nvim /etc/NetworkManager/conf.d/dns.conf
+[main]
+dns=none
+```
+```shell
+sudo cp /etc/resolv.conf resolv.conf.bak
+sudo rm /etc/resolv.conf && nvim resolv.conf
+nameserver 127.0.0.1
+options edns0
+````
+```shell
+sudo systemctl start dnscrypt-proxy.service
+sudo systemctl enable dnscrypt-proxy-service
+# use dnsleaktest.com to check for leaks
+```
+
+
 Enable markdown live preview with nvim
 ```shell
 sudo npm -g install instant-markdown-d
 ```
 
-Setting grub options
+Setting grub options:
 ```shell
 sudo nvim /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
