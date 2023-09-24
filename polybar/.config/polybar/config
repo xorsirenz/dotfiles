@@ -50,7 +50,7 @@ font-2 = "Hack Nerd Font:style=Solid:pixelsize=14;3"
 
 modules-left = dwm
 modules-center = date calendar
-modules-right = pkgupdates pulseaudio battery-combined-ramp-udev powermenu
+modules-right = pkgupdates vpn-status pulseaudio battery-combined-ramp-udev powermenu
 
 tray-position = left
 tray-detached = true
@@ -185,6 +185,11 @@ label-muted = " "
 label-muted-foreground = ${colors.white}
 
 click-right = pavucontrol
+
+[module/vpn-status]
+type = custom/script
+exec = ~/.config/polybar/scripts/vpn-status.sh
+interval = 5
 
 [module/battery-combined-ramp-udev]
 type = custom/script
