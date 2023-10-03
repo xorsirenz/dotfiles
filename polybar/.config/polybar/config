@@ -190,6 +190,7 @@ click-right = pavucontrol
 type = custom/script
 exec = ~/.config/polybar/scripts/vpn-status.sh
 interval = 5
+click-left = ~/.config/polybar/scripts/vpn-status.sh vpn_client
 
 [module/battery-combined-ramp-udev]
 type = custom/script
