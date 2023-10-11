@@ -212,12 +212,6 @@ sh# vim /etc/hostname # <PC_NAME>
 sh# vim /etc/hosts    # 127.0.0.1 localhost (\n) ::1 localhost (/n) 127.0.1.1 <PC_NAME>
 ```
 
-Setting up kernel hooks for encryption:
-```shell
-sh# vim /etc/mkinitcpio.conf # find hooks line
-  HOOKS=(base udev autodetect keyboard keymap modconf block encrypt filesystems keyboard)
-sh# mkinitcpio -p linux
-```
 
 Installing Grub:
 ```shell
@@ -226,6 +220,13 @@ sh# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 sh# grub-mkconfig -o /boot/grub/grub.cfg
 ```
 <details><summary> Additional steps / Grub for LUKS:</summary>
+Setting up kernel hooks for encryption:
+
+```shell
+sh# vim /etc/mkinitcpio.conf # find hooks line
+  HOOKS=(base udev autodetect keyboard keymap modconf block encrypt filesystems keyboard)
+sh# mkinitcpio -p linux
+```
 
 ```shell
 sh# blkid
