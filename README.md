@@ -10,6 +10,7 @@
 🌸 **File manager**<sup> ➙ [ranger](https://github.com/ranger/ranger)</sup>  
 🌸 **Compositor**<sup> ➙ [picom (ibhagwan fork)](https://github.com/ibhagwan/picom)</sup>  
 🌸 **Notifications**<sup> ➙ [dunst](https://dunst-project.org/)</sup>  
+🌸 **Screenshot Utility**<sup> ➙ [flameshot](https://github.com/flameshot-org/flameshot)</sup>  
 🌸 **Widget**<sup> ➙ [layan-dark](https://github.com/vinceliuice/Layan-gtk-theme)</sup>  
 🌸 **Icon Theme**<sup> ➙ [reversal-pink-dark](https://github.com/yeyushengfan258/Reversal-icon-theme)</sup>  
 🌸 **Mouse Cursor**<sup> ➙ [zinia-cursors-light](https://codeberg.org/maya/zinia-cursors)</sup>  
