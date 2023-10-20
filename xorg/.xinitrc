@@ -49,7 +49,7 @@ fi
 export _JAVA_AWT_WM_NONREPARENTING=1 #fix ghidra parenting issue
 xinput set-prop 14 "Device Enabled" 0
 (sleep 2s && "$HOME/.config/polybar/launch.sh") &
-nitrogen --restore &
+~/.fehbg &
 pulseaudio &
 numlockx &
 nm-applet &
