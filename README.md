@@ -17,11 +17,11 @@
 
 ___
 
-![](https://github.com/x3-madison/dotfiles/blob/main/01.png?raw=true)  
+![](https://github.com/bootlegwifi/dotfiles/blob/main/01.png?raw=true)  
 
-![](https://github.com/x3-madison/dotfiles/blob/main/02.png?raw=true)  
+![](https://github.com/bootlegwifi/dotfiles/blob/main/02.png?raw=true)  
 
-![](https://github.com/x3-madison/dotfiles/blob/main/03.png?raw=true)  
+![](https://github.com/bootlegwifi/dotfiles/blob/main/03.png?raw=true)  
 
 ---
 
