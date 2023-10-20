@@ -49,7 +49,7 @@ sudo pacman --noconfirm -S noto-fonts noto-fonts-extra noto-fonts-cjk gsfonts ne
 # ttf-fira-code ttf-font-awesome ttf-jetbrains-mono
 
 CYAN "Installing packages for the rice.."
-sudo pacman --noconfirm -S breeze-icons dunst feh firefox jsoncpp lxappearance neofetch neovim nitrogen nodejs npm okular pavucontrol pulseaudio playerctl python-yaml ranger w3m zathura zathura-pdf-poppler
+sudo pacman --noconfirm -S breeze-icons dunst feh firefox jsoncpp lxappearance neofetch neovim nodejs npm okular pavucontrol pulseaudio playerctl python-yaml ranger w3m zathura zathura-pdf-poppler
 
 CYAN "Installing dotfiles"
 mkdir -p ~/.config/
