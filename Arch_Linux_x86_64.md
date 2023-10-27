@@ -263,6 +263,13 @@ $ vim /etc/sudoers  # uncomment: root ALL=(ALL) ALL -and- %wheel ALL=(ALL) ALL
 $ groupadd plugdev
 $ gpasswd -a $USER plugdev
 ```
+
+Audit rules:
+```shell
+$ auditctl -w /etc/passwd -p rwa -k etc-passwd
+$ auditctl -w /etc/shadow -p rwa -k etc-shadow
+$ auditctl -w /var/log/lastlog -p rwa -k log-lastlog
+```
 Connecting to wifi using NetworkManager:
 ```shell
 nmcli dev status
