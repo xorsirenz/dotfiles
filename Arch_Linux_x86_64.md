@@ -305,7 +305,7 @@ browser.eme.ui.enabled: false
 browser.tabs.closeWindowWithLastTab: false
 browser.tabs.firefox-view: false
 extensions.pocket.enabled: false
-media.eme.enabled: false
+media.eme.enabled: false #keep true if streaming platforms break
 pdfjs.disabled: true (ymmv)
 toolkit.legacyUserProfileCustomizations.stylesheets = true
 ```
