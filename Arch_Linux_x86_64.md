@@ -171,10 +171,10 @@ root@archiso# lsblk
 ## Base install 
 Installing Base & Personal Packages:
 ```shell
-root@archiso# pacstrap /mnt base base-devel linux linux-firmware linux-headers networkmanager vim intel-ucode
+root@archiso# pacstrap /mnt base base-devel linux linux-firmware linux-headers networkmanager vim intel-ucode #amd-vcode (cpu)
 ```
 
-Generating filesystem
+Generating filesystem:
 ```shell
 root@archiso# genfstab -U /mnt >> /mnt/etc/fstab
 ```
