@@ -37,3 +37,6 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 
 " Yank until the end of the line
 nnoremap Y y$
+
+" Terminal
+nnoremap <C-t> :terminal<CR>
