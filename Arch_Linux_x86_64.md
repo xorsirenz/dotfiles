@@ -280,7 +280,7 @@ nmcli dev wifi connect <network-ssid> password "<network-password>"
 ```
 Installing Personal Base Programs:
 ```shell
-$ pacman -S acpi acpi_call bind binutils bluez bluez-utils blueman btop curl dnscrypt-proxy feh firefox flameshot git gsfonts gucharmap imagemagick jsoncpp lsof lxappearance lynis mcfly neovim networkmanager-openvpn network-manager-applet net-tools nitrogen nm-connection-manager nmap nmp nodejs noto-fonts-cjk numlockx openresolv okular openvpn p7zip picom playerctl polybar-dwm-module pulseaudio pulseaudio-bluetooth python-yaml ranger resolconf tldr tlp tmux traceroute tree ufw unzip valgrind w3m whois wireshark wmname xorg xorg-server xorg-xinit xdg-utils xorg-xmag yajl zathura zathura-pdf-poppler zip zsh```
+$ pacman -S acpi acpi_call bind binutils bluez bluez-utils blueman btop curl dnscrypt-proxy feh firefox flameshot git gsfonts gucharmap imagemagick jsoncpp lsof lxappearance lynis mcfly nasm neovim networkmanager-openvpn network-manager-applet net-tools nitrogen nm-connection-manager nmap nmp nodejs noto-fonts-cjk numlockx openresolv okular openvpn p7zip picom playerctl polybar-dwm-module pulseaudio pulseaudio-bluetooth python-yaml ranger resolconf tldr tlp tmux traceroute tree ufw unzip valgrind w3m whois wireshark wmname xorg xorg-server xorg-xinit xdg-utils xorg-xmag yajl zathura zathura-pdf-poppler zip zsh```
 
 Git clone zsh plugins into ~/.config/zsh/plugins/
 ```shell
