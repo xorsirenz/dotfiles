@@ -358,10 +358,10 @@ nmcli connection import type openvpn file /etc/openvpn/client/<client-vpn>.ovpn
 
 setup dnscrypt proxy:
 ```shell
-sudo nvim /etc/dnscrypt-proxy/dnscrypt-proxy.toml # uncomment server_names
+sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml # uncomment server_names
 ```
 ```shell
-sudo nvim /etc/NetworkManager/conf.d/dns.conf
+sudo vim /etc/NetworkManager/conf.d/dns.conf
 [main]
 dns=none
 ```
@@ -385,9 +385,15 @@ sudo npm -g install instant-markdown-d
 
 Setting grub options:
 ```shell
-sudo nvim /etc/default/grub
+sudo vim /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
 GRUB_CMDLINE_LINUX="ipv6.disable=1"
+```
+Redundantly disabling IPv6:
+```shell
+sudo vim /tmp/ipv6-icmp.conf
+net.ipv6.icmp.echo_ignore_all=1
+sudo sysctl -p /tmp/ipv6-icmp.conf 
 ```
 
 Enable fstrim for SSD (thinkpad)
@@ -399,9 +405,4 @@ Setup bluetooth services
 ```shell
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
-```
-
-Setup Openrazer (for RGB Modification)
-```shell
-paru -S openrazer-driver-dkms-git openrazer-meta-git python-openrazer-git polychromatic-git
 ```
