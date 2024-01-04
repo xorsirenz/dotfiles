@@ -47,19 +47,18 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 export _JAVA_AWT_WM_NONREPARENTING=1 #fix ghidra parenting issue
-xinput set-prop 14 "Device Enabled" 0
-(sleep 2s && "$HOME/.config/polybar/launch.sh") &
+xinput set-prop 11 "Device Enabled" 0
+(sleep 2s && "$HOME/.config/polybar/launch.sh") & (sleep 1s)
 ~/.fehbg &
 pulseaudio &
 numlockx &
-nm-applet &
-blueman-applet &
 dunst &
 picom &
-(sleep 1s && "/usr/bin/kitty") &
+nm-applet &
+blueman-applet &
+#(sleep 1s && "/usr/bin/kitty") &
 (sleep 2s && exec wmname dwm) &
 while true; do
     dwm >/dev/null 2>&1
 done
 exec dwm
-
