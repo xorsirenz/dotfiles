@@ -8,9 +8,6 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-
     " HTML
     Plug 'mattn/emmet-vim'
 
@@ -26,18 +23,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'antoinemadec/coc-fzf'
    
     " Indentation
+    Plug 'nathanaelkane/vim-indent-guides'
     Plug 'lukas-reineke/indent-blankline.nvim'
 
     " LuaLine Status Bar
     Plug 'nvim-lualine/lualine.nvim'
-    
+
     " Git
     Plug 'tpope/vim-fugitive'
 
     " Markdown preview
     Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
     " Themes
     Plug 'kyazdani42/nvim-web-devicons'
-
 
 call plug#end()
