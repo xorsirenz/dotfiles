@@ -3,9 +3,7 @@ let g:indent_blankline_enabled = 0
 cmap w!! w !sudo tee %
 set mouse=a                         " Enable mouse
 set clipboard=unnamedplus           " Copy paste between vim & everything else
-set syntax=asmx86                      " Gimme syntax
-let b:asmsyntax = 'nasm'            " NASM syntax
-" set termguicolors
+let g:asmsyntax = 'nasm'            " NASM syntax
 
 set wrap                            " Display long lines on two lines
 set linebreak                       " Wrap at end of word
@@ -24,7 +22,6 @@ set ruler                           " Always show cursor position
 set number                          " Line numbers
 set number relativenumber           " Cursor position relative to line
 set autochdir                       " Working dir will always be the same as your current working dir
-set filetype
 set encoding=utf-8                  " Encoding displayed
 set fileencoding=utf-8              " Encoding witten to file
 set updatetime=300                  " Faster completion
