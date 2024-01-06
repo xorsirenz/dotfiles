@@ -1,53 +1,42 @@
-" set leader key
-let g:mapleader = "\<Space>"
+let g:mapleader = "\<Space"         " Set leader key
 let g:indent_blankline_enabled = 0
-
-syntax enable                           " Enables syntax highlighing
-set hidden                              " Required to keep multiple buffers open multiple buffers
-set wrap                                " Display long lines on two lines
-set linebreak                           " Makes wrap at end of word
-set encoding=utf-8                      " The encoding displayed
-set pumheight=10                        " Makes popup menu smaller
-set fileencoding=utf-8                  " The encoding written to file
-set ruler                               " Show the cursor position all the time
-set cmdheight=2                         " More space for displaying messages
-set iskeyword+=-                        " treat dash separated words as a word text object
-set mouse=a                             " Enable your mouse
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
-set conceallevel=0                      " So that I can see `` in markdown files
-set tabstop=4                           " Insert 4 spaces for a tab
-set shiftwidth=4                        " Change the number of space characters inserted for indentation
-set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-set expandtab                           " Converts tabs to spaces
-set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
-set laststatus=0                        " Always display the status line
-set number                              " Line numbers
-"set cursorline                          " Enable highlighting of the current line
-highlight LineNr ctermbg=none
-set background=dark                     " tell vim what the background color looks like
-set showtabline=4                       " Always show tabs
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
-set nobackup                            " This is recommended by coc
-set nowritebackup                       " This is recommended by coc
-set updatetime=300                      " Faster completion
-set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard=unnamedplus               " Copy paste between vim and everything else
-set autochdir                           " Your working directory will always be the same as your working directory
-set number relativenumber               " Sets cursor postion relative to line
-
-set termguicolors
-
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-
-" hmm
 cmap w!! w !sudo tee %
+set mouse=a                         " Enable mouse
+set clipboard=unnamedplus           " Copy paste between vim & everything else
+set syntax=asmx86                      " Gimme syntax
+let b:asmsyntax = 'nasm'            " NASM syntax
+" set termguicolors
 
-" asm syntax
-"set ft=nasm
+set wrap                            " Display long lines on two lines
+set linebreak                       " Wrap at end of word
+set tabstop=4                       " 4 spaces for a tab
+set shiftwidth=4                    " Number of space chars inserted for indentation
+set smarttab                        " Realize tap width
+set expandtab                       " Convert tabs to spaces
+set smartindent                     " Smart Indent
+set autoindent                      " Auto Indent
+set formatoptions=cro               " Stop newline continuation of comments
+set pumheight=10                    " Smaller pop-ups
+set cmdheight=2                     " Larger area to display messages
+set splitbelow                      " Horizontal Split will automatically be below
+set splitright                      " Vertical splits will automatically be to the right
+set ruler                           " Always show cursor position
+set number                          " Line numbers
+set number relativenumber           " Cursor position relative to line
+set autochdir                       " Working dir will always be the same as your current working dir
+set filetype
+set encoding=utf-8                  " Encoding displayed
+set fileencoding=utf-8              " Encoding witten to file
+set updatetime=300                  " Faster completion
+set timeoutlen=500                  " Default timeoutlen is 1000ms
+set iskeyword+=-                    " Treat dash separated words as a word text object
+set conceallevel=0                  " To see `` in markdown files
+set laststatus=0                    " Always display status line
+set showtabline=4                   " Always show tabs
+set noshowmode                      " Remove -- INSERT -- NORMAL -- VISUAL
+set background=dark                 " Tell vim the background
+
+au! BufWritePost $MYVIMRC source %  " Auto source when writing to init.vim / Alternatively you can run :source $MYVIMRC
 
 " Indentation
 lua << EOF
