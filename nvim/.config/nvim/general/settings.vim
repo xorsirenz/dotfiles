@@ -3,7 +3,6 @@ let g:indent_blankline_enabled = 0
 cmap w!! w !sudo tee %
 set mouse=a                         " Enable mouse
 set clipboard=unnamedplus           " Copy paste between vim & everything else
-let g:asmsyntax = 'nasm'            " NASM syntax
 
 set wrap                            " Display long lines on two lines
 set linebreak                       " Wrap at end of word
