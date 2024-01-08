@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ###### Oops, aren't dotfiles meant to be hidden?
 ##### Suggested to be used with my suckless [dwm / dmenu](https://github.com/bootlegwifi/suckless) config.
 ### // Setup
@@ -56,8 +55,14 @@ ___
 | `Mod + Shift + m`          | Spawn Matrix (element)                   |
 
 ##### // hint: `Mod` key is set to the `Win` / `Super` key.
+<<<<<<< HEAD
 =======
 ### This is my personal guide on a base linux install.
 ### Some steps may be missing, and is catered to my personal PCs.
 ### Still in progress. please use at your own risk.
 >>>>>>> eae8bba (old writeup)
+=======
+#### This is my personal guide on a base linux install.
+#### Some steps may be missing, and is catered to my personal PCs.
+#### Still in progress. please use at your own risk.
+>>>>>>> 0aadb26 (install guide)
