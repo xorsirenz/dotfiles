@@ -1,4 +1,3 @@
-#source ~/.gef/gef.py
 set debuginfod enabled on
 set verbose off
 set confirm off
