@@ -4,7 +4,7 @@ export PATH="$HOME/bin:$PATH"
 
 #enable colors and change prompt
 autoload -U colors && colors
-PS1="[%n:%F{cyan}%~%f]$ "
+PS1="[%n:%F{white}%~%f]$ "
 
 # History
 HISTFILE=~/.histfile
@@ -25,7 +25,7 @@ source $HOME/.aliases
 bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/kyli0x/.zshrc'
+zstyle :compinstall filename '/home/madison/.zshrc'
 autoload -Uz compinit && compinit #auto complete
 
 # the gits
