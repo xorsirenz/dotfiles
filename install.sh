@@ -110,7 +110,7 @@ mkdir -p ~/.config/
     cp -r ./ranger/.config/ranger/* ~/.config/ranger/;
   else
     CYAN "Installing ranger config.."
-    mkdir ~/.config/ranger/ && cp -r ./polybar/.config/polybar/* ~/.config/polybar/;
+    mkdir ~/.config/ranger/ && cp -r ./ranger/.config/ranger/* ~/.config/ranger/;
   fi
   if [ -d ~/.config/zathura/ ]; then
     CYAN "Backing up & installing new zathura config.."
