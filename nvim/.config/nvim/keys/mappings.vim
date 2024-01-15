@@ -29,7 +29,11 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
+" Toggle NERD Tree open
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" Open Ranger in current dir
+nnoremap <C-r> :RangerOpenCurrentDir<CR>
 
 " Yank until the end of the line
 nnoremap Y y$
