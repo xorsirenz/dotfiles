@@ -1,0 +1,7 @@
+# bootlegwifi
+e scr.utf8 = true
+e scr.utf8.curvy = true
+e stack.size = 256
+e asm.cmt.right=true
+# monkai theme
+eco cga
