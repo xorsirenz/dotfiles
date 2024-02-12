@@ -1,5 +1,5 @@
 ###### Oops, aren't dotfiles meant to be hidden?
-##### Suggested to be used with the [Arch Linux](https://archlinux.org/download/) image, and my suckless [dwm / dmenu](https://github.com/bootlegwifi/suckless) config
+##### Suggested to be used with the [Arch Linux](https://archlinux.org/download/) image, and my suckless [dwm / dmenu](https://github.com/xorsirenz/suckless) config
 ### // Setup
 🌸 **Window Manager**<sup> ➙ [dwm](https://dwm.suckless.org)</sup>  
 🌸 **Bar**<sup> ➙ [polybar](https://github.com/polybar/polybar)</sup>  
@@ -18,11 +18,11 @@
 
 ___
 
-![](https://github.com/bootlegwifi/dotfiles/blob/main/01.png?raw=true)  
+![](https://github.com/xorsirenz/dotfiles/blob/main/01.png?raw=true)  
 
-![](https://github.com/bootlegwifi/dotfiles/blob/main/02.png?raw=true)  
+![](https://github.com/xorsirenz/dotfiles/blob/main/02.png?raw=true)  
 
-![](https://github.com/bootlegwifi/dotfiles/blob/main/03.png?raw=true)  
+![](https://github.com/xorsirenz/dotfiles/blob/main/03.png?raw=true)  
 
 ---
 
