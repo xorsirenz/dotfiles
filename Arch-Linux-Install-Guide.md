@@ -311,7 +311,7 @@ pdfjs.disabled: true (ymmv)
 toolkit.legacyUserProfileCustomizations.stylesheets = true
 ```
 
-Remove Adwaita cursor theme
+Remove Adwaita cursor theme:
 ```shell
 sudo rm -rf /usr/share/icons/Adwaita
 ```
