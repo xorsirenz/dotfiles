@@ -201,9 +201,9 @@ Setting Timezone:
 ```shell
 sh# ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 sh# hwclock --systohc
-sh# vim /etc/locale.gen   # uncomment en_US.UTF-8 pt_BR.UTF-8
+sh# vim /etc/locale.gen   # uncomment en_US.UTF-8 ru_RU.UTF-8
 sh# locale-gen
-sh# vim /etc/locale.conf  # LANG=en_US.UTF-8 LANG=pt_BR.UTF-8 LC_TIME=pt_BR.UTF-8
+sh# vim /etc/locale.conf  # LANG=en_US.UTF-8 LANG=ru_RU.UTF-8 LC_TIME=ru_RU.UTF-8
 ```
 
 Setting Hostname and Hosts:
