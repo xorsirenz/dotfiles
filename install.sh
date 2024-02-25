@@ -1,8 +1,8 @@
 #!/bin/env bash
 set -e 
 #
-# Bootlegwifi's Arch + Dwm + Polybar dotfile rice installation script
-# By me.. Bootlegwifi!!
+# xorsirenz's Arch + Dwm + Polybar dotfile rice installation script
+# By me.. xorsirenz!!
 # WARNING * THIS SCRIPT IS NOT FINISHED - use at own risk - and you will probably have to fix bugs
 # To turn on this script please enable it by commenting out line 27
 #
@@ -19,7 +19,7 @@ function CYAN(){
 }
 
 
-CYAN "Bootlegwifi's Arch (with dwm+polybar) install script, Hope you enjoy!"
+CYAN "xorsirenz's Arch (with dwm+polybar) install script, Hope you enjoy!"
 
 # Script turned off until testing is finished
 CYAN "This script is turned off until testing is completed."
