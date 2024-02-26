@@ -280,13 +280,14 @@ nmcli dev wifi connect <network-ssid> password "<network-password>"
 ```
 Installing Personal Base Programs:
 ```shell
-$ pacman -S acpi adobe-source-code-pro-fonts arp-scan bind blueman binutils bluez bluez-utils blueman breeze breeze-icons bridge-utils btop capstone checksec cmake ctags curl dmidecode dnscrypt-proxy dnsmasq dunst feh firefox flameshot gdb git gsfonts gucharmap imagemagick jsoncpp lsof lxappearance lynis man-pages mcfly nasm neovim networkmanager-openvpn network-manager-applet net-tools nitrogen nm-connection-manager nmap nmp nodejs noto-fonts-cjk numlockx openresolv okular openvpn p7zip picom playerctl polybar-dwm-module pulseaudio pulseaudio-bluetooth python-yaml qemu-full ranger resolconf rkhunter tldr tlp tmux traceroute tree ttf-fira-code ttf-font-awesome ttf-hack-nerd ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ufw unzip valgrind w3m whois wireshark-cli wireshark-qt wmname xclip xdg-utils xdotool xorg xorg-server xorg-xinit xorg-xmag yajl zathura zathura-pdf-poppler zip zsh```
+$ pacman -S acpi adobe-source-code-pro-fonts arp-scan bind blueman binutils bluez bluez-utils blueman breeze breeze-icons bridge-utils btop capstone checksec cmake ctags curl dmidecode dnscrypt-proxy dnsmasq dunst feh firefox flameshot gdb git gsfonts gucharmap imagemagick jsoncpp lsof lxappearance lynis man-pages mcfly nasm neovim networkmanager-openvpn network-manager-applet net-tools nitrogen nm-connection-manager nmap nmp nodejs noto-fonts-cjk numlockx openresolv okular openvpn p7zip picom playerctl polybar-dwm-module pulseaudio pulseaudio-bluetooth python-yaml qemu-full ranger resolconf rkhunter tldr tlp tmux traceroute tree ttf-fira-code ttf-font-awesome ttf-hack-nerd ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ufw unzip valgrind w3m whois wireshark-cli wireshark-qt wmname xclip xdg-utils xdotool xorg xorg-server xorg-xinit xorg-xmag yajl zathura zathura-pdf-poppler zip zsh
+```
 
-
-Git clone zsh plugins into ~/.config/zsh/plugins/
+Configure zsh: 
 ```shell
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+# git clone zsh plugins into ~/.config/zsh/plugins
 ```
 
 Additional Programs:
