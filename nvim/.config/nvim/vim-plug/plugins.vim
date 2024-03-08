@@ -38,7 +38,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Ranger Tree
     Plug 'iberianpig/ranger-explorer.vim'
 
-    " Tabs
+    " Syntax Support
+    Plug 'sheerun/vim-polyglot'
     Plug 'akinsho/bufferline.nvim'
 
     " Themes

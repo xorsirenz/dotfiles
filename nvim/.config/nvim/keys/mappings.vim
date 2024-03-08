@@ -1,3 +1,6 @@
+inoremap <expr> <c-j> ("<C-n>")
+inoremap <expr> <c-k> ("<C-p>")
+
 " Use alt + hjkl to resize windows
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
@@ -14,7 +17,7 @@ nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
 " <TAB>: completion
-inoremap <expr><TAB> pumvisible() ? "\<C-m>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better tabbing
 vnoremap < <gv
