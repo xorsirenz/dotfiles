@@ -4,6 +4,7 @@ cmap w!! w !sudo tee %
 set mouse=a                         " Enable mouse
 set clipboard=unnamedplus           " Copy paste between vim & everything else
 
+set hidden                          " Required to keep multiple buffers open
 set wrap                            " Display long lines on two lines
 set linebreak                       " Wrap at end of word
 set tabstop=4                       " 4 spaces for a tab
@@ -31,6 +32,10 @@ set laststatus=0                    " Always display status line
 set showtabline=4                   " Always show tabs
 set noshowmode                      " Remove -- INSERT -- NORMAL -- VISUAL
 set background=dark                 " Tell vim the background
+
+set nobackup                        " Recommended by coc
+set nowritebackup                   " Recommended by coc
+
 
 au! BufWritePost $MYVIMRC source %  " Auto source when writing to init.vim / Alternatively you can run :source $MYVIMRC
 
