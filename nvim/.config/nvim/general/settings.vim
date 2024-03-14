@@ -39,6 +39,12 @@ set nowritebackup                   " Recommended by coc
 
 au! BufWritePost $MYVIMRC source %  " Auto source when writing to init.vim / Alternatively you can run :source $MYVIMRC
 
+augroup remember_folds              " Remember folds after exit
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
 " Indentation
 lua << EOF
 vim.opt.list = true
