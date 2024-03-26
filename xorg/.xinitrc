@@ -55,7 +55,6 @@ numlockx &
 dunst &
 picom &
 nm-applet &
-blueman-applet &
 #(sleep 1s && "/usr/bin/kitty") &
 (sleep 2s && exec wmname dwm) &
 while true; do
