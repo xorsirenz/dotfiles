@@ -224,7 +224,7 @@ Setting up kernel hooks for encryption:
 
 ```shell
 sh# vim /etc/mkinitcpio.conf # find hooks line
-  HOOKS=(base udev autodetect keyboard keymap modconf block encrypt filesystems keyboard)
+  HOOKS=(base udev autodetect keyboard keymap modconf block encrypt filesystems)
 sh# mkinitcpio -p linux
 ```
 
