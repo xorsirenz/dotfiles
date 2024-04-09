@@ -24,7 +24,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Indentation
     Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'lukas-reineke/indent-blankline.nvim'
 
     " LuaLine Status Bar
     Plug 'nvim-lualine/lualine.nvim'
