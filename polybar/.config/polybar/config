@@ -215,7 +215,7 @@ label-open-foreground = ${colors.red}
 #format-underline = ${colors.gray}
 
 ; main close
-label-close = " "
+label-close = ""
 label-close-foreground = ${colors.green}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
