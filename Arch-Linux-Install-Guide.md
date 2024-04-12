@@ -171,7 +171,7 @@ root@archiso# lsblk
 ## Base install 
 Installing Base & Personal Packages:
 ```shell
-root@archiso# pacstrap /mnt base base-devel linux linux-firmware linux-headers networkmanager vim intel-ucode #amd-vcode (cpu)
+root@archiso# pacstrap /mnt base base-devel linux linux-firmware linux-headers networkmanager network-manager-openvpn vim intel-ucode #amd-vcode (cpu)
 ```
 
 Generating filesystem:
@@ -183,6 +183,7 @@ Moving into Arch System:
 ```shell
 root@archiso# arch-chroot /mnt
 ```
+
 Creating swap file:
 ```shell
 sh# fallocate -l 2GB /swapfile
@@ -192,6 +193,7 @@ sh# swapon /swapfile
 sh# vim /etc/fstab
   /swapfile none swap default 0 0
 ```
+
 Enabling Internet:
 ```shell
 sh# systemctl enable NetworkManager
@@ -212,13 +214,13 @@ sh# vim /etc/hostname # <PC_NAME>
 sh# vim /etc/hosts    # 127.0.0.1 localhost (\n) ::1 localhost (/n) 127.0.1.1 <PC_NAME>
 ```
 
-
 Installing Grub:
 ```shell
 sh# pacman -S grub efibootmgr
 sh# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 sh# grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
 <details><summary> Additional steps / Grub for LUKS:</summary>
 Setting up kernel hooks for encryption:
 
@@ -236,20 +238,16 @@ sh# vim /etc/default/grub
   GRUB_CMDLINE_LINUX="cryptdevice=UUID=need-this-id:cryptroot root=/dev/mapper/cryptroot"
 sh# grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
 </details><br>
-
-
 
 Setting Root Password:
 ```shell
 sh# passwd  # set password
 ```
 
-Reboot
+- Reboot
 
 ## Post Install:
-
 Turning on NTP:
 ```shell
 $ timedatectl set-ntp true
@@ -270,6 +268,7 @@ $ auditctl -w /etc/passwd -p rwa -k etc-passwd
 $ auditctl -w /etc/shadow -p rwa -k etc-shadow
 $ auditctl -w /var/log/lastlog -p rwa -k log-lastlog
 ```
+
 Connecting to wifi using NetworkManager:
 ```shell
 nmcli dev status
@@ -278,21 +277,39 @@ nmcli radio wifi on # if disabled
 nmcli dev wifi list
 nmcli dev wifi connect <network-ssid> password "<network-password>"
 ```
-Installing Personal Base Programs:
+
+AUR package manager:
 ```shell
-$ pacman -S acpi adobe-source-code-pro-fonts arp-scan bind blueman binutils bluez bluez-utils blueman breeze breeze-icons bridge-utils btop capstone checksec cmake ctags curl dmidecode dnscrypt-proxy dnsmasq dunst feh firefox flameshot gdb git gsfonts gucharmap imagemagick jsoncpp lsof lxappearance lynis man-pages mcfly nasm neovim networkmanager-openvpn network-manager-applet net-tools nitrogen nm-connection-manager nmap nmp nodejs noto-fonts-cjk numlockx openresolv okular openvpn p7zip picom playerctl polybar-dwm-module pulseaudio pulseaudio-bluetooth python-yaml qemu-full ranger resolconf rkhunter tldr tlp tmux traceroute tree ttf-fira-code ttf-font-awesome ttf-hack-nerd ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ufw unzip valgrind w3m whois wireshark-cli wireshark-qt wmname xclip xdg-utils xdotool xorg xorg-server xorg-xinit xorg-xmag yajl zathura zathura-pdf-poppler zip zsh
+git clone https://aur.archlinux.org/paru.git /opt/
+cd /opt/paru && makepkg -si 
 ```
+
+Personal base programs:
+```shell
+$ pacman -S breeze bridge-utils cmake curl dnsmasq dunst feh firefox flameshot gdb git kitty libvirt lsof lxappearance man-pages mcfly neovim network-manager-applet nmap noto-fonts-cjk npm numlockx okular openvpn otf-hasklig-nerd p7zip pacman-contrib pavucontrol picom pulseaudio qemu-desktop ranger strace traceroute tree tff-font-awesome ttf-hack-nerd ttf-nerd-fonts-symbols unzip vim w3m whois wmname xclip xdg-utils xdotool yajl zathura zathura-pdf-poppler zsh
+```
+
+```shell
+$ paru -S paru-debug polybar-dwm-module 
+```
+
+<details><summary>Optional base programs:</summary>
+
+```shell
+$ pacman -S acpi adobe-source-code-pro-fonts bind binutils bluez bluez-utils blueman btop dmidecode dnscrypt-proxy gsfonts gucharmap imagemagick jsoncpp network-manager-applet nitrogen nm-connection-manager nodejs openresolv playerctl pulseaudio-bluetooth python-yaml resolconf tldr tlp tmux ttf-fira-code ttf-jetbrains-mono xdotool xorg-xmag
+```
+
+RE/dev programs:
+```shell
+arp-scan capstone checksec ctags ghidra iaito jdk11-openjdk lynis nasm net-tools radare2 rkhunter valgrind wireshark-cli wireshark-qt 
+```
+</details><br>
 
 Configure zsh: 
 ```shell
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 # git clone zsh plugins into ~/.config/zsh/plugins
-```
-
-Additional Programs:
-```shell
-ghidra iaito jdk11-openjdk radare2
 ```
 
 Setting default browser:
@@ -325,7 +342,6 @@ ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub # copy key to github account settings
 ```
 
-
 Setting git defaults:
 ```shell
 git config --global user.name "<username>"
@@ -333,6 +349,7 @@ git config --global user.email "<user_email>"
 git config --global init.defaultBranch main # default branch to main (for rust-lang)
 git remote set-url --add --push origin YOUR-GIT-SSH-URL # for pushing to multiple git repos at once (dont use globally)
 ```
+
 Disable Touchpad:
 ```shell
 xinput list
@@ -358,29 +375,7 @@ sudo cp /usr/share/openvpn/examples/client.conf /etc/openvpn/client/
 nmcli connection import type openvpn file /etc/openvpn/client/<client-vpn>.ovpn
 ```
 
-setup dnscrypt proxy:
-```shell
-sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml # uncomment server_names
-```
-```shell
-sudo vim /etc/NetworkManager/conf.d/dns.conf
-[main]
-dns=none
-```
-```shell
-sudo cp /etc/resolv.conf resolv.conf.bak
-sudo rm /etc/resolv.conf && nvim resolv.conf
-nameserver 127.0.0.1
-options edns0
-````
-```shell
-sudo systemctl start dnscrypt-proxy.service
-sudo systemctl enable dnscrypt-proxy-service
-# use dnsleaktest.com to check for leaks
-```
-
-
-Enable markdown live preview with nvim
+Enable markdown live preview with nvim:
 ```shell
 sudo npm -g install instant-markdown-d
 ```
@@ -391,6 +386,7 @@ sudo vim /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
 GRUB_CMDLINE_LINUX="ipv6.disable=1"
 ```
+
 Redundantly disabling IPv6:
 ```shell
 sudo vim /tmp/ipv6-icmp.conf
@@ -408,3 +404,29 @@ Setup bluetooth services
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 ```
+
+<details><summary>Optional setup dnscrypt proxy:</summary>
+
+```shell
+sudo vim /etc/dnscrypt-proxy/dnscrypt-proxy.toml # uncomment server_names
+```
+
+```shell
+sudo vim /etc/NetworkManager/conf.d/dns.conf
+[main]
+dns=none
+```
+
+```shell
+sudo cp /etc/resolv.conf resolv.conf.bak
+sudo rm /etc/resolv.conf && nvim resolv.conf
+nameserver 127.0.0.1
+options edns0
+````
+
+```shell
+sudo systemctl start dnscrypt-proxy.service
+sudo systemctl enable dnscrypt-proxy-service
+# use dnsleaktest.com to check for leaks
+```
+</details><br>
