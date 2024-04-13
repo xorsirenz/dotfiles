@@ -44,9 +44,9 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "Ubuntu:style=Regular:pixelsize=16;3"
+font-0 = "Ubuntu:style=Regular:pixelsize=17;2"
 font-1 = "Noto Sans CJK JP"
-font-2 = "Hack Nerd Font:style=Solid:pixelsize=16;3"
+font-2 = "Hack Nerd Font:style=Solid:pixelsize=12;2"
 
 modules-left = dwm
 modules-center = date calendar
@@ -55,7 +55,7 @@ modules-right = pkgupdates vpn-status pulseaudio battery-combined-ramp-udev powe
 tray-position = left
 tray-detached = true
 tray-padding = 1
-tray-offset-x = 205
+tray-offset-x = 200
 tray-scale = 1.0
 
 override-redirect = false
@@ -150,7 +150,7 @@ format = <label-title>
 label-title = %title%
 label-title-padding = 1
 label-title-foreground = ${colors.white}
-label-title-maxlen = 40
+label-title-maxlen = 100
 
 [module/date]
 type = internal/date
