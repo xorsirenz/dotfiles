@@ -286,7 +286,7 @@ cd /opt/paru && makepkg -si
 
 Personal base programs:
 ```shell
-$ pacman -S breeze bridge-utils cmake curl dnsmasq dunst feh firefox flameshot gdb git kitty libvirt lsof lxappearance man-pages mcfly neovim network-manager-applet nmap noto-fonts-cjk npm numlockx okular openvpn otf-hasklig-nerd p7zip pacman-contrib pavucontrol picom pulseaudio qemu-desktop ranger strace traceroute tree tff-font-awesome ttf-hack-nerd ttf-nerd-fonts-symbols unzip vim w3m whois wmname xclip xdg-utils xdotool yajl zathura zathura-pdf-poppler zsh
+$ pacman -S breeze bind bridge-utils cmake curl dnsmasq dunst feh firefox flameshot gdb git kitty libvirt lsof lxappearance man-pages mcfly neovim network-manager-applet nmap noto-fonts-cjk npm numlockx okular openvpn otf-hasklig-nerd p7zip pacman-contrib pavucontrol picom pulseaudio qemu-desktop ranger strace traceroute tree tff-font-awesome ttf-hack-nerd ttf-nerd-fonts-symbols unzip vim w3m whois wmname xclip xdg-utils xdotool yajl zathura zathura-pdf-poppler zsh
 ```
 
 ```shell
@@ -296,7 +296,7 @@ $ paru -S paru-debug polybar-dwm-module
 <details><summary>Optional base programs:</summary>
 
 ```shell
-$ pacman -S acpi adobe-source-code-pro-fonts bind binutils bluez bluez-utils blueman btop dmidecode dnscrypt-proxy gsfonts gucharmap imagemagick jsoncpp network-manager-applet nitrogen nm-connection-manager nodejs openresolv playerctl pulseaudio-bluetooth python-yaml resolconf tldr tlp tmux ttf-fira-code ttf-jetbrains-mono xdotool xorg-xmag
+$ pacman -S acpi adobe-source-code-pro-fonts binutils bluez bluez-utils blueman btop dmidecode dnscrypt-proxy gsfonts gucharmap imagemagick jsoncpp network-manager-applet nitrogen nm-connection-manager nodejs openresolv playerctl pulseaudio-bluetooth python-yaml resolconf tldr tlp tmux ttf-fira-code ttf-jetbrains-mono xdotool xorg-xmag
 ```
 
 RE/dev programs:
