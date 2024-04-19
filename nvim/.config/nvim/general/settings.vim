@@ -7,8 +7,8 @@ set clipboard=unnamedplus           " Copy paste between vim & everything else
 set hidden                          " Required to keep multiple buffers open
 set wrap                            " Display long lines on two lines
 set linebreak                       " Wrap at end of word
-set tabstop=4                       " 4 spaces for a tab
-set shiftwidth=4                    " Number of space chars inserted for indentation
+set tabstop=2                       " 4 spaces for a tab
+set shiftwidth=2                    " Number of space chars inserted for indentation
 set smarttab                        " Realize tap width
 set expandtab                       " Convert tabs to spaces
 set smartindent                     " Smart Indent
