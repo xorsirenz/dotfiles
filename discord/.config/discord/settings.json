@@ -1,4 +1,8 @@
 {
+  "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": false,
+  "MIN_WIDTH": 940,
+  "MIN_HEIGHT": 500,
+  "chromiumSwitches": {},
   "IS_MAXIMIZED": false,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
@@ -6,5 +10,8 @@
     "y": 29,
     "width": 1596,
     "height": 869
-  }
+  },
+  "OPEN_ON_STARTUP": false,
+  "MINIMIZE_TO_TRAY": true,
+  "SKIP_HOST_UPDATE": true
 }
