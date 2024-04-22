@@ -1,7 +1,7 @@
 #!/bin/sh
 
-alias ls='ls --color=auto'
-alias ll='ls -lh'
+alias ls='eza --color=always --icons=always --git --long -G --no-filesize --no-time --no-user --no-permissions'
+alias ll='eza --color=always --icons=always --git --long'
 alias diff='diff --color=auto'
 alias grep='grep --color=always'
 alias df='df -h'
