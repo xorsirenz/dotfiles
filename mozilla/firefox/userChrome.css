@@ -24,12 +24,10 @@
   color: #8c85e4 !important;
 }
 
-
 /* url bar */
 #urlbar-background {
   display: none !important;
 }
-
 
 /* megabar */
 #urlbar[breakout][breakout-extend][open] {
@@ -39,13 +37,11 @@
     --toolbar-field-focus-border-color: #09121b !important;
 }
 
-
 /* main bar */
 #navigator-toolbox {
   background-color: #09121b !important;
   --tabs-navbar-shadow-size: none !important;
 }
-
 
 /* select tabs */
 .tabbrowser-tab .tab-background[selected="true"] {
@@ -89,7 +85,6 @@
   opacity: 1;
   visibility: visible !important;
 }
-
 
 /* bookmark menu */
 #PersonalToolbar {
