@@ -1,0 +1,2 @@
+##
+firefox: layout.css.devPixelsPerPx = 1.4
