@@ -1,5 +1,6 @@
 vim.opt.mouse = { a = true }
 vim.opt.clipboard = "unnamed,unnamedplus"
+vim.cmd 'colorscheme vim'
 
 vim.opt.hidden = true
 vim.opt.wrap = false
