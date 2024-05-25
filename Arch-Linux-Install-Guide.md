@@ -254,7 +254,7 @@ $ timedatectl set-ntp true
 
 Adding User Account & Giving Sudo Priv:
 ```shell
-$ useradd -m -s /bin/bash -g wheel <USERNAME>
+$ useradd -m -s /bin/zsh -g wheel <USERNAME>
 $ passwd
 $ vim /etc/sudoers  # uncomment: root ALL=(ALL) ALL -and- %wheel ALL=(ALL) ALL
 $ groupadd plugdev
