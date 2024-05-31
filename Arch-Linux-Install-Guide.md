@@ -393,6 +393,13 @@ net.ipv6.icmp.echo_ignore_all=1
 sudo sysctl -p /tmp/ipv6-icmp.conf 
 ```
 
+Set reverse path filtering to strict:
+```shell
+sudo vim /usr/lib/sysctl.d/50-default.conf
+net.ipv4.conf.default.rp_filter = 1
+net.ipv4.conf.all.rp_filter = 1
+```
+
 Enable fstrim for SSD (thinkpad)
 ```shell
 sudo systemctl enable fstrim.timer
