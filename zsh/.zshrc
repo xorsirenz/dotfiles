@@ -1,6 +1,7 @@
 export SHELL=/bin/zsh
 export EDITOR=vim
 export PATH="$HOME/bin:$PATH"
+source $HOME/.aliases
 
 #enable colors and change prompt
 autoload -U colors && colors
@@ -18,7 +19,6 @@ setopt NULL_GLOB
 setopt NO_NULL_GLOB
 setopt GLOB_COMPLETE
 unsetopt beep #turn off beep
-source $HOME/.aliases
 
 # vi mode
 #bindkey -v
