@@ -46,7 +46,7 @@ Create Partitions:
   - n   # new partition
   - (enter)
   - (enter)
-  - +1G
+  - +512M
   - -Y
 
   - n
