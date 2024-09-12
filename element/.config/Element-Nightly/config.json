@@ -1,0 +1,39 @@
+{
+    "setting_defaults": {
+        "custom_themes": [
+            {
+                "name": "xorsirenz dark",
+                "is_dark": true,
+                "colors": {
+                    "accent-color": "#8c85e4",
+                    "accent": "#8c85e4",
+                    "primary-color": "#8c85e4",
+                    "warning-color": "#d65146",
+                    "alert": "#d65146",
+
+                    "sidebar-color": "#09121b",
+                    "roomlist-background-color": "#09121b",
+                    "roomlist-text-color": "#ffffff",
+                    "roomlist-text-secondary-color": "#e48c85",
+                    "roomlist-highlights-color": "#09121b",
+                    "roomlist-separator-color": "#09121b",
+
+                    "timeline-background-color": "#09121b",
+                    "timeline-text-color": "#ffffff",
+                    "secondary-content": "#e48c85",
+                    "tertiary-content": "#ffffff",
+                    "timeline-text-secondary-color": "#b9bbbe",
+                    "timeline-highlights-color": "#09121b",
+
+                    "reaction-row-button-selected-bg-color": "#8c85e4",
+                    "menu-selected-color": "#8c85e4",
+                    "focus-bg-color": "#09121b",
+                    "room-highlight-color": "#8c85e4",
+                    "other-user-pill-bg-color": "#8c85e4",
+                    "togglesw-off-color": "#09121b"
+                }
+            }
+        ]
+    },
+    "show_labs_settings": true
+}
