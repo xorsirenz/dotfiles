@@ -1,7 +1,16 @@
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+
+[init]
+    defaultBranch = main
+
 [user]
 	name = madison
-	email = 69394836+xorsirenz@users.noreply.github.com
-[init]
-	defaultBranch = main
+    email = 69394836+xorsirenz@users.noreply.github.com
+
+[push]
+    default = current
+
 [tag]
 	forceSignAnnotated = true
