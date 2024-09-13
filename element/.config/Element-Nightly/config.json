@@ -22,6 +22,7 @@
                     "timeline-text-color": "#ffffff",
                     "secondary-content": "#e48c85",
                     "tertiary-content": "#ffffff",
+                    "quinary-content": "#09121b",
                     "timeline-text-secondary-color": "#b9bbbe",
                     "timeline-highlights-color": "#09121b",
 
@@ -30,7 +31,17 @@
                     "focus-bg-color": "#09121b",
                     "room-highlight-color": "#8c85e4",
                     "other-user-pill-bg-color": "#8c85e4",
-                    "togglesw-off-color": "#09121b"
+                    "togglesw-off-color": "#09121b",
+                    "username-colors": [
+                        "#e48c85", 
+                        "#85e48c", 
+                        "#8c85e4",
+                        "#e4bc85", 
+                        "#e485ae", 
+                        "#85dde4", 
+                        "#d65146", 
+                        "#bc85e4"
+                    ]
                 }
             }
         ]
