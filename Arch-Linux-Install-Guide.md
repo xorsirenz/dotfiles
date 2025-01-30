@@ -325,6 +325,7 @@ browser.tabs.firefox-view: false
 extensions.pocket.enabled: false
 media.eme.enabled: false #keep true if streaming platforms break
 pdfjs.disabled: true (ymmv)
+privacy.resistFingerprinting true
 toolkit.legacyUserProfileCustomizations.stylesheets = true
 ```
 
