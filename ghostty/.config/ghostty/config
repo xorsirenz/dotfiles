@@ -3,8 +3,11 @@ foreground = e48c85
 
 font-family = Hasklug Nerd Font Mono Med
 font-size = 17
+font-feature = -liga
 
 shell-integration-features = no-cursor
 cursor-style = block
 
 window-decoration = false
+
+command = ~/.config/ghostty/start-tmux
