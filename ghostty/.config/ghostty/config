@@ -9,5 +9,3 @@ shell-integration-features = no-cursor
 cursor-style = block
 
 window-decoration = false
-
-command = ~/.config/ghostty/start-tmux
