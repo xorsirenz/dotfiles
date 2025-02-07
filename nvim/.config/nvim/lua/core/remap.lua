@@ -26,6 +26,8 @@ vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
 
 vim.keymap.set("n", "<leader>r", "<cmd>RangerOpenCurrentDir<CR>")
 
+vim.keymap.set("n", "<leader>pw", "<cmd>set wrap!<CR>")
+
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
