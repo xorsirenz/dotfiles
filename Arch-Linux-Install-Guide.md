@@ -285,7 +285,7 @@ cd /opt/paru && makepkg -si
 
 Personal base programs:
 ```shell
-$ pacman -S breeze bind bridge-utils cmake curl dnsmasq dunst eza feh firefox flameshot gdb ghostty git libvirt lsof lxappearance man-pages mcfly neovim network-manager-applet nmap noto-fonts-cjk noto-fonts-emoji npm numlockx okular openvpn otf-hasklig-nerd p7zip pacman-contrib pavucontrol picom pulseaudio qemu-desktop ranger strace traceroute tree ttf-font-awesome ttf-hack-nerd ttf-nerd-fonts-symbols unzip vim w3m whois wmname xclip xdg-utils xdotool yajl zathura zathura-pdf-poppler zsh
+$ pacman -S breeze bind bridge-utils cmake curl dnsmasq dunst eza feh firefox flameshot fzf gdb ghostty git libvirt lsof lxappearance man-pages neovim network-manager-applet nmap noto-fonts-cjk noto-fonts-emoji npm numlockx okular openvpn otf-hasklig-nerd p7zip pacman-contrib pavucontrol picom pulseaudio qemu-desktop ranger strace traceroute tree ttf-font-awesome ttf-hack-nerd ttf-nerd-fonts-symbols unzip vim w3m whois wmname xclip xdg-utils xdotool yajl zathura zathura-pdf-poppler zsh
 ```
 
 ```shell

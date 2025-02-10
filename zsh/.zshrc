@@ -1,7 +1,9 @@
 export SHELL=/bin/zsh
 export EDITOR=vim
 export PATH="$HOME/bin:$PATH"
+export PATH=$PATH:$HOME/go/bin
 source $HOME/.aliases
+source $HOME/.cs50env
 
 #enable colors and change prompt
 autoload -U colors && colors
@@ -56,3 +58,5 @@ eval "$(mcfly init zsh)"
 #loading plugins - keep at end of file.
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
