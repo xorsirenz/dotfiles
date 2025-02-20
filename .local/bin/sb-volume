@@ -35,9 +35,9 @@ if [ -z "$volume" ]; then
     exit 1
 fi
 
-if [ "$volume" -gt 40 ]; then
+if [ "$volume" -gt 75 ]; then
     icon=" "
-elif [ "$volume" -gt 15 ]; then
+elif [ "$volume" -gt 50 ]; then
     icon=" "
 else
     icon=" "

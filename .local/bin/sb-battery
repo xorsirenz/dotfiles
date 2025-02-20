@@ -23,15 +23,15 @@ for battery in /sys/class/power_supply/BAT?*; do
 
     capacity="$(cat "$battery/capacity" 2>&1)"
     if [ "$capacity" -gt 90 ]; then
-        status=" "
+        status="  "
     elif [ "$capacity" -gt 60 ]; then
-        status=" "
+        status="  "
     elif [ "$capacity" -gt 40 ]; then
-        status=" "
+        status="  "
     elif [ "$capacity" -gt 10 ]; then
-        status=" "
+        status="  "
     else
-        status=" "
+        status="  "
     fi
 
     case "$(cat "$battery/status" 2>&1)" in
@@ -42,13 +42,13 @@ for battery in /sys/class/power_supply/BAT?*; do
                 color=1
             fi
             ;;
-        Charging) status=" 󰚥 $status" ;;
-        "Not charging") status="  " ;;
-        Unknown) status=" ? $status" ;;
+        Charging) status="󰚥 $status" ;;
+        "Not charging") status="  " ;;
+        Unknown) status="? $status" ;;
         *) exit 1 ;;
     esac
 
-    if [ "$capacity" -gt 95 ]; then
+    if [ "$capacity" -gt 90 ]; then
         display "$status" "$color"
     else 
         display "$status$capacity%" "$color"
