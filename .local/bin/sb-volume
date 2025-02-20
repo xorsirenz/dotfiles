@@ -15,11 +15,10 @@ wpctl() {
 }
 
 case "$BLOCK_BUTTON" in
-    1) setsid --fork ghostty -e pulsemixer ;;
+    1) wpctl set-volume 3%- ;;
     2) wpctl set-mute toggle ;;
-    4) wpctl set-volume 3%+ ;;
-    5) wpctl set-volume 3%- ;;
-    6) terminal -e "$EDITOR" "$0" ;;
+    3) wpctl set-volume 3%+ ;;
+    4) setsid --fork ghostty -e pulsemixer ;;
 esac
 
 . sb-theme

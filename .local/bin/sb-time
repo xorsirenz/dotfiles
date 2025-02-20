@@ -1,0 +1,16 @@
+#!/bin/sh
+
+notify() {
+    notify-send --icon=office-calendar-symbolic \
+        --hint=string:x-canonical-private-synchronous:"$1" "$@"
+}
+
+case $BLOCK_BUTTON in
+    1)
+        notify " " "$(cal --color=always |
+            sed "s|..7m|<span color='$(xrdb -get color1)'>|;s|..0m|</span>|")"
+        ;;
+esac
+
+. sb-theme
+display "$(date '+%H:%M')"
