@@ -1,6 +1,6 @@
-exec startx
+export SHELL=/bin/zsh
+export EDITOR=vim
+export PATH="$PATH:/$HOME/.local/bin"
+export PATH=$PATH:$HOME/go/bin
 
-export PATH="$HOME/.cargo/bin:$PATH"
-PATH="$PATH:/$HOME/.local"
-PATH="$PATH:/$HOME/.local/bin"
-PATH="$PATH:/$HOME/.local/bin/status-bar"
+exec startx

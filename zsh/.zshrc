@@ -1,9 +1,4 @@
-export SHELL=/bin/zsh
-export EDITOR=vim
-export PATH="$HOME/bin:$PATH"
-export PATH=$PATH:$HOME/go/bin
 source $HOME/.aliases
-source $HOME/.cs50env
 
 #enable colors and change prompt
 autoload -U colors && colors
@@ -11,7 +6,7 @@ PS1="[%n:%F{white}%~%f]$ "
 
 # History
 HISTFILE=~/.histfile
-HISTSIZE=10000
+HISTSIZE=50000
 SAVEHIST=10000
 
 # language
