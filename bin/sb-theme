@@ -1,0 +1,20 @@
+#!/bin/sh
+# Utility functions for theming statusbar scripts.
+
+display() {
+    if [ -n "$2" ]; then
+        color="$2"
+    else
+        case "$(basename "$0")" in
+            sb-volume) color=15 ;;
+            sb-battery) color=14 ;;
+            sb-date) color=12 ;;
+            *) color=15 ;;
+        esac
+    fi
+
+    case "$STATUSBAR" in
+        dwmblocks) echo "^C$color^$1" ;;
+        *) echo "$1" ;;
+    esac
+}
