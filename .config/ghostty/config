@@ -8,4 +8,10 @@ font-feature = -calt, -liga
 shell-integration-features = no-cursor
 cursor-style = block
 
+clipboard-trim-trailing-spaces = true
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = false
+copy-on-select = false
+
 window-decoration = none
