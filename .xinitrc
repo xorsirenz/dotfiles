@@ -40,7 +40,10 @@ if [ -d $xinitdir/xinitrc.d ] ; then
  unset f
 fi
 
+export _JAVA_AWT_WM_NONREPARENTING=1
 fehbg &
+flameshot &
+dunst &
 dwmblocks &
 
 exec startdwm
