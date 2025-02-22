@@ -13,7 +13,6 @@ SAVEHIST=10000
 export LANG=en_US.UTF-8
 # globstoppers
 setopt NULL_GLOB
-setopt NO_NULL_GLOB
 setopt GLOB_COMPLETE
 unsetopt beep #turn off beep
 
