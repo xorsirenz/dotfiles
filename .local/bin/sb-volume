@@ -23,7 +23,7 @@ esac
 
 . sb-theme
 if wpctl get-volume | grep -q "[MUTED]"; then
-    display " " 9
+    display " " 9
     exit
 fi
 

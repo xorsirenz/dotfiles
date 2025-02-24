@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [[ $(pgrep -a wg-crypt$) ]]; then
-    echo " "
+    echo " "
 elif [[ $(nmcli con | grep -i wireguard) ]]; then
-    echo " "
+    echo " "
 else
-    echo " "
+    echo " "
 fi
