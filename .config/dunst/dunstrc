@@ -8,7 +8,7 @@
     follow = mouse
 
     # geometry
-    width = 255
+    #width = 500
     origin = top-right
     offset = 5x35
     #geometry = "0x0-5+55"
@@ -37,8 +37,8 @@
     seperator_color = auto
 
     # Padding between text and separator.
-    padding = 8
-    horizontal_padding = 8
+    padding = 6
+    horizontal_padding = 6
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -56,7 +56,7 @@
 
     ### Text ###
 
-    font = Hack Nerd Font 12
+    font = Maple Mono 16
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -92,7 +92,7 @@
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = false
 
     ### Icons ###
 
