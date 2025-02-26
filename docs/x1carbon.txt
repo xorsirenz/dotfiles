@@ -1,2 +1,3 @@
 ##
+xrandr --output eDP1 --scale 0.90x0.90
 firefox: layout.css.devPixelsPerPx = 1.4
