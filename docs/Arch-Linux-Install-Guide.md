@@ -170,7 +170,7 @@ root@archiso# lsblk
 ## Base install 
 Installing Base & Personal Packages:
 ```shell
-root@archiso# pacstrap /mnt base base-devel linux linux-firmware linux-headers networkmanager network-manager-openvpn vim intel-ucode #amd-vcode (cpu)
+root@archiso# pacstrap /mnt base base-devel git linux linux-firmware linux-headers networkmanager network-manager-openvpn neovim zsh intel-ucode #amd-vcode (cpu)
 ```
 
 Generating filesystem:
@@ -285,22 +285,16 @@ cd /opt/paru && makepkg -si
 
 Personal base programs:
 ```shell
-$ pacman -S breeze bind bridge-utils cmake curl dnsmasq dunst eza feh firefox flameshot fzf gdb ghostty git libvirt lsof lxappearance man-pages neovim network-manager-applet nmap noto-fonts-cjk noto-fonts-emoji npm numlockx okular openvpn otf-hasklig-nerd p7zip pacman-contrib pavucontrol picom pulseaudio qemu-desktop ranger strace traceroute tree ttf-font-awesome ttf-hack-nerd ttf-nerd-fonts-symbols unzip vim w3m whois wmname xclip xdg-utils xdotool yajl zathura zathura-pdf-poppler zsh
-```
+$ pacman -S acpi acpid bc btop calcurse dunst eza feh firefox flameshot fzf gdb ghostty gopls jq lsof man-db nmap notify-osd noto-fonts-cjk noto-fonts-emoji noto-fonts-extra openresolv openssh pacman-contrib pidgin pidgin-otr pipewire pipewire-also pipewire-pulse pulsemixer pwvucontrol ranger torbrowser-launcher tree ttf-nerd-fonts-symbols wget wireguard-tools xcb-util xorg-xfontsel xorg-xinput xorg-xrandr
 
 ```shell
-$ paru -S paru-debug polybar-dwm-module 
+$ paru -S paru-debug ttf-maple-beta
 ```
 
-<details><summary>Optional base programs:</summary>
+<details><summary>Additional base programs:</summary>
 
 ```shell
-$ pacman -S acpi adobe-source-code-pro-fonts binutils bluez bluez-utils blueman btop dmidecode dnscrypt-proxy gsfonts gucharmap imagemagick jsoncpp network-manager-applet nitrogen nm-connection-manager nodejs openresolv playerctl pulseaudio-bluetooth python-yaml resolconf tldr tlp tmux ttf-fira-code ttf-jetbrains-mono xdotool xorg-xmag
-```
-
-RE/dev programs:
-```shell
-arp-scan capstone checksec ctags ghidra iaito jdk11-openjdk lynis nasm net-tools radare2 rkhunter valgrind wireshark-cli wireshark-qt 
+$ pacman -S arp-scan bind binutils bridge-utils bluez bluez-utils blueman capstone cmake checksum ctags curl dnsmasq dmidecode dnscrypt-proxy ghidra iaito imagemagick jsoncpp lynis nasm net-tools nodejs openresolv p7zip playerctl pulseaudio-bluetooth python-yaml radare2 resolconf rkhunter strace tldr tlp traceroute unzip valgrind w3m whois  wireshark-cli wireshark-qt xwmname xclip xdg-utils xdotool xorg-xmag yajl zathura zathura-pdf-poppler
 ```
 </details><br>
 
@@ -327,11 +321,6 @@ media.eme.enabled: false #keep true if streaming platforms break
 pdfjs.disabled: true (ymmv)
 privacy.resistFingerprinting true
 toolkit.legacyUserProfileCustomizations.stylesheets = true
-```
-
-Remove Adwaita cursor theme
-```shell
-sudo rm -rf /usr/share/icons/Adwaita
 ```
 
 Setting up new git SSH key:
