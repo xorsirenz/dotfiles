@@ -30,10 +30,21 @@ for battery in /sys/class/power_supply/BAT?*; do
         status="󱃍 "
     fi
 
-    if [ "$capacity" -gt 90 ]; then
-        display "󱟢 " "$color"
-    else 
-        display "$status$capacity%" "$color"
-    fi
+    case "$(cat "$battery/status" 2>&1)" in
+        Full) status=" " ;;
+        Discharging)
+            if [ "$capacity" -le 20 ]; then
+                status="$status$capacity%"
+            else
+                status="$status$capacity%"
+            fi
+            ;;
+        Charging) status="$status$capacity%" ;;
+        "Not charging") status="󰂄 " ;;
+        Unknown) status="? $status" ;;
+        *) exit 1 ;;
+    esac
+    
+    display "$status"
 
 done
