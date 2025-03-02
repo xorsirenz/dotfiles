@@ -7,8 +7,10 @@ notify() {
 
 case $BLOCK_BUTTON in
     1)
-        notify " " "$(cal --color=always |
-            sed "s|..7m|<span color='$(xrdb -get color1)'>|;s|..0m|</span>|")"
+        dunstify -h " " "$(cal)"
+        ;;
+    3)
+        dunstify -h " " "$(date)"
         ;;
 esac
 
