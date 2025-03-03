@@ -31,17 +31,17 @@ for battery in /sys/class/power_supply/BAT?*; do
     fi
 
     case "$(cat "$battery/status" 2>&1)" in
-        Full) status=" " ;;
+        Full) status="󰂄 " ;;
         Discharging)
-            if [ "$capacity" -le 20 ]; then
-                status="$status$capacity%"
+            if [ "$capacity" -ge 99 ]; then
+                status="$status"
             else
                 status="$status$capacity%"
             fi
             ;;
-        Charging) status="$status$capacity%" ;;
-        "Not charging") status="󰂄 " ;;
-        Unknown) status="? $status" ;;
+        Charging) status=" $capacity%" ;;
+        "Not charging") status="󰁹 " ;;
+        Unknown) status="󰂑  $capacity" ;;
         *) exit 1 ;;
     esac
     
