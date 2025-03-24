@@ -1,27 +1,27 @@
-|        Keybind             |                 Function                 |
+|        keybind             |                 function                 |
 | -------------------------- | ---------------------------------------- |
-| `Mod + Enter`              | Spawn Terminal (Kitty)                   |
-| `Mod + Shift + q`          | Quit window                              |
-| `Mod + Ctrl + q`           | Kill dwm                                 |
-| `Mod + d`                  | Launch dmenu                             |
-| `Mod + Shift + Enter`      | Swap master window                       |
-| `Mod + j`                  | Focus next stacked window                |
-| `Mod + k`                  | Focus previous stacked window            |
-| `Mod + i`                  | Increment master window                  |
-| `Mod + o`                  | Decrement master window                  |
-| `Mod + h`                  | Increase master horizontal size          |
+| `Mod + Enter`              | spawn terminal (ghostty+tmux)            |
+| `Mod + Shift + Enter`      | spawn terminal (ghostty)                 |
+| `Mod + Shift + q`          | quit window                              |
+| `Mod + Ctrl + q`           | kill dwm                                 |
+| `Mod + d`                  | launch dmenu                             |
+| `Mod + j`                  | focus next stacked window                |
+| `Mod + k`                  | focus previous stacked window            |
+| `Mod + i`                  | increment master window                  |
+| `Mod + o`                  | decrement master window                  |
+| `Mod + h`                  | increase master horizontal size          |
 | `Mod + l`                  | Decrease master horizontal size          |
-| `Mod + tab`                | Toggle between tags                      |
-| `Mod + tag number`         | Change current tag                       |
-| `Mod + Shift + tag number` | Move focused window to another tag       |
-| `Mod + 0`                  | View all active tags                     |
-| `Mod + t`                  | Tiled layout                             |
-| `Mod + f`                  | Floating layout                          |
-| `Mod + m`                  | Monocle layout                           |
-| `Mod + -`                  | Decrease gaps                            |
-| `Mod + =`                  | Incease gaps                             |
-| `Mod + Shift + =`          | Remove gaps                              |
-| `Mod + w`                  | Spawn broswer (firefox)                  |
-| `Mod + Shift + d`          | Spawn discord                            |
+| `Mod + tab`                | toggle between tags                      |
+| `Mod + tag number`         | change current tag                       |
+| `Mod + Shift + tag number` | move focused window to another tag       |
+| `Mod + 0`                  | view all active tags                     |
+| `Mod + t`                  | tiled layout                             |
+| `Mod + f`                  | floating layout                          |
+| `Mod + m`                  | monocle layout                           |
+| `Mod + -`                  | decrease gaps                            |
+| `Mod + =`                  | incease gaps                             |
+| `Mod + Shift + =`          | remove gaps                              |
+| `Mod + w`                  | spawn broswer (firefox)                  |
+| `Mod + Shift + d`          | spawn discord                            |
 
 ##### // `Mod` key is mapped to the `Win` / `Super` key.
