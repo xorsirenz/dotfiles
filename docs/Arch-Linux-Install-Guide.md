@@ -295,7 +295,7 @@ $ paru -S adwaita-dark paru-debug ttf-maple-beta
 <details><summary>Additional base programs:</summary>
 
 ```shell
-$ pacman -S arp-scan bind binutils bridge-utils bluez bluez-utils blueman capstone cmake checksum ctags curl dnsmasq dmidecode dnscrypt-proxy ghidra iaito imagemagick jsoncpp lynis nasm net-tools nodejs openresolv p7zip playerctl pulseaudio-bluetooth python-yaml radare2 resolconf rkhunter strace tldr tlp traceroute unzip valgrind w3m whois  wireshark-cli wireshark-qt xwmname xclip xdg-utils xdotool xorg-xmag yajl zathura zathura-pdf-poppler
+$ pacman -S arp-scan bind binutils bridge-utils bluez bluez-utils blueman capstone cmake checksum ctags curl dnsmasq dmidecode dnscrypt-proxy ghidra iaito imagemagick jsoncpp lynis nasm net-tools nodejs openresolv p7zip playerctl pulseaudio-bluetooth python-yaml qt-tools qt-xmlpatterns radare2 resolconf rkhunter strace tldr tlp traceroute unzip valgrind w3m whois  wireshark-cli wireshark-qt xwmname xclip xdg-utils xdotool xorg-xmag yajl zathura zathura-pdf-poppler
 ```
 </details><br>
 
