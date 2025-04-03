@@ -1,4 +1,6 @@
 source $HOME/.aliases
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 #enable colors and change prompt
 autoload -U colors && colors
@@ -18,7 +20,7 @@ unsetopt beep #turn off beep
 
 # vi mode
 #bindkey -v
-bindkey '^R' history-incremental-search-backward
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/madison/.zshrc'
@@ -43,6 +45,7 @@ zstyle ':vcs_info:*' stagedstr ' +'
 zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
+
 #case insensitive path-completion 
 zstyle ':completion:*' matcher-list  'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
@@ -50,4 +53,5 @@ zstyle ':completion:*' matcher-list  'm:{[:lower:][:upper:]}={[:upper:][:lower:]
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+#fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
