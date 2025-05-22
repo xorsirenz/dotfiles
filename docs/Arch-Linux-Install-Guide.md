@@ -285,11 +285,11 @@ cd /opt/paru && makepkg -si
 
 Personal base programs:
 ```shell
-$ pacman -S acpi acpid bc btop calcurse dunst eza feh firefox flameshot fzf gdb ghostty gopls jq lsof lxappearance man-db nmap notify-osd noto-fonts-cjk noto-fonts-emoji noto-fonts-extra openresolv openssh pacman-contrib pidgin pidgin-otr pipewire pipewire-also pipewire-pulse pulsemixer pwvucontrol ranger torbrowser-launcher tree ttf-nerd-fonts-symbols wget wireguard-tools xcb-util xf86-video-intel xorg-xfontsel xorg-xinput xorg-xrandr
+$ pacman -S acpi acpid bc btop calcurse dunst eza feh firefox flameshot fzf gdb ghostty gopls jq lsof lxappearance man-db nmap notify-osd noto-fonts-cjk noto-fonts-emoji noto-fonts-extra openresolv openssh pacman-contrib pidgin pidgin-otr pipewire pipewire-also pipewire-pulse pulsemixer pwvucontrol ranger torbrowser-launcher tree ttf-0xproto-nerd ttf-nerd-fonts-symbols wget wireguard-tools xcb-util xf86-video-intel xorg-xfontsel xorg-xinput xorg-xrandr
 ```
 
 ```shell
-$ paru -S adwaita-dark paru-debug ttf-maple-beta
+$ paru -S adwaita-dark paru-debug
 ```
 
 <details><summary>Additional base programs:</summary>
