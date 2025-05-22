@@ -35,11 +35,11 @@ if [ -z "$volume" ]; then
 fi
 
 if [ "$volume" -gt 75 ]; then
-    icon=" "
+    icon="  "
 elif [ "$volume" -gt 50 ]; then
-    icon=" "
+    icon="  "
 else
-    icon=" "
+    icon="  "
 fi
 
 display "$icon"
