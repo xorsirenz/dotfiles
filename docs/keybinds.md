@@ -21,7 +21,7 @@
 | `Mod + -`                  | decrease gaps                            |
 | `Mod + =`                  | incease gaps                             |
 | `Mod + Shift + =`          | remove gaps                              |
-| `Mod + w`                  | spawn broswer (firefox)                  |
+| `Mod + Shift + w`          | spawn broswer (brave)                    |
 | `Mod + Shift + d`          | spawn discord                            |
 
 ##### // `Mod` key is mapped to the `Win` / `Super` key.
