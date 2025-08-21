@@ -4,7 +4,7 @@ vim.opt.clipboard = "unnamed,unnamedplus"
 vim.opt.termguicolors = true
 vim.cmd 'colorscheme vim'
 vim.cmd 'highlight Pmenu guibg=#09121b'
-vim.cmd 'highlight PmenuSel guifg=#85e48c guibg=#09121b'
+vim.cmd 'highlight PmenuSel guifg=#baffc9 guibg=#09121b'
 
 vim.opt.hidden = true
 vim.opt.wrap = false
