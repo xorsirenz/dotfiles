@@ -32,7 +32,7 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 # add red indicator to prompt
-RPROMPT='%F{#ec95ec}${vcs_info_msg_0_}%f'
+RPROMPT='%F{#baffc9}${vcs_info_msg_0_}%f'
 zstyle ':vcs_info:git:*' formats '%b'
 # Run vcs_info just before a prompt is displayed (precmd)
 add-zsh-hook precmd vcs_info
