@@ -3,8 +3,8 @@ return {
   version = "*",
   config = function()
     require("toggleterm").setup{
-      size = 5,
-      open_mapping = [[<c-\>]]
+      size = 4,
+      open_mapping = [[<c-s>]]
     }
   end
 }
