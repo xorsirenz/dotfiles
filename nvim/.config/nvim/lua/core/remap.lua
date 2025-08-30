@@ -29,6 +29,8 @@ vim.keymap.set("n", "<leader>r", "<cmd>RangerOpenCurrentDir<CR>")
 
 vim.keymap.set("n", "<leader>pw", "<cmd>set wrap!<CR>")
 
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
