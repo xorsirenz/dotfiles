@@ -1,0 +1,9 @@
+#!/bin/sh
+intern=eDP1
+extern=HDMI1
+
+if xrandr | grep "$extern disconnected"; then
+    xrandr --auto
+else
+    xrandr --output eDP1 --primary --output HDMI1 --mode 1920x1080 --left-of eDP1
+fi
