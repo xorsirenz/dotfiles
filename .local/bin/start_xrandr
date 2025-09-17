@@ -3,7 +3,7 @@ intern=eDP1
 extern=HDMI1
 
 if xrandr | grep "$extern disconnected"; then
-    xrandr --auto
+    xrandr --auto --output $intern --primary 
 else
-    xrandr --output eDP1 --primary --output HDMI1 --mode 1920x1080 --left-of eDP1
+    xrandr --output $intern --auto --output $extern --auto --left-of $intern --primary
 fi
