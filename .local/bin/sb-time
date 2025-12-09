@@ -10,7 +10,7 @@ case $BLOCK_BUTTON in
         dunstify -h " " "$(cal)"
         ;;
     3)
-        dunstify -h " " "$(date)"
+        dunstify -h " " "$(date '+%A %D')"
         ;;
 esac
 
