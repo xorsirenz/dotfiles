@@ -30,6 +30,8 @@ vim.opt.scrolloff = 2
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
+
 vim.opt.background = "dark"
 vim.opt.signcolumn = "no"
 
