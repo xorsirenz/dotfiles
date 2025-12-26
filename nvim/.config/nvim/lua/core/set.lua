@@ -1,4 +1,3 @@
-vim.
 vim.opt.mouse = { a = true }
 vim.opt.clipboard = "unnamed,unnamedplus"
 
