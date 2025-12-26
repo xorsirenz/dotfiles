@@ -5,7 +5,7 @@ function SirenzColors(color)
     vim.opt.colorcolumn = "80"
     vim.cmd 'highlight ColorColumn guibg=#0f1f2e'
     vim.cmd 'highlight Pmenu guibg=#0f1f2e'
-    vim.cmd 'highlight PmenuSel guifg=#e48c85 guibg=#09121b'
+    vim.cmd 'highlight PmenuSel guifg=#ebbcba guibg=#09121b'
 
 end
 return {
@@ -16,7 +16,7 @@ return {
             require('rose-pine').setup({
                 disable_background = true,
                 highlight_groups = {
-		            TelescopeBorder = { fg = "#e48c85", bg = "#09121b" },
+		            TelescopeBorder = { fg = "rose", bg = "#09121b" },
 		            TelescopeNormal = { bg = "#09121b" },
 		            TelescopePromptNormal = { bg = "#09121b" },
 		            TelescopeResultsNormal = { fg = "subtle", bg = "#09121b" },
