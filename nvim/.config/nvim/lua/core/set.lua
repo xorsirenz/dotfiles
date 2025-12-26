@@ -1,13 +1,8 @@
+vim.
 vim.opt.mouse = { a = true }
 vim.opt.clipboard = "unnamed,unnamedplus"
 
 vim.opt.termguicolors = true
-vim.cmd 'colorscheme vim'
-vim.cmd 'highlight Pmenu guibg=#09121b'
-vim.cmd 'highlight PmenuSel guifg=#e1f7d5 guibg=#09121b'
-
-vim.opt.colorcolumn = "80"
-vim.cmd 'highlight ColorColumn guibg=#0f1f2e'
 
 vim.opt.hidden = true
 vim.opt.wrap = false
