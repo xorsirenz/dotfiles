@@ -283,7 +283,7 @@ git clone https://aur.archlinux.org/paru.git /opt/
 cd /opt/paru && makepkg -si 
 ```
 
-###Setting up system for xlibre
+### Setting up system for xlibre
 Adding xlibre key to pacman:
 ```shell
 sudo pacman-key --recv-keys 73580DE2EDDFA6D6
