@@ -23,9 +23,12 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
+-- vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
+vim.keymap.set("n", "<leader>ee", "opub fn main() !void {<CR>}<Esc>O")
 
 vim.keymap.set("n", "<leader>r", "<cmd>RangerOpenCurrentDir<CR>")
+
+vim.keymap.set("n", "<leader>lp", "<cmd>LivePreview start<CR>")
 
 vim.keymap.set("n", "<leader>pw", "<cmd>set wrap!<CR>")
 
@@ -34,3 +37,4 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
