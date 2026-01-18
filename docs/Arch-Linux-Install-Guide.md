@@ -283,9 +283,23 @@ git clone https://aur.archlinux.org/paru.git /opt/
 cd /opt/paru && makepkg -si 
 ```
 
+###Setting up system for xlibre
+Adding xlibre key to pacman:
+```shell
+sudo pacman-key --recv-keys 73580DE2EDDFA6D6
+sudo pacman-key --finger 73580DE2EDDFA6D6
+sudo pacman-key --lsign-key 73580DE2EDDFA6D6
+```
+
+Adding xlibre repo to `/etc/pacman.conf`
+```shell
+[xlibre]
+Server = https://x11libre.net/repo/arch_based/x86_64
+```
+
 Personal base programs:
 ```shell
-$ pacman -S acpi acpid bc btop calcurse dunst eza feh firefox flameshot fzf gdb ghostty gopls jq lsof lxappearance man-db nmap notify-osd noto-fonts-cjk noto-fonts-emoji noto-fonts-extra openresolv openssh pacman-contrib pidgin pidgin-otr pipewire pipewire-also pipewire-pulse pulsemixer pwvucontrol ranger torbrowser-launcher tree ttf-0xproto-nerd ttf-nerd-fonts-symbols wget wireguard-tools xcb-util xf86-video-intel xorg-xfontsel xorg-xinput xorg-xrandr
+$ pacman -S acpi acpid bc btop calcurse dunst eza feh firefox flameshot fzf gdb ghostty gopls jq lsof lxappearance man-db nmap notify-osd noto-fonts-cjk noto-fonts-emoji noto-fonts-extra openresolv openssh pacman-contrib pidgin pidgin-otr pipewire pipewire-also pipewire-pulse pulsemixer pwvucontrol ranger torbrowser-launcher tree ttf-0xproto-nerd ttf-nerd-fonts-symbols wget wireguard-tools xcb-util xlibre-video-intel xlibre-server xlibre-input-libinput xorg-xfontsel xorg-xinput xorg-xrandr
 ```
 
 ```shell
