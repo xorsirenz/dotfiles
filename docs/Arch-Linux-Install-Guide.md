@@ -365,6 +365,11 @@ Disable sleep/suspend/hibernate:
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
 
+Disable terminal beep
+```shell
+echo "blacklist pcspkr" |sudo tree /etc/modprobe.d/nobeep.conf
+```
+
 Setup wireshark for user:
 ```shell
 sudo usermod -a -G wireshark $USER #relog
