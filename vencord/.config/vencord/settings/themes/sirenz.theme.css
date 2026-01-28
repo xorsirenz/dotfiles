@@ -7,7 +7,7 @@
  * @website https://xorsirenz.dev
 */
 
-@import url('https://github.com/xorsirenz/dotfiles/vencord/.config/vencord/settings/themes/sirenz.theme.css');
+@import url('https://raw.githubusercontent.com/xorsirenz/dotfiles/refs/heads/main/vencord/.config/vencord/settings/themes/sirenz.theme.css');
 
 :root {
     --background: 9, 18, 27;
