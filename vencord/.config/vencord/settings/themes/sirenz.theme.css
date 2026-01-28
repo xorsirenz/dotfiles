@@ -1,0 +1,14 @@
+/**
+ * @name sirenz-dark
+ * @author xorsirenz
+ * @version 0.0.1
+ * @description sirenz-theme
+ * @source https://github.com/xorsirenz/dotfiles
+ * @website https://xorsirenz.dev
+*/
+
+@import url('https://github.com/xorsirenz/dotfiles/vencord/.config/vencord/settings/themes/sirenz.theme.css');
+
+:root {
+    --background: 9, 18, 27;
+}
