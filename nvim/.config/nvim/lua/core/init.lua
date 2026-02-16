@@ -4,6 +4,26 @@ require("core.lazy")
 
 local autocmd = vim.api.nvim_create_autocmd
 
+autocmd('BufEnter', {
+    pattern = "*",
+    callback = function()
+        if vim.env.TMUX then
+            local filename = vim.fn.expand("%:t")
+            local cmd = string.format("tmux rename-window " .. vim.fn.shellescape(filename))
+            vim.fn.jobstart(cmd, { detach = true })
+    	end
+    end
+})
+
+autocmd('VimLeave', {
+    pattern = "*",
+    callback = function()
+        if vim.env.TMUX then
+            vim.fn.system("tmux set-window-option automatic-rename")
+        end
+    end
+})
+
 autocmd('LspAttach', {
     group = SirenzGroup,
     callback = function(e)
@@ -23,5 +43,6 @@ autocmd('LspAttach', {
 
     end
 })
+
 
 vim.lsp.enable('zls')
