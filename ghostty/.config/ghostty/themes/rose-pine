@@ -1,18 +1,34 @@
+# overlay
 palette = 0=#26233a
+# love
 palette = 1=#eb6f92
+# pine
 palette = 2=#31748f
+# gold
 palette = 3=#f6c177
+# foam
 palette = 4=#9ccfd8
+# iris
 palette = 5=#c4a7e7
+# rose
 palette = 6=#ebbcba
+# text
 palette = 7=#e0def4
+# muted
 palette = 8=#6e6a86
+# love
 palette = 9=#eb6f92
+# pine
 palette = 10=#31748f
+# gold
 palette = 11=#f6c177
+# foam
 palette = 12=#9ccfd8
+# iris
 palette = 13=#c4a7e7
+# rose
 palette = 14=#ebbcba
+# text
 palette = 15=#e0def4
 background = #09121b
 foreground = #ebbcba
