@@ -1,37 +1,39 @@
-vim.opt.mouse = { a = true }
-vim.opt.clipboard = "unnamed,unnamedplus"
+local set = vim.opt
 
-vim.opt.termguicolors = true
+set.mouse = { a = true }
+set.clipboard = "unnamed,unnamedplus"
 
-vim.opt.title = true
-vim.opt.cmdheight = 0
+set.termguicolors = true
 
-vim.opt.hidden = true
-vim.opt.wrap = false
-vim.opt.linebreak = true
+set.title = true
+set.cmdheight = 0
 
-vim.opt.number = true
-vim.opt.relativenumber = true
+set.hidden = true
+set.wrap = false
+set.linebreak = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+set.number = true
+set.relativenumber = true
 
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.expandtab = true
+set.smartindent = true
 
-vim.opt.showmode = false
-vim.opt.scrolloff = 2
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+set.hlsearch = true
+set.incsearch = true
 
-vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
+set.showmode = false
+set.scrolloff = 2
+set.ignorecase = true
+set.smartcase = true
 
-vim.opt.background = "dark"
-vim.opt.signcolumn = "no"
+set.completeopt = {'menuone', 'noselect', 'noinsert'}
 
-vim.opt.updatetime = 50
+set.background = "dark"
+set.signcolumn = "no"
 
-vim.opt.swapfile = false
+set.updatetime = 50
+
+set.swapfile = false
