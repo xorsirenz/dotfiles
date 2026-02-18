@@ -4,6 +4,7 @@ vim.opt.clipboard = "unnamed,unnamedplus"
 vim.opt.termguicolors = true
 
 vim.opt.title = true
+vim.opt.cmdheight = 0
 
 vim.opt.hidden = true
 vim.opt.wrap = false
