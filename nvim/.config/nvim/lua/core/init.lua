@@ -25,14 +25,12 @@ autocmd('VimLeave', {
 })
 
 autocmd('CmdlineEnter', {
-    pattern = "*",
     callback = function()
         vim.opt.cmdheight = 1
     end
 })
 
 autocmd('CmdlineLeave', {
-    pattern = "*",
     callback = function()
         vim.opt.cmdheight = 0
     end
