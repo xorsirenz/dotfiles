@@ -5,39 +5,39 @@ require("core.lazy")
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd('BufEnter', {
+    group = SirenzBufEnter,
     pattern = "*",
     callback = function()
-        if vim.env.TMUX then
-            local filename = vim.fn.expand("%:t")
+        local filename = vim.fn.expand("%:t")
             local cmd = string.format("tmux rename-window " .. vim.fn.shellescape(filename))
             vim.fn.jobstart(cmd, { detach = true })
-    	end
     end
 })
 
 autocmd('VimLeave', {
+    group = SirenzVimLeave,
     pattern = "*",
     callback = function()
-        if vim.env.TMUX then
             vim.fn.system("tmux set-window-option automatic-rename")
-        end
     end
 })
 
 autocmd('CmdlineEnter', {
+    group = SirenzCmdEnter,
     callback = function()
         vim.opt.cmdheight = 1
     end
 })
 
 autocmd('CmdlineLeave', {
+    group = SirenzCmdLeave,
     callback = function()
         vim.opt.cmdheight = 0
     end
 })
 
 autocmd('LspAttach', {
-    group = SirenzGroup,
+    group = SirenzLspAttach,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
