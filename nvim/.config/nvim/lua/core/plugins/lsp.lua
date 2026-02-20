@@ -14,25 +14,11 @@ return {
         "j-hui/fidget.nvim",
     },
 
-
     config = function()
         require("conform").setup({
             formatters_by_ft = {
             }
         })
-
-        vim.lsp.config('zls', {
-            settings = {
-                single_file_support = true,
-                zls = {
-                    enable_inlay_hints = true,
-                    enable_snippets = true,
-                    warn_style = true,
-                }
-            }
-        })
-        vim.g.zig_fmt_parse_errors = 0
-        vim.g.zig_fmt_autosave = 0
 
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
@@ -50,9 +36,8 @@ return {
                 "gopls",
             },
 
-
             handlers = {
-                function(server_name) -- default handler (optional)
+                function(server_name)
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
@@ -66,8 +51,6 @@ return {
                             Lua = {
                                 format = {
                                     enable = true,
-                                    -- Put format options here
-                                    -- NOTE: the value should be STRING!!
                                     defaultConfig = {
                                         indent_style = "space",
                                         indent_size = "2",
@@ -97,11 +80,24 @@ return {
             sources = cmp.config.sources({
                 { name = "copilot", group_index = 2 },
                 { name = 'nvim_lsp' },
-                { name = 'luasnip' }, -- For luasnip users.
+                { name = 'luasnip' },
             }, {
                 { name = 'buffer' },
             })
         })
+
+        vim.lsp.config('zls', {
+            settings = {
+                single_file_support = true,
+                zls = {
+                    enable_inlay_hints = true,
+                    enable_snippets = true,
+                    warn_style = true,
+                }
+            }
+        })
+        vim.g.zig_fmt_parse_errors = 0
+        vim.g.zig_fmt_autosave = 0
 
         vim.diagnostic.config({
             -- update_in_insert = true,
