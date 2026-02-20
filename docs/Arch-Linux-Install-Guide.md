@@ -299,7 +299,7 @@ Server = https://x11libre.net/repo/arch_based/x86_64
 
 Personal base programs:
 ```shell
-$ pacman -S acpi acpid bc btop calcurse dunst eza feh firefox flameshot fzf gdb ghostty gopls jq lsof lxappearance man-db nmap notify-osd noto-fonts-cjk noto-fonts-emoji noto-fonts-extra openresolv openssh pacman-contrib pidgin pidgin-otr pipewire pipewire-also pipewire-pulse pulsemixer pwvucontrol ranger torbrowser-launcher tree ttf-0xproto-nerd ttf-nerd-fonts-symbols wget wireguard-tools xcb-util xlibre-video-intel xlibre-server xlibre-input-libinput xorg-xfontsel xorg-xinput xorg-xrandr
+$ pacman -S acpi acpid bc btop calcurse dunst eza feh firefox flameshot fzf gdb ghostty gopls jq lsof lxappearance man-db nmap notify-osd noto-fonts-cjk noto-fonts-emoji noto-fonts-extra openresolv openssh pacman-contrib pidgin pidgin-otr pipewire pipewire-also pipewire-pulse pulsemixer pwvucontrol ranger torbrowser-launcher tree ttf-0xproto-nerd ttf-nerd-fonts-symbols wget wireguard-tools xcb-util xlibre-server xlibre-input-libinput xorg-xfontsel xorg-xinput xorg-xrandr
 ```
 
 ```shell
