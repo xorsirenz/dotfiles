@@ -4,36 +4,29 @@ require("core.lazy")
 
 local autocmd = vim.api.nvim_create_autocmd
 
-autocmd('BufEnter', {
-    group = SirenzBufEnter,
+autocmd({ 'BufEnter', 'VimLeavePre' }, {
+    group = SirenzRenameStatus,
     pattern = "*",
-    callback = function()
-        local filename = vim.fn.expand("%:t")
+    callback = function(args)
+        if args.event == "BufEnter" then
+            local filename = vim.fn.expand("%:t")
             local cmd = string.format("tmux rename-window " .. vim.fn.shellescape(filename))
-            vim.fn.jobstart(cmd, { detach = true })
-    end
-})
-
-autocmd('VimLeave', {
-    group = SirenzVimLeave,
-    pattern = "*",
-    callback = function()
+            vim.fn.jobstart(cmd, { detatch = true })
+        elseif args.event == "VimLeavePre" then
             vim.fn.system("tmux set-window-option automatic-rename")
-    end
+        end
+    end,
 })
 
-autocmd('CmdlineEnter', {
-    group = SirenzCmdEnter,
-    callback = function()
-        vim.opt.cmdheight = 1
-    end
-})
-
-autocmd('CmdlineLeave', {
-    group = SirenzCmdLeave,
-    callback = function()
-        vim.opt.cmdheight = 0
-    end
+autocmd({ 'CmdlineEnter', "CmdlineLeave" }, {
+    group = SirenzCmdLineToggle,
+    callback = function(args)
+        if args.event == "CmdlineEnter" then
+            vim.opt.cmdheight = 1
+        elseif args.event == "CmdlineLeave" then
+            vim.opt.cmdheight = 0
+        end
+    end,
 })
 
 autocmd('LspAttach', {
@@ -52,9 +45,7 @@ autocmd('LspAttach', {
         vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
         vim.keymap.set("n", "<leader>eh", function() vim.lsp.inlay_hint.enable() end, opts)
         vim.keymap.set("n", "<leader>dh", function() vim.lsp.inlay_hint.enable(false) end, opts)
-
     end
 })
-
 
 vim.lsp.enable('zls')
