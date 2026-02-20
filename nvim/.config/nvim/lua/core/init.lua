@@ -2,8 +2,10 @@ require("core.remap")
 require("core.set")
 require("core.lazy")
 
+local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
+local SirenzRenameStatus = augroup('SirenzRenameStatus', {})
 autocmd({ 'BufEnter', 'VimLeavePre' }, {
     group = SirenzRenameStatus,
     pattern = "*",
@@ -18,6 +20,7 @@ autocmd({ 'BufEnter', 'VimLeavePre' }, {
     end,
 })
 
+local SirenzCmdLineToggle = augroup('SirenzCmdLineToggle', {})
 autocmd({ 'CmdlineEnter', "CmdlineLeave" }, {
     group = SirenzCmdLineToggle,
     callback = function(args)
@@ -29,6 +32,18 @@ autocmd({ 'CmdlineEnter', "CmdlineLeave" }, {
     end,
 })
 
+local SirenzYankText = augroup('SirenzYankText', {})
+autocmd('TextYankPost', {
+    group = SirenzYankText,
+    pattern = "*",
+    callback = function()
+        vim.highlight.on_yank({
+            timeout = 50,
+        })
+    end,
+})
+
+local SirenzLspAttach = augroup('SirenzLspAttach', {})
 autocmd('LspAttach', {
     group = SirenzLspAttach,
     callback = function(e)
