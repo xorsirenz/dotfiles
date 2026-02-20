@@ -2,6 +2,7 @@ source $HOME/.aliases
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+
 #enable colors and change prompt
 autoload -U colors && colors
 PS1="[%n:%F{white}%~%f]$ "
@@ -19,7 +20,7 @@ setopt GLOB_COMPLETE
 unsetopt beep #turn off beep
 
 # vi mode
-#bindkey -v
+bindkey -v '^?' backward-delete-char
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
