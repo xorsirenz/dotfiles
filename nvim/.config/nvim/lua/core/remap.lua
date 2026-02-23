@@ -2,6 +2,8 @@ set = vim.keymap.set
 
 vim.g.mapleader = " "
 
+set("c", "w<CR>", ":silent w<CR>")
+
 set("n", "<leader>pv", ":q<CR>")
 set("n", "<leader>jq", ":%!jq .<CR>")
 
