@@ -15,7 +15,7 @@ autocmd({ 'BufEnter', 'VimLeavePre' }, {
             local cmd = string.format("tmux rename-window " .. vim.fn.shellescape(filename))
             vim.fn.jobstart(cmd, { detatch = true })
         elseif args.event == "VimLeavePre" then
-            vim.fn.system("tmux set-window-option automatic-rename")
+            vim.fn.jobstart("tmux set-window-option automatic-rename")
         end
     end,
 })
