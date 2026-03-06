@@ -284,6 +284,7 @@ cd /opt/paru && makepkg -si
 ```
 
 ### Setting up system for xlibre
+##### # for the record, xlibre devs are toxic asf, sexist, ego/powertrip and i highly recommend using something else once theres a viable option
 Adding xlibre key to pacman:
 ```shell
 sudo pacman-key --recv-keys 73580DE2EDDFA6D6
