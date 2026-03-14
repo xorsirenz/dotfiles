@@ -19,7 +19,6 @@ set("n", "N", "Nzzzv")
 
 set("n", "Q", "<nop>")
 set("n", "<leader>f", vim.lsp.buf.format)
-set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
 
 set("n", "<C-k>", "<cmd>cnext<CR>zz")
 set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -43,4 +42,3 @@ set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
-
