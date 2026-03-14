@@ -19,6 +19,7 @@ set("n", "N", "Nzzzv")
 
 set("n", "Q", "<nop>")
 set("n", "<leader>f", vim.lsp.buf.format)
+set("n", "<leader>df", function() vim.diagnostic.open_float({ focusable = true }) end )
 
 set("n", "<C-k>", "<cmd>cnext<CR>zz")
 set("n", "<C-j>", "<cmd>cprev<CR>zz")
