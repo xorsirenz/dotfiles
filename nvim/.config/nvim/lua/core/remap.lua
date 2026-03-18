@@ -28,6 +28,8 @@ set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+set("n", "<leader>cc", "<cmd>Compile<CR>")
+set("n", "<leader>cr", "<cmd>Recompile<CR>")
 
 -- set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
 set("n", "<leader>ee", "opub fn main() !void {<CR>}<Esc>O")
