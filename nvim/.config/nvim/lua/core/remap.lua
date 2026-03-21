@@ -31,8 +31,8 @@ set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 set("n", "<leader>cc", "<cmd>Compile<CR>")
 set("n", "<leader>cr", "<cmd>Recompile<CR>")
 
--- set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
-set("n", "<leader>ee", "opub fn main() !void {<CR>}<Esc>O")
+set("n", "<leader>gee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
+set("n", "<leader>zee", "opub fn main() !void {<CR>}<Esc>O")
 
 set("n", "<leader>r", "<cmd>RangerOpenCurrentDir<CR>")
 
