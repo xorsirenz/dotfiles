@@ -1,7 +1,7 @@
 theme = rose-pine
 
 font-family = "0xProto"
-font-size = 17
+font-size = 15
 font-feature = -calt, -liga
 
 shell-integration-features = no-cursor
@@ -14,3 +14,5 @@ clipboard-paste-protection = false
 copy-on-select = false
 
 window-decoration = none
+
+shell-integration-features = ssh-env, ssh-terminfo
