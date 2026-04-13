@@ -1,6 +1,6 @@
 source $HOME/.aliases
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/shell/key-bindings.zsh
+source /usr/share/fzf/shell/completion.zsh
 
 
 #enable colors and change prompt
