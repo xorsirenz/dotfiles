@@ -24,7 +24,7 @@ bindkey -v '^?' backward-delete-char
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/madison/.zshrc'
+zstyle :compinstall filename '/home/xorsirenz/.zshrc'
 autoload -Uz compinit && compinit #auto complete
 
 # the gits
