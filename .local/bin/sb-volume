@@ -23,7 +23,7 @@ esac
 
 . sb-theme
 if wpctl get-volume | grep -q "[MUTED]"; then
-    display "  " 9
+    display "" 9
     exit
 fi
 
@@ -35,11 +35,11 @@ if [ -z "$volume" ]; then
 fi
 
 if [ "$volume" -gt 99 ]; then
-    icon="  "
+    icon=""
 elif [ "$volume" -gt 50 ]; then
-    icon="  "
+    icon=""
 else
-    icon="  "
+    icon=""
 fi
 
 display "$icon"
