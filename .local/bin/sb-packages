@@ -4,7 +4,7 @@ if ! updates_rpm=$(dnf check-update 2> /dev/null | wc -l ); then
     updates_rpm=0
 fi
 
-updates=$((updates_rpm))
+updates=$((updates_rpm - 1))
 
 if [ "$updates" -gt 0 ]; then
     echo "$updates󰁢"
