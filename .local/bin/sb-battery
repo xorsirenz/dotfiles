@@ -39,9 +39,9 @@ for battery in /sys/class/power_supply/BAT?*; do
                 status="$status$capacity%"
             fi
             ;;
-        Charging) status=" $capacity%" ;;
+        Charging) status="$capacity%" ;;
         "Not charging") status="󰁹" ;;
-        Unknown) status="󰂑  $capacity" ;;
+        Unknown) status="󰂑$capacity" ;;
         *) exit 1 ;;
     esac
     
