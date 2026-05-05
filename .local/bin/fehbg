@@ -1,1 +1,25 @@
-feh --bg-scale --no-xinerama --randomize $HOME/.local/wallpapers/*
+#!/usr/bin/env bash
+
+WALLDIR="$HOME/.local/wallpapers"
+cmd=(feh --no-fehbg)
+
+shuffle_wallpapers=($(printf "%s\n" "${WALLPAPERS[@]}" | shuf))
+mapfile -t WALLPAPERS < <(find "$WALLDIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.gif" \))
+mapfile -t OUTPUTS < <(xrandr --query | awk '/ connected/ {print $1}')
+
+
+i=0
+for output in "${OUTPUTS[@]}"; do
+    wp="${shuffle_wallpapers[$i]}"
+
+    if [[ -z "$wp" ]]; then
+        mapfile -t shuffle_wallpapers < <(printf "%s\n" "${WALLPAPERS[@]}" | shuf)
+        i=0
+        wp="${shuffle_wallpapers[$i]}"
+    fi
+
+    cmd+=(--bg-fill "$wp")
+    ((i++))
+done
+
+"${cmd[@]}"
