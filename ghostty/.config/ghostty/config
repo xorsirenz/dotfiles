@@ -1,7 +1,7 @@
 theme = rose-pine
 
 font-family = "0xProto"
-font-size = 15
+font-size = 13
 font-feature = -calt, -liga
 
 shell-integration-features = no-cursor
