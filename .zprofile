@@ -5,5 +5,3 @@ export PATH="$PATH:$HOME/.zig"
 
 export GOPATH="$HOME/.go"
 export PATH="$PATH:$GOPATH/bin"
-
-exec startx
