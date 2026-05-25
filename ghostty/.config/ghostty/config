@@ -16,5 +16,3 @@ copy-on-select = false
 window-decoration = none
 
 shell-integration-features = ssh-env, ssh-terminfo
-
-command = ~/.local/bin/tmux_start.sh
