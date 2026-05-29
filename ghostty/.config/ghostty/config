@@ -15,4 +15,6 @@ copy-on-select = false
 
 window-decoration = none
 
+fullscreen = true
+
 shell-integration-features = ssh-env, ssh-terminfo
