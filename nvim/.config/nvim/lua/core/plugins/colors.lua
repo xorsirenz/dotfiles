@@ -3,7 +3,7 @@ function SirenzColors(color)
 	vim.cmd.colorscheme(color)
 
     vim.opt.colorcolumn = "80"
-    vim.cmd 'highlight ColorColumn guibg=#0f1f2e'
+    vim.cmd 'highlight ColorColumn guibg=#232136'
     vim.cmd 'highlight Pmenu guibg=#0f1f2e'
     vim.cmd 'highlight PmenuSel guifg=#ebbcba guibg=#09121b'
     vim.cmd 'highlight LspInlayHint guibg=#0b1824'
