@@ -1,2 +1,2 @@
 ###### dotfiles are meant to be hidden?
-##### used with my suckless config [dwm / dmenu](https://codeberg.org/xorsirenz/suckless)
+##### remnants potentially may have been used with my archived suckless config [dwm / dmenu](https://github.com/xorsirenz/suckless)
