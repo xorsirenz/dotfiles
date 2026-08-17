@@ -42,6 +42,8 @@ set("n", "<leader>pw", "<cmd>set wrap!<CR>")
 
 set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+set('n', '<leader>t', ':set expandtab<CR>:retab<CR>', { noremap = true, silent = true })
+
 set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
