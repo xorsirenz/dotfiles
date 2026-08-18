@@ -1,0 +1,128 @@
+/* -- created by xorsirenz -- */
+{
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  /* module order */
+  "modules-left": [
+    "dwl/tags"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/updates",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature",
+    "group/audio",
+    "network",
+    "custom/vpn"
+  ],
+  /* left module */
+  "dwl/tags": {
+    "num-tags": 9,
+    "tag-labels": [
+        "", "", "",
+        "", "", "",
+        "", "", ""
+    ],
+    "disable-scroll": true
+  },
+  /* center module */
+  "clock": {
+    "timezone": "America/Los_Angeles",
+    "format": "{:%d %b  %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "on-scroll": 1,
+        "format": {
+            "months": "<span color='#ebbcba'><b>{}</b></span>",
+            "days": "<span color='#e0def4'>{}</span>",
+            "weekdays": "<span color='#31748f'><b>{}</b></span>",
+            "today": "<span color='#ebbcba'><b><u>{}</u></b></span>"
+        }
+    },
+    "actions": {
+    "on-scroll-up": "shift_up",
+    "on-scroll-down": "shift_down",
+    "on-click-middle": "shift_reset"
+  }
+  },
+  /* right module */
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%"
+  },
+  "memory": {
+    "format": "{}% 󰍛",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used} / {total} ({percentage}%)"
+  },
+  "disk": {
+    "format": "{percentage_used}% ",
+    "tooltip": true,
+    "tooltip-format": "Free: {used} / {total} ({percentage_used}%)"
+  },
+  "temperature": {
+    "format": "{temperatureC}°C {icon}",
+    "tooltip": true,
+    "tooltip-format": "Temp: {temperatureC}°C",
+    "format-icons": [
+      ""
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle"
+  },
+  "pulseaudio/slider": {
+    "tooltip": false
+  },
+  "group/audio": {
+    "orientation": "horizontal",
+    "modules": [
+        "pulseaudio",
+        "pulseaudio/slider"
+    ],
+    "drawer": {
+        "transition-duration": 250,
+        "transition-left-to-right": false,
+        "click-to-reveal": false
+    }
+  },
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "tooltip": true
+    },
+  "custom/vpn": {
+    "exec": "~/.config/waybar/scripts/vpn-detect.sh",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": true
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": " ",
+    "tooltip-format": " {ifname} via {gwaddr}",
+    "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  }
+}

@@ -1,0 +1,196 @@
+/* -- created by xorsirenz -- */
+/* rose pine colors */
+@define-color rootcolor #09121b;
+@define-color bordercolor #31748f;
+@define-color focuscolor #ebbcba;
+@define-color urgentcolor #c4a7e7;
+
+@define-color textcolor #e0def4;
+@define-color mutedcolor #908caa;
+@define-color cyan #9ccfd8;
+@define-color surface #26233a;
+@define-color white #fffaf3;
+@define-color red #eb6f92;
+
+* {
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: rgba(9, 18, 27, 0.85);
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#pulseaudio,
+#pulseaudio-slider,
+#custom-updates,
+#custom-vpn,
+#network {
+  background: @rootcolor;
+  color: @textcolor;
+  margin: 6px 0;
+  padding: 0 10px;
+}
+
+#clock,
+#custom-updates {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#clock,
+#custom-vpn {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#tags {
+  background: transparent;
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0 6px;
+}
+
+#tags button {
+  color: @mutedcolor;
+  background: transparent;
+  padding: 4px 7px;
+  margin: 0 2px;
+  border-radius: 6px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#tags button.occupied {
+  color: @cyan;
+}
+
+#tags button.focused {
+  color: @focuscolor;
+  text-shadow: 0 0 4px @focuscolor;
+}
+
+#tags button:hover {
+  color: @focuscolor;
+}
+
+#tags button.focused:hover {
+  color: @white;
+}
+
+calendar {
+  background: @rootcolor;
+  color: @textcolor;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+calendar.header {
+  color: @focuscolor;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: @mutedcolor;
+}
+
+calendar.button:hover {
+  color: @focuscolor;
+}
+
+calendar:selected {
+  color: @rootcolor;
+  background: @focuscolor;
+  border-radius: 5px;
+}
+
+calendar.highlight {
+  color: @cyan;
+}
+
+calendar:indeterminate {
+  color: @surface;
+}
+
+#group-audio {
+  margin: 6px 0;
+}
+
+#pulseaudio-slider {
+  min-width: 50px;
+}
+
+#pulseaudio-slider trough {
+  background: @surface;
+  border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+  background: @bordercolor;
+  border-radius: 5px;
+}
+
+#pulseaudio-slider slider {
+  background: @focuscolor;
+  border-radius: 50%;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+#custom-updates {
+  padding-left: 8px;
+  padding-right: 10px;
+}
+
+#custom-updates.updates {
+  color: @textcolor;
+}
+
+#custom-updates.updated {
+  color: @textcolor;
+}
+
+#custom-vpn {
+  padding-left: 8px;
+  padding-right: 13px;
+}
+
+#custom-vpn.connected {
+  color: @cyan;
+}
+
+#custom-vpn.disconnected {
+  color: @red;
+}
+
+tooltip {
+  background: @rootcolor;
+  color: @textcolor;
+  border: 1px solid @bordercolor;
+  border-radius: 8px;
+  padding: 0px 10px;
+}
+
+tooltip label {
+  color: @textcolor;
+  font-family: "JetbrainsMono Nerd Font";
+}
+
+@keyframes blink {
+  to {
+    background-color: @rootcolor;
+    color: @focuscolor;
+  }
+}
