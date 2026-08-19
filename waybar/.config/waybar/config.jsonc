@@ -7,7 +7,8 @@
   "gtk-layer-shell": true,
   /* module order */
   "modules-left": [
-    "dwl/tags"
+    "dwl/tags",
+    "dwl/window"
   ],
   "modules-center": [
     "clock"
@@ -55,6 +56,9 @@
   }
   },
   /* right module */
+  "dwl/window": {
+      "format": "{layout}",
+  },
   "cpu": {
     "format": "{usage}% ",
     "tooltip": true,

@@ -90,6 +90,19 @@ window#waybar.hidden {
   color: @white;
 }
 
+#window {
+  background: transparent;
+  color: @mutedcolor;
+  margin: 6px 5px;
+  padding: 0 8px;
+  font-weight: bold;
+}
+
+#window:hover {
+  color: @focuscolor;
+  text-shadow: 0 0 4px @focuscolor;
+}
+
 calendar {
   background: @rootcolor;
   color: @textcolor;
