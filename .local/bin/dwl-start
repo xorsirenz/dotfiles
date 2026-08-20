@@ -1,0 +1,46 @@
+#!/bin/sh
+
+WALLPAPER_DIR="$HOME/.local/wallpapers"
+
+dwl_pid=
+waybar_pid=
+swaybg_pid=
+
+cleanup() {
+    [ -n "$waybar_pid" ] && kill "$waybar_pid" 2>/dev/null
+    [ -n "$swaybg_pid" ] && kill "$swaybg_pid" 2>/dev/null
+
+    wait "$waybar_pid" 2>/dev/null
+    wait "$swaybg_pid" 2>/dev/null
+}
+
+trap 'cleanup; exit 0' INT TERM EXIT
+
+while :; do
+    dwl &
+    dwl_pid=$!
+
+    sleep 0.2
+
+    wallpaper="$(find "$WALLPAPER_DIR" -type f \
+        \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) |
+        shuf -n 1)"
+
+    if [ -n "$wallpaper" ]; then
+        swaybg -i "$wallpaper" -m fill &
+        swaybg_pid=$!
+    fi
+
+    waybar &
+    waybar_pid=$!
+
+    wait "$dwl_pid"
+
+    cleanup
+
+    dwl_pid=
+    waybar_pid=
+    swaybg_pid=
+
+    sleep 0.2
+done
