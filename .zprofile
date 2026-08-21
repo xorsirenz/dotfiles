@@ -10,5 +10,5 @@ export PATH="$PATH:$GOPATH/bin"
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 
 if [ "$(tty)" = "/dev/tty1" ]; then
-    exec ~/.local/bin/start-dwl
+    exec ~/.local/bin/dwl-start
 fi
