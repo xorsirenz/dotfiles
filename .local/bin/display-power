@@ -1,0 +1,27 @@
+#!/bin/sh
+
+is_playing() {
+    /usr/bin/playerctl status 2>/dev/null | grep -q '^Playing$'
+}
+
+case "$1" in
+    off)
+        if is_playing; then
+            exit 0
+        fi
+
+        /usr/bin/wlopm --off '*'
+        ;;
+
+    on)
+        /usr/bin/wlopm --on '*'
+        ;;
+
+    suspend)
+        if is_playing; then
+            exit 0
+        fi
+
+        /usr/bin/systemctl suspend
+        ;;
+esac

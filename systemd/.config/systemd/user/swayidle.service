@@ -1,0 +1,12 @@
+[Unit]
+Description=Swayidle idle manager
+
+[Service]
+ExecStart=/usr/bin/swayidle -w \
+    timeout 300 '%h/.local/bin/display-power off' \
+    resume '%h/.local/bin/display-power on' \
+    timeout 900 '%h/.local/bin/display-power suspend'
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
