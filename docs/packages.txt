@@ -1,0 +1,3 @@
+nm-connection-editor
+swayidle
+powerctl
