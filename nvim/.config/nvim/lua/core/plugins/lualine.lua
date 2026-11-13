@@ -9,6 +9,16 @@ return {
             return vim.v.shell_error == 0 and tag[1] or ""
         end
 
+        local function search_count()
+            local result = vim.fn.searchcount({ maxcount = 999 })
+
+            if result.total == 0 or result.incomplete == 1 then
+                return ""
+            end
+
+            return string.format("󰍉 %d/%d", result.current, result.total)
+        end
+
         require("lualine").setup({
             options = {
                 icons_enabled = true,
@@ -31,7 +41,7 @@ return {
                     },
                 },
                 lualine_c = { "filename" },
-                lualine_x = { "encoding", "fileformat", "filetype" },
+                lualine_x = { "encoding", "fileformat", "filetype", { search_count }, },
                 lualine_y = { "progress" },
                 lualine_z = { "location" },
             },
