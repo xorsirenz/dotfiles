@@ -37,7 +37,7 @@ window#waybar.hidden {
 #custom-updates,
 #custom-vpn,
 #network {
-  background: @rootcolor;
+  /*  background: @rootcolor; */
   color: @textcolor;
   margin: 6px 0;
   padding: 0 10px;
@@ -70,7 +70,9 @@ window#waybar.hidden {
   padding: 4px 7px;
   margin: 0 2px;
   border-radius: 6px;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 #tags button.occupied {
