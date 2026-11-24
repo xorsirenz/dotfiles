@@ -14,10 +14,6 @@
 @define-color white #fffaf3;
 @define-color red #eb6f92;
 
-/* =========================================
-   GLOBAL
-   ========================================= */
-
 * {
   border: none;
   font-family: "JetBrainsMono Nerd Font";
@@ -30,10 +26,6 @@
   transition: none;
 }
 
-/* =========================================
-   WAYBAR WINDOW
-   ========================================= */
-
 window#waybar {
   background: rgba(9, 18, 27, 0.85);
   color: @textcolor;
@@ -45,10 +37,6 @@ window#waybar {
 window#waybar.hidden {
   opacity: 0.2;
 }
-
-/* =========================================
-   WORKSPACES
-   ========================================= */
 
 #tags {
   background: transparent;
@@ -83,9 +71,7 @@ window#waybar.hidden {
   box-shadow: none;
 }
 
-/* =========================================
-   WINDOW LAYOUT
-   ========================================= */
+/* WINDOW LAYOUT */
 
 #window {
   background: transparent;
@@ -107,9 +93,13 @@ window#waybar.hidden {
   padding: 0 6px;
 }
 
-/* =========================================
-   AUDIO
-   ========================================= */
+#custom-updates {
+  background: transparent;
+  color: @textcolor;
+  border: none;
+  margin: 3px 1px;
+  padding: 0 3px;
+}
 
 #group-audio {
   background: transparent;

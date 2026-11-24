@@ -7,7 +7,14 @@
   "gtk-layer-shell": true,
   "modules-left": ["dwl/tags", "dwl/window"],
   "modules-center": [],
-  "modules-right": ["tray", "group/audio", "network", "custom/vpn", "clock"],
+  "modules-right": [
+    "tray",
+    "custom/updates",
+    "group/audio",
+    "network",
+    "custom/vpn",
+    "clock",
+  ],
   "dwl/tags": {
     "num-tags": 9,
     "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -20,6 +27,12 @@
   "tray": {
     "icon-size": 17,
     "spacing": 8,
+  },
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "tooltip": true,
   },
   "pulseaudio": {
     "format": "{icon}",
