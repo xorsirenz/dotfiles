@@ -5,21 +5,9 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  /* module order */
   "modules-left": ["dwl/tags", "dwl/window"],
-  "modules-center": ["clock"],
-  "modules-right": [
-    "tray",
-    "custom/updates",
-    "cpu",
-    "memory",
-    "disk",
-    "temperature",
-    "group/audio",
-    "network",
-    "custom/vpn",
-  ],
-  /* left module "", "", "" */
+  "modules-center": [],
+  "modules-right": ["tray", "group/audio", "network", "custom/vpn", "clock"],
   "dwl/tags": {
     "num-tags": 9,
     "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -29,62 +17,9 @@
   "dwl/window": {
     "format": "{layout}",
   },
-  /* center module */
-  "clock": {
-    "timezone": "America/Los_Angeles",
-    "format": "{:%a, %d %b  ·  %H:%M}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "month",
-      "mode-mon-col": 3,
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ebbcba'><b>{}</b></span>",
-        "days": "<span color='#e0def4'>{}</span>",
-        "weekdays": "<span color='#31748f'><b>{}</b></span>",
-        "today": "<span color='#ebbcba'><b><u>{}</u></b></span>",
-      },
-    },
-    "actions": {
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down",
-      "on-click-middle": "shift_reset",
-    },
-  },
   "tray": {
-    "icon-size": 21,
-    "spacing": 10,
-    "icons": {
-      "discord": "discord",
-    },
-  },
-  /* right module */
-  "custom/updates": {
-    "exec": "~/.config/waybar/scripts/updates.sh",
-    "return-type": "json",
-    "interval": 1800,
-    "tooltip": true,
-  },
-  "cpu": {
-    "format": "{usage}% ",
-    "tooltip": true,
-    "tooltip-format": "CPU: {usage}%",
-  },
-  "memory": {
-    "format": "{}% 󰍛",
-    "tooltip": true,
-    "tooltip-format": "RAM: {used} / {total} ({percentage}%)",
-  },
-  "disk": {
-    "format": "{percentage_used}% ",
-    "tooltip": true,
-    "tooltip-format": "Free: {used} / {total} ({percentage_used}%)",
-  },
-  "temperature": {
-    "format": "{temperatureC}°C {icon}",
-    "tooltip": true,
-    "tooltip-format": "Temp: {temperatureC}°C",
-    "format-icons": [""],
+    "icon-size": 17,
+    "spacing": 8,
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -92,7 +27,10 @@
     "format-icons": {
       "default": ["", ""],
     },
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%",
     "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
   },
   "pulseaudio/slider": {
     "tooltip": false,
@@ -101,19 +39,17 @@
     "orientation": "horizontal",
     "modules": ["pulseaudio", "pulseaudio/slider"],
     "drawer": {
-      "transition-duration": 250,
+      "transition-duration": 200,
       "transition-left-to-right": false,
       "click-to-reveal": false,
     },
   },
   "network": {
-    "format": "{ifname}",
+    "format-wifi": "󰖩",
     "format-ethernet": "󰈀",
-    "format-disconnected": " ",
-    "tooltip-format": " {ifname} via {gwaddr}",
-    "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
+    "format-disconnected": "󰖪",
+    "tooltip": true,
+    "tooltip-format": "{ifname}: {ipaddr}",
     "on-click": "nm-connection-editor",
   },
   "custom/vpn": {
@@ -121,5 +57,27 @@
     "return-type": "json",
     "interval": 5,
     "tooltip": true,
+  },
+  "clock": {
+    "timezone": "America/Los_Angeles",
+    "format": "{:%a, %d %b  ·  %H:%M}",
+    "tooltip": true,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#c4a7e7'><b>        {}</b></span>",
+        "days": "<span color='#e0def4'> {}</span>",
+        "weekdays": "<span color='#908caa'><b> {}</b></span>",
+        "today": "<span color='#ebbcba'><b><u> {}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+      "on-click-middle": "shift_reset",
+    },
   },
 }

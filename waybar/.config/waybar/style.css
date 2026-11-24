@@ -1,7 +1,9 @@
 /* -- created by xorsirenz -- */
-/* rose pine colors */
+
+/* Rose Pine */
 @define-color rootcolor #09121b;
-@define-color bordercolor #31748f;
+@define-color bordercolor rgba(255, 255, 255, 0.10);
+
 @define-color focuscolor #ebbcba;
 @define-color urgentcolor #c4a7e7;
 
@@ -12,66 +14,56 @@
 @define-color white #fffaf3;
 @define-color red #eb6f92;
 
+/* =========================================
+   GLOBAL
+   ========================================= */
+
 * {
   border: none;
-  font-family: "JetbrainsMono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 15px;
+  font-weight: 500;
   min-height: 0;
+
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
 }
 
+/* =========================================
+   WAYBAR WINDOW
+   ========================================= */
+
 window#waybar {
-  min-height: 24px;
   background: rgba(9, 18, 27, 0.85);
+  color: @textcolor;
+  border: none;
+  box-shadow: none;
+  min-height: 32px;
 }
 
 window#waybar.hidden {
   opacity: 0.2;
 }
 
-#clock,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#pulseaudio,
-#pulseaudio-slider,
-#custom-updates,
-#custom-vpn,
-#network {
-  /*  background: @rootcolor; */
-  color: @textcolor;
-  margin: 2px 0;
-  padding: 0 10px;
-}
-
-#clock,
-#custom-updates {
-  margin-left: 5px;
-  border-radius: 6px 0 0 6px;
-}
-
-#clock,
-#custom-vpn {
-  margin-right: 5px;
-  border-radius: 0 6px 6px 0;
-}
+/* =========================================
+   WORKSPACES
+   ========================================= */
 
 #tags {
   background: transparent;
-  border-radius: 6px;
-  margin: 2px 5px;
-  padding: 0 6px;
+  border: none;
+  margin: 3px 2px;
+  padding: 1px 4px;
 }
 
 #tags button {
-  color: @mutedcolor;
   background: transparent;
-  padding: 1px 2px;
-  margin: 0 2px;
-  border-radius: 6px;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease;
+  color: @mutedcolor;
+  margin: 1px;
+  padding: 0 5px;
+  border: none;
+  border-radius: 7px;
 }
 
 #tags button.occupied {
@@ -79,41 +71,151 @@ window#waybar.hidden {
 }
 
 #tags button.focused {
-  color: @focuscolor;
-  text-shadow: 0 0 4px @focuscolor;
-}
-
-#tags button:hover {
-  color: @focuscolor;
-}
-
-#tags button.focused:hover {
-  color: @white;
-}
-
-#window {
   background: transparent;
-  color: @mutedcolor;
-  margin: 2px 5px;
-  padding: 0 10px;
+  color: @focuscolor;
   font-weight: bold;
 }
 
-#window:hover {
-  color: @focuscolor;
-  text-shadow: 0 0 4px @focuscolor;
+#tags button:hover,
+#tags button.focused:hover {
+  background: transparent;
+  color: @mutedcolor;
+  box-shadow: none;
 }
+
+/* =========================================
+   WINDOW LAYOUT
+   ========================================= */
+
+#window {
+  background: transparent;
+  color: @textcolor;
+  margin: 3px 2px;
+  padding: 0 5px;
+  font-weight: 500;
+}
+
+/* =========================================
+   SYSTEM TRAY
+   ========================================= */
+
+#tray {
+  background: transparent;
+  color: @textcolor;
+  border: none;
+  margin: 3px 1px;
+  padding: 0 6px;
+}
+
+/* =========================================
+   AUDIO
+   ========================================= */
+
+#group-audio {
+  background: transparent;
+  margin: 3px 1px;
+  padding: 0 2px;
+}
+
+/* Volume icon */
+#pulseaudio {
+  background: transparent;
+  color: @textcolor;
+  border: none;
+  margin: 0;
+  padding: 0 12px;
+}
+
+/* Volume slider */
+
+#pulseaudio-slider {
+  background: transparent;
+  min-width: 45px;
+  margin: 2;
+  padding: 0 6px;
+}
+
+#pulseaudio-slider trough {
+  background: @surface;
+  border-radius: 5px;
+  min-height: 5px;
+}
+
+#pulseaudio-slider highlight {
+  background: @focuscolor;
+  border-radius: 5px;
+}
+
+#pulseaudio-slider slider {
+  background: @textcolor;
+  border-radius: 50%;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+/* =========================================
+   NETWORK
+   ========================================= */
+
+#network {
+  background: transparent;
+  color: @textcolor;
+  border: none;
+  margin: 3px 1px;
+  padding: 0 3px;
+  min-width: 18px;
+}
+
+/* =========================================
+   VPN
+   ========================================= */
+
+#custom-vpn {
+  background: transparent;
+  color: @textcolor;
+  border: none;
+  margin: 3px 1px;
+  padding: 0 3px;
+}
+
+#custom-vpn.connected {
+  color: @cyan;
+}
+
+#custom-vpn.disconnected {
+  color: @mutedcolor;
+}
+
+/* =========================================
+   CLOCK - FAR RIGHT
+   ========================================= */
+
+#clock {
+  background: transparent;
+  color: @textcolor;
+  border: none;
+  margin: 3px 3px 3px 1px;
+  padding: 0 6px;
+  font-weight: 600;
+}
+
+/* =========================================
+   CALENDAR
+   ========================================= */
 
 calendar {
   background: @rootcolor;
   color: @textcolor;
-  border-radius: 6px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 12px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
 }
 
 calendar.header {
   color: @focuscolor;
   font-weight: bold;
+  font-size: 17px;
 }
 
 calendar.button {
@@ -125,78 +227,35 @@ calendar.button:hover {
 }
 
 calendar:selected {
-  color: @rootcolor;
   background: @focuscolor;
+  color: @rootcolor;
   border-radius: 5px;
 }
 
 calendar.highlight {
   color: @cyan;
+  font-weight: bold;
 }
 
 calendar:indeterminate {
-  color: @surface;
+  color: @mutedcolor;
 }
-
-#group-audio {
-  margin: 2px 0;
-}
-
-#pulseaudio-slider {
-  min-width: 50px;
-}
-
-#pulseaudio-slider trough {
-  background: @surface;
-  border-radius: 5px;
-}
-
-#pulseaudio-slider highlight {
-  background: @bordercolor;
-  border-radius: 5px;
-}
-
-#pulseaudio-slider slider {
-  background: @focuscolor;
-  border-radius: 50%;
-  min-width: 10px;
-  min-height: 10px;
-}
-
-#custom-updates.updates,
-#custom-updates.updated {
-  color: @textcolor;
-}
-
-#custom-vpn {
-  padding-left: 8px;
-  padding-right: 13px;
-}
-
-#custom-vpn.connected {
-  color: @cyan;
-}
-
-#custom-vpn.disconnected {
-  color: @red;
-}
+/* =========================================
+   TOOLTIP
+   ========================================= */
 
 tooltip {
   background: @rootcolor;
   color: @textcolor;
-  border: 1px solid @bordercolor;
-  border-radius: 6px;
-  padding: 0px 10px;
+  border: 2px solid @surface;
+  border-radius: 12px;
+  padding: 12px;
 }
 
 tooltip label {
   color: @textcolor;
-  font-family: "JetbrainsMono Nerd Font";
-}
-
-@keyframes blink {
-  to {
-    background-color: @rootcolor;
-    color: @focuscolor;
-  }
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px;
 }
