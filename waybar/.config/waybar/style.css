@@ -16,10 +16,11 @@
   border: none;
   font-family: "JetbrainsMono Nerd Font";
   font-size: 15px;
-  min-height: 10px;
+  min-height: 0;
 }
 
 window#waybar {
+  min-height: 24px;
   background: rgba(9, 18, 27, 0.85);
 }
 
@@ -39,35 +40,33 @@ window#waybar.hidden {
 #network {
   /*  background: @rootcolor; */
   color: @textcolor;
-  margin: 6px 0;
+  margin: 2px 0;
   padding: 0 10px;
 }
 
 #clock,
 #custom-updates {
   margin-left: 5px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 6px 0 0 6px;
 }
 
 #clock,
 #custom-vpn {
   margin-right: 5px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 0 6px 6px 0;
 }
 
 #tags {
   background: transparent;
-  border-radius: 10px;
-  margin: 6px 5px;
+  border-radius: 6px;
+  margin: 2px 5px;
   padding: 0 6px;
 }
 
 #tags button {
   color: @mutedcolor;
   background: transparent;
-  padding: 4px 7px;
+  padding: 1px 2px;
   margin: 0 2px;
   border-radius: 6px;
   transition:
@@ -95,8 +94,8 @@ window#waybar.hidden {
 #window {
   background: transparent;
   color: @mutedcolor;
-  margin: 6px 5px;
-  padding: 0 8px;
+  margin: 2px 5px;
+  padding: 0 10px;
   font-weight: bold;
 }
 
@@ -108,7 +107,7 @@ window#waybar.hidden {
 calendar {
   background: @rootcolor;
   color: @textcolor;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 8px;
 }
 
@@ -140,7 +139,7 @@ calendar:indeterminate {
 }
 
 #group-audio {
-  margin: 6px 0;
+  margin: 2px 0;
 }
 
 #pulseaudio-slider {
@@ -164,15 +163,7 @@ calendar:indeterminate {
   min-height: 10px;
 }
 
-#custom-updates {
-  padding-left: 8px;
-  padding-right: 10px;
-}
-
-#custom-updates.updates {
-  color: @textcolor;
-}
-
+#custom-updates.updates,
 #custom-updates.updated {
   color: @textcolor;
 }
@@ -194,7 +185,7 @@ tooltip {
   background: @rootcolor;
   color: @textcolor;
   border: 1px solid @bordercolor;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0px 10px;
 }
 
